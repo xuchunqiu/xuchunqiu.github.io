@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 春秋生活志</title><link>/posts/</link><description>Recent content in Posts on 春秋生活志</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2020 &lt;a href="https://www.wangchucheng.com/">C. Wang&lt;/a> and &lt;a href="https://www.ruiqima.com/">R. Ma&lt;/a></copyright><lastBuildDate>Tue, 10 Nov 2020 17:10:30 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>博客当前施工进展</title><link>/posts/2020-11-10/blog-construction-progress/</link><pubDate>Tue, 10 Nov 2020 17:10:30 +0800</pubDate><guid>/posts/2020-11-10/blog-construction-progress/</guid><description>当前状态 刚刚在 GitHub 把博客的仓库（私有）建好，有很多事情想做但还没分清先后，暂列在此。
+静态网站生成器 static site generator / web template system
+可选包括 Jekyll、Hexo、Pelican、Gridea、Hugo ……
+前几日看到新闻说 KDE.org 迁移到 Hugo，所以我现在有些倾向于它。
+践行 《Web 内容无障碍指南》 对于一个没有前端开发经验的人来说自己从头做起未免步子迈太大，找个无障碍优化做得比较好的 Hugo 主题 才是个现实的解决办法。根据 accessible/accessibility 标签筛选出了以下博客主题： Zzo、Color Your World、Terrassa、Zen、Cupper、Accessible Minimalism
+从 W3C 列出的 Web Accessibility Evaluation Tools List 中选了一个在线测试工具 WebAccessibility 进行测试，测试结果如下（测试进行于2020年11月9日，测试结果仅能代表此刻的情况）。
+theme name test url number of violations compliance score personal evaluation Zzo https://themes.gohugo.io/theme/hugo-theme-zzo/ 27 85% garish Color Your World https://themes.gohugo.io/theme/hugo-theme-color-your-world/ 0 91% Terrassa https://themes.</description></item></channel></rss>
