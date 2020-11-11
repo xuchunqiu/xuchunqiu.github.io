@@ -8,10 +8,9 @@ SCI 科学引文索引 Science Citation Index
 收录范围：自然科学的基础研究领域
 Web of Science™ 科睿唯安当前涉及的领域包括：科学与学术研究、生命科学与制药、专利与研发创新、产业法规与标准、网域名称管理、商标检索与保护。Web of Science™ 是其在 科学与学术研究 领域提供的「最受信任的、独立于出版商的全球引文数据库（the world’s most trusted publisher-independent global citation database）」；而 Journal Citation Reports 是其在 科学与学术研究 领域 依托于 Web of Science 的在研究分析与评估方面的产品。它早先的名称是 Web of Knowledge
 Web of Science™ 是一个基于Web而构建的动态的数字研究环境，通过强大的检索技术和基于内容的连接能力，将高质量的信息资源、独特的信息分析工具和专业的信息管理软件无缝地整合在一起，兼具知识的检索、提取、分析、评价、管理与发表等多项功能。1在内容上，
-以 Web of Science™ 核心合集(著名的三大引文索引Science Citation Index Expanded®, Social Science Citation Index®, Arts &amp;amp; Humanities Citation Index®)为核心 ，凭藉独特的引文检索机制和强大的交叉检索功能，有效地整合了：</description></item><item><title>博客当前施工进展</title><link>/posts/2020-11-10/blog-construction-progress/</link><pubDate>Tue, 10 Nov 2020 17:10:30 +0800</pubDate><guid>/posts/2020-11-10/blog-construction-progress/</guid><description>当前状态 刚刚在 GitHub 把博客的仓库（私有）建好，有很多事情想做但还没分清先后，暂列在此。
-静态网站生成器 static site generator / web template system
+以 Web of Science™ 核心合集(著名的三大引文索引Science Citation Index Expanded®, Social Science Citation Index®, Arts &amp;amp; Humanities Citation Index®)为核心 ，凭藉独特的引文检索机制和强大的交叉检索功能，有效地整合了：</description></item><item><title>博客当前施工进展</title><link>/posts/2020-11-10/blog-construction-progress/</link><pubDate>Tue, 10 Nov 2020 17:10:30 +0800</pubDate><guid>/posts/2020-11-10/blog-construction-progress/</guid><description>静态网站生成器 static site generator / web template system
 可选包括 Jekyll、Hexo、Pelican、Gridea、Hugo ……
 前几日看到新闻说 KDE.org 迁移到 Hugo，所以我现在有些倾向于它。
-践行 《Web 内容无障碍指南》 对于一个没有前端开发经验的人来说自己从头做起未免步子迈太大，找个无障碍优化做得比较好的 Hugo 主题 才是个现实的解决办法。根据 accessible/accessibility 标签筛选出了以下博客主题： Zzo、Color Your World、Terrassa、Zen、Cupper、Accessible Minimalism
+践行《Web 内容无障碍指南》 对于一个没有前端开发经验的人来说自己从头做起未免步子迈太大，找个无障碍优化做得比较好的 Hugo 主题 才是个现实的解决办法。根据 accessible/accessibility 标签筛选出了以下博客主题： Zzo、Color Your World、Terrassa、Zen、Cupper、Accessible Minimalism
 从 W3C 列出的 Web Accessibility Evaluation Tools List 中选了一个在线测试工具 WebAccessibility 进行测试，测试结果如下（测试进行于2020年11月9日，测试结果仅能代表此刻的情况）。
 theme name test url number of violations compliance score personal evaluation Zzo https://themes.gohugo.io/theme/hugo-theme-zzo/ 27 85% garish Color Your World https://themes.gohugo.io/theme/hugo-theme-color-your-world/ 0 91% Terrassa https://themes.</description></item></channel></rss>
