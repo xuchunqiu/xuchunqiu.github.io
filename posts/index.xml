@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>All Posts - 春秋碎碎念</title>
-        <link>https://xuchunqiu.github.io/posts/</link>
-        <description>All Posts | 春秋碎碎念</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor>
-            <webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Wed, 11 Nov 2020 10:29:37 &#43;0800</lastBuildDate><atom:link href="https://xuchunqiu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>什么是 SCI</title>
-    <link>https://xuchunqiu.github.io/what-is-sci/</link>
-    <pubDate>Wed, 11 Nov 2020 10:29:37 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://xuchunqiu.github.io/what-is-sci/</guid>
-    <description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts - 春秋碎碎念</title><link>https://xuchunqiu.github.io/posts/</link><description>All Posts | 春秋碎碎念</description><generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor><webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Wed, 11 Nov 2020 10:29:37 +0800</lastBuildDate><atom:link href="https://xuchunqiu.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>什么是 SCI</title><link>https://xuchunqiu.github.io/what-is-sci/</link><pubDate>Wed, 11 Nov 2020 10:29:37 +0800</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/what-is-sci/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-11-11/2020-11-11-001.png" referrerpolicy="no-referrer">
             </div><h1 id="影响因子">影响因子</h1>
 <blockquote>
@@ -161,14 +149,7 @@
 </li>
 </ol>
 </section>
-]]></description>
-</item><item>
-    <title>博客当前施工进展</title>
-    <link>https://xuchunqiu.github.io/blog-construction-progress/</link>
-    <pubDate>Tue, 10 Nov 2020 17:10:30 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://xuchunqiu.github.io/blog-construction-progress/</guid>
-    <description><![CDATA[<h1 id="静态网站生成器">静态网站生成器</h1>
+]]></description></item><item><title>博客当前施工进展</title><link>https://xuchunqiu.github.io/blog-construction-progress/</link><pubDate>Tue, 10 Nov 2020 17:10:30 +0800</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/blog-construction-progress/</guid><description><![CDATA[<h1 id="静态网站生成器">静态网站生成器</h1>
 <blockquote>
 <p>static site generator / web template system</p>
 </blockquote>
@@ -350,6 +331,4 @@
 <p><i class="far fa-square fa-fw"></i> 迁移 Notion 内的知识库</p>
 </li>
 </ul>
-]]></description>
-</item></channel>
-</rss>
+]]></description></item></channel></rss>
