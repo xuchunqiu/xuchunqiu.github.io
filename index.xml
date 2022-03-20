@@ -331,4 +331,150 @@
 <p><i class="far fa-square fa-fw"></i> 迁移 Notion 内的知识库</p>
 </li>
 </ul>
+]]></description></item><item><title>如何在 Ubuntu 上安装深度截图</title><link>https://xuchunqiu.github.io/install-deepin-screenshot-on-ubuntu/</link><pubDate>Mon, 25 Feb 2019 09:11:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-deepin-screenshot-on-ubuntu/</guid><description><![CDATA[<h1 id="update">Update</h1>
+<p>深度截图目前已有 <a href="https://www.deepin.org/zh/original/deepin-screenshot/" target="_blank" rel="noopener noreffer">官方介绍</a>、<a href="https://wiki.deepin.org/wiki/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE" target="_blank" rel="noopener noreffer">使用说明</a>，但依然没有提供从深度商店外安装深度截图的教程。</p>
+<p>appimage 格式深度截图的下载地址已经失效，但依然可以从互联网档案馆上 <a href="https://web.archive.org/web/20201120043221/https://github-production-release-asset-2e65be.s3.amazonaws.com/110259696/6110e818-0909-11e8-92a8-e734dc188fe0?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201120%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20201120T043221Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=134866f6be04ad00a4eaf1a2aa00604d5fbfd4fe5f9597a94a2a92da3d758053&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=110259696&amp;response-content-disposition=attachment%3B%20filename%3DDeepin_Screenshot_4.0.10.4-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noopener noreffer">下载（35.7 MB）</a>。</p>
+<h2 id="1-下载深度截图">1. 下载深度截图</h2>
+<p>从以下地址下载第三方打包的深度截图：</p>
+<p>~~<a href="https://github.com/ZetaoYang/deepin-app-package/releases~~">https://github.com/ZetaoYang/deepin-app-package/releases~~</a></p>
+<h2 id="2-运行">2. 运行</h2>
+<p>首先添加执行权限</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">chmod +x ./Deepin_Screenshot-x86_64.AppImage
+</code></pre></td></tr></table>
+</div>
+</div><p>使用方法：</p>
+<ul>
+<li>GUI： 文件管理器双击</li>
+<li>CLI：<code>~/Downloads/Deepin_Screenshot_4.0.10.4-x86_64.AppImage</code></li>
+</ul>
+<h2 id="3-让深度截图在-ubuntu-启动台显示">3. 让深度截图在 Ubuntu 启动台显示</h2>
+<h3 id="31-appimagelauncher-法"><del>3.1 AppImageLauncher 法</del></h3>
+<p>AppImageLauncher 顾名思义是一个可以快速把 appimage 软件加入启动台的工具。只需要从 <a href="https://github.com/TheAssassin/AppImageLauncher/releases">https://github.com/TheAssassin/AppImageLauncher/releases</a> 下载的合适版本，然后执行以下命令安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo dpkg -i ~/Downloads/appimagelauncher_1.0.3-travis508.git20190223.0c6d768_amd64.deb
+</code></pre></td></tr></table>
+</div>
+</div><p>理论上再次双击之前的 Deepin_Screenshot_4.0.10.4-x86_64.AppImage 就可以初始化 AppImageLauncher，进而可以把 Deepin_Screenshot_4.0.10.4-x86_64.AppImage 显示在 LaunchPad。不幸的是我双击后遇到闪退。</p>
+<h3 id="32-手动法">3.2 手动法</h3>
+<p>此方法适用于所有只能命令行启动的程序，只需要在 /usr/share/applications/ 下添加一个配置文件就能让程序显示在 Ubuntu 启动台上。但在开始之前，为了美观还需要一个合适的图标，我是从 <a href="http://appstore.deepin.com/data/v1/workaround/metadata/deepin-screenshot/meta/icons/deepin-screenshot.svg">http://appstore.deepin.com/data/v1/workaround/metadata/deepin-screenshot/meta/icons/deepin-screenshot.svg</a> 下载图标，然后用在线工具转为PNG格式备用。</p>
+<p>按照 <a href="https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86" target="_blank" rel="noopener noreffer">文件系统层次结构标准</a> 为深度截图在 <code>/opt</code> 下创建目录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /opt/deepinscreenshot
+</code></pre></td></tr></table>
+</div>
+</div><p>然后把 appimage 程序和 PNG 格式的图标复制进去：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo cp ~/Downloads/Deepin_Screenshot_4.0.10.4-x86_64.AppImage /opt/deepinscreenshot/
+sudo cp ~/Downloads/deepin-screenshot-24px.png /opt/deepinscreenshot/
+</code></pre></td></tr></table>
+</div>
+</div><p><del>注入灵魂</del> 注册应用程序到启动台：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo vim /usr/share/applications/biubiubiu.desktop
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>biubiubiu.desktop 的内容示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
+Name=biubiubiu
+Name[zh_CN]=深度截图
+Exec=/opt/deepinscreenshot/Deepin_Screenshot_4.0.10.4-x86_64.AppImage
+Icon=/opt/deepinscreenshot/deepin-screenshot-24px.png
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;
+StartupNotify=false
+</code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<p>然后就可以在 LaunchPad 看到图标了，鼠标拖拽即可固定到 dock 栏。</p>
+]]></description></item><item><title>如何在 Ubuntu 上安装 QQ</title><link>https://xuchunqiu.github.io/install-qq-on-ubuntu/</link><pubDate>Mon, 25 Feb 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-qq-on-ubuntu/</guid><description><![CDATA[<h1 id="update">Update</h1>
+<p>深度的 <a href="https://wiki.deepin.org/" target="_blank" rel="noopener noreffer">维基页面</a> 现在已经列出了直接使用 <code>apt</code> 命令安装 <a href="https://wiki.deepin.org/wiki/QQ%E8%BD%BB%E8%81%8A%E7%89%88" target="_blank" rel="noopener noreffer">QQ轻聊版</a>、<a href="https://wiki.deepin.org/wiki/QQ" target="_blank" rel="noopener noreffer">QQ 标准版</a> 的方法。</p>
+<h2 id="1-安装-deepin-wine-环境">1. 安装 Deepin wine 环境</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 下载</span>
+git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
+<span class="c1"># 执行安装脚本</span>
+sudo sh ./deepin-wine-for-ubuntu/install.sh
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="2-安装-deepin-版-tim-安装包">2. 安装 Deepin 版 TIM 安装包</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 下载</span>
+wget http://packages.deepin.com/deepin/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_2.0.0deepin4_i386.deb
+<span class="c1"># 解包安装</span>
+sudo dpkg -i ./Downloads/deepin.com.qq.office_2.0.0deepin4_i386.deb
+<span class="c1"># 在 Ubuntu 的 Lauchpad 应已出现 TIM 的图标，单击启动、登录，应该就可以正常使用了</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="3-可选解决在高分屏-gui-过小的问题">3. 可选：解决在高分屏 GUI 过小的问题</h2>
+<p>使用如下命令调出 wine 的配置页面：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">WINEPREFIX</span><span class="o">=</span>~/.deepinwine/Deepin-TIM/ deepin-wine winecfg
+</code></pre></td></tr></table>
+</div>
+</div><p>在 Graphics 选项卡中往大调整 Screen resolution 的值，调好后重新运行 TIM 即可看到效果。</p>
 ]]></description></item></channel></rss>
