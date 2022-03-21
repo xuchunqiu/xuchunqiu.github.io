@@ -331,6 +331,97 @@
 <p><i class="far fa-square fa-fw"></i> 迁移 Notion 内的知识库</p>
 </li>
 </ul>
+]]></description></item><item><title>如何在 Ubuntu 上安装配置 Rime 输入法</title><link>https://xuchunqiu.github.io/install-and-setup-rime-on-ubuntu/</link><pubDate>Fri, 24 May 2019 01:04:47 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-and-setup-rime-on-ubuntu/</guid><description><![CDATA[<p>Ubuntu 上比较流行又好装的中文输入法应该就只有 <a href="https://pinyin.sogou.com/linux/" target="_blank" rel="noopener noreffer">搜狗输入法 for Linux</a> 一款了，但如果你追求简洁纯粹，那 <a href="https://rime.im" target="_blank" rel="noopener noreffer">Rime 输入法</a> 或许是你的菜。</p>
+<p>Rime 是一款由 <a href="https://github.com/lotem" target="_blank" rel="noopener noreffer">佛振</a> 主导开发的自由软件，支持在 Windows、macOS 和 Linux 操作系统上运行。它的优点是干净纯粹支持高度的客制化，缺点是较差的联想功能（自己慢慢养词库或者导入其它输入法的词库）和比较复杂的配置。本文将专注于介绍 Rime 在安装阶段的配置过程。</p>
+<h2 id="1-基本安装">1. 基本安装</h2>
+<p>在 <a href="https://rime.im/download/#Linux" target="_blank" rel="noopener noreffer">Rime 下载页面的 Linux 章节</a> 中给出了基于 IBus 和 Fcitx 两种输入法框架的安装指导，我这里是选择 IBus 框架：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install ibus-rime
+<span class="c1"># 可选：安装双拼</span>
+sudo apt-get install librime-data-double-pinyin 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="2-切换到-ibus">2. 切换到 IBus</h2>
+<p>从启动台打开「输入法」或在终端中使用命令开启：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">im-config
+</code></pre></td></tr></table>
+</div>
+</div><p>然后选择 <code>ibus</code></p>
+<h2 id="3-添加-rime-到-ibus">3. 添加 Rime 到 IBus</h2>
+<p>在终端中使用以下命令开启 IBus 设置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ibus-setup
+</code></pre></td></tr></table>
+</div>
+</div><p>在输入法中添加 <code>Chinese - Rime</code>。如果看不到这一项，需要在系统设置的语言中添加中文并拖动到最顶，然后登出系统以使新的语言设置生效。</p>
+<h2 id="4-切换-ibus-engine-到-rime">4. 切换 IBus engine 到 Rime</h2>
+<p>使用如下命令切换到 Rime：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ibus engine rime
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>其它有用的命令<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 列出所有可用引擎</span>
+ibus list-engine
+
+<span class="c1"># 查看当前使用引擎</span>
+ibus engine
+</code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="5-可选在-rime-中启用小鹤双拼">5. 可选：在 Rime 中启用小鹤双拼</h2>
+<p>修改配置文件 <code>~/.config/ibus/rime/default.yaml</code> ，依照现有布局加入条目：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">- <span class="l">schema：double_pinyin_flypy</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>然后在输入时就能通过 <code>ctrl</code> + `/`` 呼出方案选单。</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">更多配置教程请查阅 <a href="https://rime.im/docs/" target="_blank" rel="noopener noreffer">Rime 帮助文档</a></div>
+        </div>
+    </div>
 ]]></description></item><item><title>如何在 Ubuntu 上安装深度截图</title><link>https://xuchunqiu.github.io/install-deepin-screenshot-on-ubuntu/</link><pubDate>Mon, 25 Feb 2019 09:11:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-deepin-screenshot-on-ubuntu/</guid><description><![CDATA[<h1 id="update">Update</h1>
 <p>深度截图目前已有 <a href="https://www.deepin.org/zh/original/deepin-screenshot/" target="_blank" rel="noopener noreffer">官方介绍</a>、<a href="https://wiki.deepin.org/wiki/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE" target="_blank" rel="noopener noreffer">使用说明</a>，但依然没有提供从深度商店外安装深度截图的教程。</p>
 <p>appimage 格式深度截图的下载地址已经失效，但依然可以从互联网档案馆上 <a href="https://web.archive.org/web/20201120043221/https://github-production-release-asset-2e65be.s3.amazonaws.com/110259696/6110e818-0909-11e8-92a8-e734dc188fe0?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201120%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20201120T043221Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=134866f6be04ad00a4eaf1a2aa00604d5fbfd4fe5f9597a94a2a92da3d758053&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=110259696&amp;response-content-disposition=attachment%3B%20filename%3DDeepin_Screenshot_4.0.10.4-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noopener noreffer">下载（35.7 MB）</a>。</p>
