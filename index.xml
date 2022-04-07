@@ -1,4 +1,381 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>春秋碎碎念</title><link>https://xuchunqiu.github.io/</link><description>这是我的自留地</description><generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor><webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Sat, 21 Aug 2021 10:08:46 +0800</lastBuildDate><atom:link href="https://xuchunqiu.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>什么是 SCI</title><link>https://xuchunqiu.github.io/what-is-sci/</link><pubDate>Wed, 11 Nov 2020 10:29:37 +0800</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/what-is-sci/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>春秋碎碎念</title><link>https://xuchunqiu.github.io/</link><description>这是我的自留地</description><generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor><webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Sat, 21 Aug 2021 10:08:46 +0800</lastBuildDate><atom:link href="https://xuchunqiu.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>JetBrains Projector 使用初体验</title><link>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</link><pubDate>Tue, 06 Jul 2021 10:22:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</guid><description><![CDATA[<p>Projector 是 JetBrains 新推出的远程开发解决方案。实现上是在远程主机上部署 IDE 服务端然后在本地浏览器中或本地客户端中访问，本文记录了安装步骤和使用体验。</p>
+<h2 id="0x00-可能有用的链接">0x00 可能有用的链接</h2>
+<ol>
+<li>官方博客介绍：<a href="https://blog.jetbrains.com/zh-hans/blog/2021/03/25/projector-ide/" target="_blank" rel="noopener noreffer">使用 Projector 远程访问 IDE</a></li>
+<li>官方文档：<a href="https://jetbrains.github.io/projector-client/mkdocs/latest/" target="_blank" rel="noopener noreffer">Projector documentation</a></li>
+<li>安装方式 A（命令行）：<a href="https://github.com/JetBrains/projector-installer" target="_blank" rel="noopener noreffer">JetBrains/projector-installer</a></li>
+<li>安装方式 B（docker）：<a href="https://github.com/JetBrains/projector-docker" target="_blank" rel="noopener noreffer">JetBrains/projector-docker</a></li>
+<li>Win/macOS/Linux 客户端下载：<a href="https://github.com/JetBrains/projector-client/releases/tag/launcher-v1.0.1" target="_blank" rel="noopener noreffer">releases on JetBrains/projector-client</a></li>
+</ol>
+<h2 id="0x01-安装步骤">0x01 安装步骤</h2>
+<p>本文是采用上面的安装方式 A 在运行 Ubuntu 18.04 的远程主机上运行，具体步骤直接参考链接 3。命令抄录如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># install python3</span>
+user@machine:~# sudo apt install python3 python3-pip -y
+
+<span class="c1"># check pip3 version</span>
+user@machine:~# pip3 --version
+<span class="c1"># if pip3 &lt; 19</span>
+user@machine:~# python3 -m pip install -U pip
+
+<span class="c1"># install other packages</span>
+user@machine:~# sudo apt install libxext6 libxrender1 libxtst6 libfreetype6 libxi6 less -y
+
+<span class="c1"># install Jetrains Projector</span>
+user@machine:~# ip3 install projector-installer --user
+
+<span class="c1"># use Projector to install IDE</span>
+user@machine:~# projector install
+Checking <span class="k">for</span> updates ... <span class="k">done</span>.
+Installing IDE in quick mode<span class="p">;</span> <span class="k">for</span> full customization you can rerun this <span class="nb">command</span> with <span class="s2">&#34;--expert&#34;</span> argument or edit this config later via <span class="s2">&#34;projector config edit&#34;</span> command.
+           1. Idea_Community
+           2. Idea_Ultimate
+           3. PyCharm_Community
+           4. PyCharm_Professional
+           5. CLion
+           6. GoLand
+           7. DataGrip
+           8. PhpStorm
+           9. WebStorm
+          10. RubyMine
+          11. Rider
+Choose IDE <span class="nb">type</span> or <span class="m">0</span> to exit: <span class="o">[</span>0-11<span class="o">]</span>: <span class="m">4</span>
+Do you want to <span class="k">select</span> from Projector-tested IDE only? <span class="o">[</span>y/N<span class="o">]</span>y
+           1. PyCharm Professional 2019.3.4
+           2. PyCharm Professional 2020.2
+           3. PyCharm Professional 2020.3.3
+Choose IDE number to install or <span class="m">0</span> to exit: <span class="o">[</span>0-3<span class="o">]</span>: <span class="m">3</span>
+Installing PyCharm Professional 2020.3.3
+Downloading pycharm-professional-2020.3.3.tar.gz
+<span class="o">[</span><span class="c1">##------------------------------------------------]    4%  00:04:15</span>
+Unpacking pycharm-professional-2020.3.3.tar.gz
+<span class="o">[</span><span class="c1">##################################################]  100%          </span>
+Configuration name: PyCharm
+Checking <span class="k">for</span> updates ... <span class="k">done</span>.
+To access IDE, open in browser 
+        http://localhost:9999/
+        http://127.0.0.1:9999/
+        http://10.106.200.224:9999/
+
+To see Projector logs in realtime run
+        tail -f <span class="s2">&#34;/root/.projector/configs/PyCharm/projector.log&#34;</span>
+
+Exit IDE or press Ctrl+C to stop Projector.
+
+<span class="c1"># start IDE</span>
+user@machine:~# projector run
+</code></pre></td></tr></table>
+</div>
+</div><p>其中我遇到的坑主要是需要升级 pip3（&gt;= 19）和 Python（&gt;= 3.6），解决方案见下一章。</p>
+<h2 id="0x02-故障排除">0x02 故障排除</h2>
+<h3 id="更新完-pip3-后得到-syntaxerror-invalid-syntax">更新完 pip3 后得到 <code>SyntaxError: invalid syntax</code></h3>
+<p>首先按照链接 3 的教程更新 pip3 到最新版本：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 检查现有 pip3 版本</span>
+pip3 --version
+
+<span class="c1"># 如果版本小于 19 就使用如下命令更新到最新版本</span>
+python3 -m pip install -U pip
+</code></pre></td></tr></table>
+</div>
+</div><p>再接着执行任何 <code>pip3 install</code> 都会得到如下错误：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sys.stderr.write<span class="o">(</span>f<span class="s2">&#34;ERROR: {exc}&#34;</span><span class="o">)</span>
+                                   ^
+SyntaxError: invalid syntax
+</code></pre></td></tr></table>
+</div>
+</div><p>这个问题出现的原因是远程主机 Python = 3.5，但 pip 默认更新到最新的 pip 21.0 仅支持 Python 3.6+<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。我的选择是将 pip 更新到最后支持 Python 3.5 的那一版：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">curl -fsSL -o- https://bootstrap.pypa.io/pip/3.5/get-pip.py <span class="p">|</span> python3.5
+</code></pre></td></tr></table>
+</div>
+</div><p>这就为接下来的问题埋下伏笔。现在回想此时正确的做法应是直接更新 Python。</p>
+<h3 id="尝试用-pip3-安装-projector-时遇到-error">尝试用 pip3 安装 Projector 时遇到 <code>Error</code></h3>
+<p>在按照链接 3 的教程安装完一系列的依赖后，就可以正式安装 Projector：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pip3 install projector-installer --user
+
+ERROR: Could not find a version that satisfies the requirement projector-installer
+ERROR: No matching distribution found <span class="k">for</span> projector-installer
+</code></pre></td></tr></table>
+</div>
+</div><p>如果遇到以上错误，说明需要升级 Python 版本<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。教程见<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>，摘录如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.8
+sudo apt install python3.8-distutils
+
+<span class="c1"># 更新软链接</span>
+sudo rm /usr/bin/python3
+sudo ln -s python3.8 /usr/bin/python3
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="projector-命令无效"><code>projector</code> 命令无效</h3>
+<p>这个问题在链接 3 的 FAQ 部分已经进行了说明<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>。是出在 <code>projector</code> 的安装路径 <code>~/.local/bin</code> 没有加入到环境变量 <code>$PATH</code> 中，直接的 workaround 是使用完整路径启动 <code>projector</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">~/.local/bin/projector
+</code></pre></td></tr></table>
+</div>
+</div><p>不过一劳永逸的方法将添加环境变量 <code>$PATH</code> 的命令写入到 <code>~/.profile</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;export PATH=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">:~/.local/bin&#34;</span> &gt;&gt; ~/.profile
+. ~/.profile
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="projector-run-尝试启动-ide-后很快出现报错日志"><code>projector run</code> 尝试启动 IDE 后很快出现报错日志</h3>
+<p>在初次使用 <code>projector install</code> 完成 IDE 安装后会自动启动 IDE，使用完毕后使用 <code>Ctrl</code> + <code>c</code> 退出。之后想再次启动已经安装好的 IDE 就需要使用 <code>projector run</code> 命令，可能遇到在输出完 IDE 的访问链接后立刻打印报错日志的情况：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Checking <span class="k">for</span> updates ... <span class="k">done</span>.
+To access IDE, open in browser 
+        http://localhost:9999/
+        http://127.0.0.1:9999/
+        http://10.106.200.224:9999/
+
+To see Projector logs in realtime run
+        tail -f <span class="s2">&#34;/root/.projector/configs/PyCharm/projector.log&#34;</span>
+
+Exit IDE or press Ctrl+C to stop Projector.
+--------------------- Projector log session start. Installer version: 1.1.1 Run config: PyCharm - 2021-04-07 08:02:35.367158
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to attach IJ injector agent
+<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to initialize IDEA: fix AA and disable smooth scrolling <span class="o">(</span>at start<span class="o">)</span>
+<span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: ProjectorServer is starting on host 0.0.0.0/0.0.0.0 and port <span class="m">9999</span>
+<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to Getting IDE colors
+<span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: WebSocket SSL is disabled
+<span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: Server started on host 0.0.0.0/0.0.0.0 and port <span class="m">9999</span>
+<span class="o">[</span>DEBUG<span class="o">]</span> :: ProjectorServer :: Daemon thread starts
+<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to search <span class="k">for</span> editors
+IDE has not been initialized yet
+<span class="o">[</span>DEBUG<span class="o">]</span> :: ProjectorServer :: Daemon thread finishes
+</code></pre></td></tr></table>
+</div>
+</div><p>这个问题可能是之前的 IDE 没有成功退出导致的<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>（虽然 log 看起来并非如此），杀掉旧进程就可以了：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">root@machine:~# ps aux <span class="p">|</span> grep -i pycharm
+root       <span class="m">966</span> 36.5  0.2 <span class="m">8513048</span> <span class="m">286408</span> pts/0  Sl   07:38   9:51 /root/.projector/apps/pycharm-2020.3.3/jbr/bin/java -classpath /r
+root      <span class="m">2102</span>  0.0  0.0  <span class="m">13216</span>  <span class="m">1064</span> pts/0    S+   08:05   0:00 grep --color<span class="o">=</span>auto -i pycharm
+root@machine:~# <span class="nb">kill</span> <span class="m">966</span>
+root@machine:~# ps aux <span class="p">|</span> grep -i pycharm
+root      <span class="m">2113</span>  0.0  0.0  <span class="m">13216</span>  <span class="m">1044</span> pts/0    S+   08:06   0:00 grep --color<span class="o">=</span>auto -i pycharm
+root@machine:~# projector run
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="0x03-存在的问题">0x03 存在的问题</h2>
+<p>此处仅列举我在实际体验中觉得很糟心的地方，其它问题可以在链接 2 的 Known problems<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> 部分查看。</p>
+<h3 id="快捷键冲突剪贴板共享">快捷键冲突剪贴板共享</h3>
+<p>Projector 的服务端是安装在远程 Linux 环境中，然后通过本地浏览器或下载链接 5 的客户端使用（这里需要提一句的是 JetBrains 家 IDE 的 <code>Settings</code>-<code>Plugins</code>-<code>Marketplace</code> 中也上架了 <code>Projector</code>，但这个是把本机 IDE 当服务端来用的）。</p>
+<p>当通过浏览器访问 Projector 时，IDE 的快捷键会与浏览器本身的快捷键冲突，例如选择代码块的快捷键 <code>Ctrl</code> + <code>w</code><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>在 Chromium/Firefox/Safari 中是关闭当前标签页。所以为了使用快捷键还有复制粘贴功能，最好还是下载独立的 Projector 客户端。</p>
+<h3 id="启用自签证书的-https">启用自签证书的 HTTPS</h3>
+<p>本文初次写成于 2021 年 3 月，但当 4 月我在另一台机器上部署完 Projector 后发现即使用 Projector 客户端去连也不能将其中的文本复制粘贴到其它程序中。在 JetBrains 的 bug 跟踪系统 YouTrack 上有人<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>解释是新版本的服务端后只有在 localhost 部署或启用 HTTPS 后才能跨程序复制粘贴，同时给出了对于 <a href="https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/accessing/#incomplete-clipboard-synchronization" target="_blank" rel="noopener noreffer">不完整剪贴板同步实现过程的官方文档</a>。</p>
+<p>就个人+内网使用来说，自签 HTTPS 证书是比较简单的方式。此处给出自签证书的启用方法，至于使用可信任证书颁发机构给域名颁发的证书，可以参考链接 3 自述文件的 FAQ 部分<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>。</p>
+<p>在命令行中交互式启动自签 HTTPS 证书：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 所有可用命令</span>
+projector config <span class="o">(</span>--help<span class="o">)</span>
+
+<span class="c1"># 列出所有配置的名称</span>
+projector config list
+
+<span class="c1"># 展示选定配置的详情</span>
+projector config show
+<span class="c1"># 这里的信息要比 ~/.projector/configs/PyCharm/config.ini 更详细，</span>
+<span class="c1"># 也有一个布尔的 &#34;Projector uses secure config (https/wss)= 0&#34;</span>
+
+<span class="c1"># 交互式修改配置</span>
+projector config edit
+<span class="c1"># 只需给 Use secure connection? 一个 y 的回答</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>修改完毕后再 <code>projector run</code> 就能看到终端中提示要从 <code>~/.projector/ssl/ca.crt</code> 安装证书，有意思的是这个证书下载下来是 0KB，无法安装。我最后是通过直接在 Chrome 访问 <code>https://&lt;projector-server-address&gt;:&lt;projector-port&gt;</code> -&gt; 导出证书 -&gt; 文件管理器安装。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://stackoverflow.com/questions/65869296/installing-pip-is-not-working-in-python-3-6">https://stackoverflow.com/questions/65869296/installing-pip-is-not-working-in-python-3-6</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://youtrack.jetbrains.com/issue/PRJ-302">https://youtrack.jetbrains.com/issue/PRJ-302</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://stackoverflow.com/questions/58591889/how-i-can-upgrade-my-ubuntu-python3-7-to-python3-8-latest-version">https://stackoverflow.com/questions/58591889/how-i-can-upgrade-my-ubuntu-python3-7-to-python3-8-latest-version</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://github.com/JetBrains/projector-installer#projector-command-is-unavailable">https://github.com/JetBrains/projector-installer#projector-command-is-unavailable</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://stackoverflow.com/questions/61236544/clion-pycharm-phpstorm-intellij-wont-start-says-ide-has-not-been-initialized/61237140#61237140">https://stackoverflow.com/questions/61236544/clion-pycharm-phpstorm-intellij-wont-start-says-ide-has-not-been-initialized/61237140#61237140</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/jetbrains/#known-problems">https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/jetbrains/#known-problems</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection">https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection</a> <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0">https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0</a> <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="https://github.com/JetBrains/projector-installer#secure-connection">https://github.com/JetBrains/projector-installer#secure-connection</a> <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+]]></description></item><item><title>什么是 SCI</title><link>https://xuchunqiu.github.io/what-is-sci/</link><pubDate>Wed, 11 Nov 2020 10:29:37 +0800</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/what-is-sci/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-11-11/2020-11-11-001.png" referrerpolicy="no-referrer">
             </div><h1 id="影响因子">影响因子</h1>
 <blockquote>
