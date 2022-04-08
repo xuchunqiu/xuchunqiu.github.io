@@ -1,4 +1,92 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts - 春秋碎碎念</title><link>https://xuchunqiu.github.io/posts/</link><description>All Posts | 春秋碎碎念</description><generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor><webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Tue, 06 Jul 2021 10:22:06 +0000</lastBuildDate><atom:link href="https://xuchunqiu.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>JetBrains Projector 使用初体验</title><link>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</link><pubDate>Tue, 06 Jul 2021 10:22:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</guid><description><![CDATA[<p>Projector 是 JetBrains 新推出的远程开发解决方案。实现上是在远程主机上部署 IDE 服务端然后在本地浏览器中或本地客户端中访问，本文记录了安装步骤和使用体验。</p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts - 春秋碎碎念</title><link>https://xuchunqiu.github.io/posts/</link><description>All Posts | 春秋碎碎念</description><generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor><webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Tue, 08 Mar 2022 01:37:19 +0000</lastBuildDate><atom:link href="https://xuchunqiu.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>远程开发工具 JetBrains Gateway 初体验</title><link>https://xuchunqiu.github.io/jetbrains-gateway-first-experiences/</link><pubDate>Tue, 08 Mar 2022 01:37:19 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/jetbrains-gateway-first-experiences/</guid><description><![CDATA[<p>在去年写完 <a href="https://xuchunqiu.me/jetbrains-projector-first-experiences/" target="_blank" rel="noopener noreffer">Projector 的体验</a> 之后，我就已经没有再使用过它了，原因如下：</p>
+<ul>
+<li>必须安装客户端才能使用快捷键</li>
+<li>服务端非本机部署时，必须在客户端主机上安装自签证书才能使用复制粘贴功能</li>
+<li>因为网络传输不畅而不时遇到画质压缩，就只能等它连接稳定后再继续操作，使用体验不够连贯</li>
+</ul>
+<p>所以之后我又用回了通过 SSH 来部署代码和调用远程 Python 解释器的方法。去年年底，JetBrains 在其博客上发布了《<a href="https://blog.jetbrains.com/zh-hans/blog/2021/11/29/introducing-remote-development-for-jetbrains-ides/" target="_blank" rel="noopener noreffer">隆重推出 JetBrains IDE 的远程开发</a>》一文介绍了 <a href="https://www.jetbrains.com/zh-cn/remote-development/gateway/" target="_blank" rel="noopener noreffer">Gateway</a> 这一全新的远程开发工具。最近我终于有时间来安装体验一下 Gateway，本文就是对这一过程的简单回顾。</p>
+<h2 id="0x00-前言">0x00 前言</h2>
+<p>在开始之前必须强调的是，与 Projector 可以部署社区版 IDE 不同，要想通过 Gateway 连接到远程 IDE 则必须有对应的 IDE 订阅。我是通过学生 edu 邮箱获得的 JetBrains 全家桶订阅。</p>
+<p>更多关于 Gateway 的常见问题可以参阅官方博文：《<a href="https://blog.jetbrains.com/zh-hans/blog/2021/12/03/dive-into-jetbrains-gateway/#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94" target="_blank" rel="noopener noreffer">深入了解 JetBrains Gateway</a>》</p>
+<h2 id="0x01-下载与安装">0x01 下载与安装</h2>
+<p>支持的操作系统：</p>
+<ul>
+<li>服务端：Linux（<a href="https://blog.jetbrains.com/zh-hans/blog/2021/12/03/dive-into-jetbrains-gateway/#:~:text=%E6%88%91%E4%BB%AC%E5%B0%86%E5%9C%A8%E6%9C%AA%E6%9D%A5%E6%B7%BB%E5%8A%A0%E5%AF%B9%20Windows%20%E5%92%8C%20macOS%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%94%AF%E6%8C%81" target="_blank" rel="noopener noreffer">未来会加入 Windows 和 macOS 的支持</a>）</li>
+<li>客户端：Linux、Windows、macOS（intel）、macOS（Apple Silicon）</li>
+</ul>
+<p>与 Projector 不同，Gateway 服务端的安装完全通过客户端完成：<a href="https://www.jetbrains.com/zh-cn/remote-development/gateway/" target="_blank" rel="noopener noreffer">下载地址</a></p>
+<p>目前下载到的应该都 <strong><ruby>抢先体验计划<rt>Early Access Programs</rt></ruby></strong> 的版本，截止本文写就时最新的版本是 <code>2022.1 Beta (221.5080.102)</code>，安装好后的主界面如下；</p>
+<figure>
+</figure>
+
+<p>共有 SSH、JebBrains Space 和 共享链接 三种启动 Gateway 客户端的方式。区别如下：</p>
+<ul>
+<li>SSH：只要提供远程 Linux 主机的 SSH 连接信息即可，也是本文使用的方式</li>
+<li>JetBrains Space：团队开发协作平台，有提供 <a href="https://www.jetbrains.com/space/buy/" target="_blank" rel="noopener noreffer">基础的免费方案</a></li>
+<li>Code With Me 链接 / Gateway 链接：前者是用于结对编程的 IDE 插件，同样有 <a href="https://www.jetbrains.com/zh-cn/code-with-me/buy/#personal" target="_blank" rel="noopener noreffer">基础的免费方案</a>；后者的分享链接暂时还没有暴露出来，只有在连接到已有环境失败时才会显示出来</li>
+</ul>
+<p>接下来就选择 SSH，提供远程 Linux 主机的连接信息：</p>
+<figure>
+</figure>
+
+<p>成功后就可以选择需要在远程主机上安装哪个 IDE 服务端（在 Gateway 中被称为 Backend）。当前有 IDEA、CLion、GoLand、PhpStorm、PyCharm、Rider、RubyMine 和 WebStorm 可选（EAP 的 Gateway 看到的 IDE 也都是 <strong><ruby>EAP<rt>Early Access Programs</rt></ruby></strong> 或 <strong><ruby>RC<rt>Release Candidate</rt></ruby></strong> 版），但都不提供社区版的选项：</p>
+<figure>
+</figure>
+
+<p>默认是直接从互联网下载 IDE Backend 安装到远程主机的 <code>~/. cache/JetBrains/RemoteDev/dist</code>，也可以手动上传安装包和指定安装路径：</p>
+<figure>
+</figure>
+
+<p>等待下载和安装过程完成，就会在本机自动打开 Gateway Client 了，与正常的 IDE 稍有区别的是多了一些连接状态的显示。整体上 Gateway 服务端的安装实在是比 Projector 省心太多。</p>
+<figure>
+</figure>
+
+<h2 id="0x02-gateway-的使用感受">0x02 Gateway 的使用感受</h2>
+<h3 id="优点">优点</h3>
+<ol>
+<li>比起在 <code>Settings</code>-<code>Tools</code>-<code>SSH Configurations</code> 添加 SSH 配置的远程开发方式，Gateway 不需要手动同步本地和远程代码（因为它的代码只保存在远程）、配置远程解释器。</li>
+<li>比起 Projector 或是 VNC 方案，Gateway 画面永远不会糊。</li>
+<li>剪贴板共享功能开箱即用。</li>
+<li>支持将远程主机端口映射到本地。这个主要是因为我的远程主机是一个 Docker 环境，在创建好后就不能添加端口映射了，但 Gateway Client 的 <code>Settings</code>-<code>Tools</code>- <code>Port Forwarding</code> 里可以很方便地添加端口映射：
+<figure>
+</figure>
+</li>
+</ol>
+<h3 id="缺点">缺点</h3>
+<ol>
+<li>有时需要复制两遍。当在 Gateway Client 中打开的文本内容先复制再粘贴时，有机率粘上的是之前一次复制的内容，不过只要 Gateway Client 再复制一次就没问题了。</li>
+<li>没有考虑非英文输入的情况。这篇博文就是通过 Gateway 完成的，在使用拼音输入中文的过程中，我注意到当打字速度过快时就会有前后「吃字」的问题。这可能是因为 Gateway 对于输入的每个字母都是立即传输的，但当汉字上屏后光标位置的瞬间跳动没有被正确处理。</li>
+<li>上传文件功能缺失。拖动本地文件到 Gateway Client 的文件树上并不会有任何反应，如果这时能自动通过 SFTP 协议上传就好了。</li>
+</ol>
+<h2 id="0x03-补充强制结束-ide-backend-的方法">0x03 补充：强制结束 IDE Backend 的方法</h2>
+<p>因为目前还处在 EAP 阶段，稳定度还不算太高，有时会遇到 IDE Backend 旧进程卡死新进程启动不起来的窘境，目前 Gateway 也没有提供强制重启之类的功能，只能手动去 kill 相关进程。在 Gateway 的 <strong><ruby>最近 SSH 项目<rt>Recent SSH Projects</rt></ruby></strong> 页面有一个终端图标，点进去执行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">user@machine:~# ps aux <span class="p">|</span> grep -i pycharm <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="m">738</span>
+</span></span><span class="line"><span class="cl"><span class="m">743</span>
+</span></span><span class="line"><span class="cl"><span class="m">861</span>
+</span></span><span class="line"><span class="cl"><span class="m">876</span>
+</span></span><span class="line"><span class="cl"><span class="m">1138</span>
+</span></span><span class="line"><span class="cl"><span class="m">2880</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 把以上所有进程号都杀掉</span>
+</span></span><span class="line"><span class="cl">user@machine:~# <span class="nb">kill</span> <span class="m">738</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>JetBrains Projector 使用初体验</title><link>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</link><pubDate>Tue, 06 Jul 2021 10:22:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</guid><description><![CDATA[<p>Projector 是 JetBrains 新推出的远程开发解决方案。实现上是在远程主机上部署 IDE 服务端然后在本地浏览器中或本地客户端中访问，本文记录了安装步骤和使用体验。</p>
 <h2 id="0x00-可能有用的链接">0x00 可能有用的链接</h2>
 <ol>
 <li>官方博客介绍：<a href="https://blog.jetbrains.com/zh-hans/blog/2021/03/25/projector-ide/" target="_blank" rel="noopener noreffer">使用 Projector 远程访问 IDE</a></li>
@@ -11,7 +99,7 @@
 <p>本文是采用上面的安装方式 A 在运行 Ubuntu 18.04 的远程主机上运行，具体步骤直接参考链接 3。命令抄录如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -67,61 +155,61 @@
 </span><span class="lnt">54
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># install python3</span>
-user@machine:~# sudo apt install python3 python3-pip -y
-
-<span class="c1"># check pip3 version</span>
-user@machine:~# pip3 --version
-<span class="c1"># if pip3 &lt; 19</span>
-user@machine:~# python3 -m pip install -U pip
-
-<span class="c1"># install other packages</span>
-user@machine:~# sudo apt install libxext6 libxrender1 libxtst6 libfreetype6 libxi6 less -y
-
-<span class="c1"># install Jetrains Projector</span>
-user@machine:~# ip3 install projector-installer --user
-
-<span class="c1"># use Projector to install IDE</span>
-user@machine:~# projector install
-Checking <span class="k">for</span> updates ... <span class="k">done</span>.
-Installing IDE in quick mode<span class="p">;</span> <span class="k">for</span> full customization you can rerun this <span class="nb">command</span> with <span class="s2">&#34;--expert&#34;</span> argument or edit this config later via <span class="s2">&#34;projector config edit&#34;</span> command.
-           1. Idea_Community
-           2. Idea_Ultimate
-           3. PyCharm_Community
-           4. PyCharm_Professional
-           5. CLion
-           6. GoLand
-           7. DataGrip
-           8. PhpStorm
-           9. WebStorm
-          10. RubyMine
-          11. Rider
-Choose IDE <span class="nb">type</span> or <span class="m">0</span> to exit: <span class="o">[</span>0-11<span class="o">]</span>: <span class="m">4</span>
-Do you want to <span class="k">select</span> from Projector-tested IDE only? <span class="o">[</span>y/N<span class="o">]</span>y
-           1. PyCharm Professional 2019.3.4
-           2. PyCharm Professional 2020.2
-           3. PyCharm Professional 2020.3.3
-Choose IDE number to install or <span class="m">0</span> to exit: <span class="o">[</span>0-3<span class="o">]</span>: <span class="m">3</span>
-Installing PyCharm Professional 2020.3.3
-Downloading pycharm-professional-2020.3.3.tar.gz
-<span class="o">[</span><span class="c1">##------------------------------------------------]    4%  00:04:15</span>
-Unpacking pycharm-professional-2020.3.3.tar.gz
-<span class="o">[</span><span class="c1">##################################################]  100%          </span>
-Configuration name: PyCharm
-Checking <span class="k">for</span> updates ... <span class="k">done</span>.
-To access IDE, open in browser 
-        http://localhost:9999/
-        http://127.0.0.1:9999/
-        http://10.106.200.224:9999/
-
-To see Projector logs in realtime run
-        tail -f <span class="s2">&#34;/root/.projector/configs/PyCharm/projector.log&#34;</span>
-
-Exit IDE or press Ctrl+C to stop Projector.
-
-<span class="c1"># start IDE</span>
-user@machine:~# projector run
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># install python3</span>
+</span></span><span class="line"><span class="cl">user@machine:~# sudo apt install python3 python3-pip -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># check pip3 version</span>
+</span></span><span class="line"><span class="cl">user@machine:~# pip3 --version
+</span></span><span class="line"><span class="cl"><span class="c1"># if pip3 &lt; 19</span>
+</span></span><span class="line"><span class="cl">user@machine:~# python3 -m pip install -U pip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install other packages</span>
+</span></span><span class="line"><span class="cl">user@machine:~# sudo apt install libxext6 libxrender1 libxtst6 libfreetype6 libxi6 less -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install Jetrains Projector</span>
+</span></span><span class="line"><span class="cl">user@machine:~# ip3 install projector-installer --user
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># use Projector to install IDE</span>
+</span></span><span class="line"><span class="cl">user@machine:~# projector install
+</span></span><span class="line"><span class="cl">Checking <span class="k">for</span> updates ... <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Installing IDE in quick mode<span class="p">;</span> <span class="k">for</span> full customization you can rerun this <span class="nb">command</span> with <span class="s2">&#34;--expert&#34;</span> argument or edit this config later via <span class="s2">&#34;projector config edit&#34;</span> command.
+</span></span><span class="line"><span class="cl">           1. Idea_Community
+</span></span><span class="line"><span class="cl">           2. Idea_Ultimate
+</span></span><span class="line"><span class="cl">           3. PyCharm_Community
+</span></span><span class="line"><span class="cl">           4. PyCharm_Professional
+</span></span><span class="line"><span class="cl">           5. CLion
+</span></span><span class="line"><span class="cl">           6. GoLand
+</span></span><span class="line"><span class="cl">           7. DataGrip
+</span></span><span class="line"><span class="cl">           8. PhpStorm
+</span></span><span class="line"><span class="cl">           9. WebStorm
+</span></span><span class="line"><span class="cl">          10. RubyMine
+</span></span><span class="line"><span class="cl">          11. Rider
+</span></span><span class="line"><span class="cl">Choose IDE <span class="nb">type</span> or <span class="m">0</span> to exit: <span class="o">[</span>0-11<span class="o">]</span>: <span class="m">4</span>
+</span></span><span class="line"><span class="cl">Do you want to <span class="k">select</span> from Projector-tested IDE only? <span class="o">[</span>y/N<span class="o">]</span>y
+</span></span><span class="line"><span class="cl">           1. PyCharm Professional 2019.3.4
+</span></span><span class="line"><span class="cl">           2. PyCharm Professional 2020.2
+</span></span><span class="line"><span class="cl">           3. PyCharm Professional 2020.3.3
+</span></span><span class="line"><span class="cl">Choose IDE number to install or <span class="m">0</span> to exit: <span class="o">[</span>0-3<span class="o">]</span>: <span class="m">3</span>
+</span></span><span class="line"><span class="cl">Installing PyCharm Professional 2020.3.3
+</span></span><span class="line"><span class="cl">Downloading pycharm-professional-2020.3.3.tar.gz
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="c1">##------------------------------------------------]    4%  00:04:15</span>
+</span></span><span class="line"><span class="cl">Unpacking pycharm-professional-2020.3.3.tar.gz
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="c1">##################################################]  100%          </span>
+</span></span><span class="line"><span class="cl">Configuration name: PyCharm
+</span></span><span class="line"><span class="cl">Checking <span class="k">for</span> updates ... <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">To access IDE, open in browser 
+</span></span><span class="line"><span class="cl">        http://localhost:9999/
+</span></span><span class="line"><span class="cl">        http://127.0.0.1:9999/
+</span></span><span class="line"><span class="cl">        http://10.106.200.224:9999/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To see Projector logs in realtime run
+</span></span><span class="line"><span class="cl">        tail -f <span class="s2">&#34;/root/.projector/configs/PyCharm/projector.log&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Exit IDE or press Ctrl+C to stop Projector.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># start IDE</span>
+</span></span><span class="line"><span class="cl">user@machine:~# projector run
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中我遇到的坑主要是需要升级 pip3（&gt;= 19）和 Python（&gt;= 3.6），解决方案见下一章。</p>
 <h2 id="0x02-故障排除">0x02 故障排除</h2>
@@ -129,63 +217,63 @@ user@machine:~# projector run
 <p>首先按照链接 3 的教程更新 pip3 到最新版本：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 检查现有 pip3 版本</span>
-pip3 --version
-
-<span class="c1"># 如果版本小于 19 就使用如下命令更新到最新版本</span>
-python3 -m pip install -U pip
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 检查现有 pip3 版本</span>
+</span></span><span class="line"><span class="cl">pip3 --version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果版本小于 19 就使用如下命令更新到最新版本</span>
+</span></span><span class="line"><span class="cl">python3 -m pip install -U pip
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>再接着执行任何 <code>pip3 install</code> 都会得到如下错误：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sys.stderr.write<span class="o">(</span>f<span class="s2">&#34;ERROR: {exc}&#34;</span><span class="o">)</span>
-                                   ^
-SyntaxError: invalid syntax
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sys.stderr.write<span class="o">(</span>f<span class="s2">&#34;ERROR: {exc}&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                                   ^
+</span></span><span class="line"><span class="cl">SyntaxError: invalid syntax
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这个问题出现的原因是远程主机 Python = 3.5，但 pip 默认更新到最新的 pip 21.0 仅支持 Python 3.6+<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。我的选择是将 pip 更新到最后支持 Python 3.5 的那一版：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl -fsSL -o- https://bootstrap.pypa.io/pip/3.5/get-pip.py <span class="p">|</span> python3.5
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fsSL -o- https://bootstrap.pypa.io/pip/3.5/get-pip.py <span class="p">|</span> python3.5
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这就为接下来的问题埋下伏笔。现在回想此时正确的做法应是直接更新 Python。</p>
 <h3 id="尝试用-pip3-安装-projector-时遇到-error">尝试用 pip3 安装 Projector 时遇到 <code>Error</code></h3>
 <p>在按照链接 3 的教程安装完一系列的依赖后，就可以正式安装 Projector：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pip3 install projector-installer --user
-
-ERROR: Could not find a version that satisfies the requirement projector-installer
-ERROR: No matching distribution found <span class="k">for</span> projector-installer
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip3 install projector-installer --user
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ERROR: Could not find a version that satisfies the requirement projector-installer
+</span></span><span class="line"><span class="cl">ERROR: No matching distribution found <span class="k">for</span> projector-installer
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果遇到以上错误，说明需要升级 Python 版本<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。教程见<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>，摘录如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -195,42 +283,42 @@ ERROR: No matching distribution found <span class="k">for</span> projector-insta
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.8
-sudo apt install python3.8-distutils
-
-<span class="c1"># 更新软链接</span>
-sudo rm /usr/bin/python3
-sudo ln -s python3.8 /usr/bin/python3
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo add-apt-repository ppa:deadsnakes/ppa
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install python3.8
+</span></span><span class="line"><span class="cl">sudo apt install python3.8-distutils
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 更新软链接</span>
+</span></span><span class="line"><span class="cl">sudo rm /usr/bin/python3
+</span></span><span class="line"><span class="cl">sudo ln -s python3.8 /usr/bin/python3
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="projector-命令无效"><code>projector</code> 命令无效</h3>
 <p>这个问题在链接 3 的 FAQ 部分已经进行了说明<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>。是出在 <code>projector</code> 的安装路径 <code>~/.local/bin</code> 没有加入到环境变量 <code>$PATH</code> 中，直接的 workaround 是使用完整路径启动 <code>projector</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">~/.local/bin/projector
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">~/.local/bin/projector
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>不过一劳永逸的方法将添加环境变量 <code>$PATH</code> 的命令写入到 <code>~/.profile</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;export PATH=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">:~/.local/bin&#34;</span> &gt;&gt; ~/.profile
-. ~/.profile
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;export PATH=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">:~/.local/bin&#34;</span> &gt;&gt; ~/.profile
+</span></span><span class="line"><span class="cl">. ~/.profile
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="projector-run-尝试启动-ide-后很快出现报错日志"><code>projector run</code> 尝试启动 IDE 后很快出现报错日志</h3>
 <p>在初次使用 <code>projector install</code> 完成 IDE 安装后会自动启动 IDE，使用完毕后使用 <code>Ctrl</code> + <code>c</code> 退出。之后想再次启动已经安装好的 IDE 就需要使用 <code>projector run</code> 命令，可能遇到在输出完 IDE 的访问链接后立刻打印报错日志的情况：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -254,34 +342,34 @@ sudo ln -s python3.8 /usr/bin/python3
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">Checking <span class="k">for</span> updates ... <span class="k">done</span>.
-To access IDE, open in browser 
-        http://localhost:9999/
-        http://127.0.0.1:9999/
-        http://10.106.200.224:9999/
-
-To see Projector logs in realtime run
-        tail -f <span class="s2">&#34;/root/.projector/configs/PyCharm/projector.log&#34;</span>
-
-Exit IDE or press Ctrl+C to stop Projector.
---------------------- Projector log session start. Installer version: 1.1.1 Run config: PyCharm - 2021-04-07 08:02:35.367158
-OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
-<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to attach IJ injector agent
-<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to initialize IDEA: fix AA and disable smooth scrolling <span class="o">(</span>at start<span class="o">)</span>
-<span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: ProjectorServer is starting on host 0.0.0.0/0.0.0.0 and port <span class="m">9999</span>
-<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to Getting IDE colors
-<span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: WebSocket SSL is disabled
-<span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: Server started on host 0.0.0.0/0.0.0.0 and port <span class="m">9999</span>
-<span class="o">[</span>DEBUG<span class="o">]</span> :: ProjectorServer :: Daemon thread starts
-<span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to search <span class="k">for</span> editors
-IDE has not been initialized yet
-<span class="o">[</span>DEBUG<span class="o">]</span> :: ProjectorServer :: Daemon thread finishes
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Checking <span class="k">for</span> updates ... <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">To access IDE, open in browser 
+</span></span><span class="line"><span class="cl">        http://localhost:9999/
+</span></span><span class="line"><span class="cl">        http://127.0.0.1:9999/
+</span></span><span class="line"><span class="cl">        http://10.106.200.224:9999/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To see Projector logs in realtime run
+</span></span><span class="line"><span class="cl">        tail -f <span class="s2">&#34;/root/.projector/configs/PyCharm/projector.log&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Exit IDE or press Ctrl+C to stop Projector.
+</span></span><span class="line"><span class="cl">--------------------- Projector log session start. Installer version: 1.1.1 Run config: PyCharm - 2021-04-07 08:02:35.367158
+</span></span><span class="line"><span class="cl">OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to attach IJ injector agent
+</span></span><span class="line"><span class="cl"><span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to initialize IDEA: fix AA and disable smooth scrolling <span class="o">(</span>at start<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: ProjectorServer is starting on host 0.0.0.0/0.0.0.0 and port <span class="m">9999</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to Getting IDE colors
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: WebSocket SSL is disabled
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> :: ProjectorServer :: Server started on host 0.0.0.0/0.0.0.0 and port <span class="m">9999</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>DEBUG<span class="o">]</span> :: ProjectorServer :: Daemon thread starts
+</span></span><span class="line"><span class="cl"><span class="o">[</span>DEBUG<span class="o">]</span> :: IdeState :: Starting attempts to search <span class="k">for</span> editors
+</span></span><span class="line"><span class="cl">IDE has not been initialized yet
+</span></span><span class="line"><span class="cl"><span class="o">[</span>DEBUG<span class="o">]</span> :: ProjectorServer :: Daemon thread finishes
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这个问题可能是之前的 IDE 没有成功退出导致的<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>（虽然 log 看起来并非如此），杀掉旧进程就可以了：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -290,27 +378,27 @@ IDE has not been initialized yet
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">root@machine:~# ps aux <span class="p">|</span> grep -i pycharm
-root       <span class="m">966</span> 36.5  0.2 <span class="m">8513048</span> <span class="m">286408</span> pts/0  Sl   07:38   9:51 /root/.projector/apps/pycharm-2020.3.3/jbr/bin/java -classpath /r
-root      <span class="m">2102</span>  0.0  0.0  <span class="m">13216</span>  <span class="m">1064</span> pts/0    S+   08:05   0:00 grep --color<span class="o">=</span>auto -i pycharm
-root@machine:~# <span class="nb">kill</span> <span class="m">966</span>
-root@machine:~# ps aux <span class="p">|</span> grep -i pycharm
-root      <span class="m">2113</span>  0.0  0.0  <span class="m">13216</span>  <span class="m">1044</span> pts/0    S+   08:06   0:00 grep --color<span class="o">=</span>auto -i pycharm
-root@machine:~# projector run
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@machine:~# ps aux <span class="p">|</span> grep -i pycharm
+</span></span><span class="line"><span class="cl">root       <span class="m">966</span> 36.5  0.2 <span class="m">8513048</span> <span class="m">286408</span> pts/0  Sl   07:38   9:51 /root/.projector/apps/pycharm-2020.3.3/jbr/bin/java -classpath /r
+</span></span><span class="line"><span class="cl">root      <span class="m">2102</span>  0.0  0.0  <span class="m">13216</span>  <span class="m">1064</span> pts/0    S+   08:05   0:00 grep --color<span class="o">=</span>auto -i pycharm
+</span></span><span class="line"><span class="cl">root@machine:~# <span class="nb">kill</span> <span class="m">966</span>
+</span></span><span class="line"><span class="cl">root@machine:~# ps aux <span class="p">|</span> grep -i pycharm
+</span></span><span class="line"><span class="cl">root      <span class="m">2113</span>  0.0  0.0  <span class="m">13216</span>  <span class="m">1044</span> pts/0    S+   08:06   0:00 grep --color<span class="o">=</span>auto -i pycharm
+</span></span><span class="line"><span class="cl">root@machine:~# projector run
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="0x03-存在的问题">0x03 存在的问题</h2>
 <p>此处仅列举我在实际体验中觉得很糟心的地方，其它问题可以在链接 2 的 Known problems<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> 部分查看。</p>
-<h3 id="快捷键冲突剪贴板共享">快捷键冲突剪贴板共享</h3>
-<p>Projector 的服务端是安装在远程 Linux 环境中，然后通过本地浏览器或下载链接 5 的客户端使用（这里需要提一句的是 JetBrains 家 IDE 的 <code>Settings</code>-<code>Plugins</code>-<code>Marketplace</code> 中也上架了 <code>Projector</code>，但这个是把本机 IDE 当服务端来用的）。</p>
-<p>当通过浏览器访问 Projector 时，IDE 的快捷键会与浏览器本身的快捷键冲突，例如选择代码块的快捷键 <code>Ctrl</code> + <code>w</code><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>在 Chromium/Firefox/Safari 中是关闭当前标签页。所以为了使用快捷键还有复制粘贴功能，最好还是下载独立的 Projector 客户端。</p>
+<h3 id="快捷键冲突和剪贴板共享">快捷键冲突和剪贴板共享</h3>
+<p>Projector 的服务端是安装在远程 Linux 环境中，然后通过本地浏览器或下载链接 5 的客户端使用（这里需要提一句的是 JetBrains 的 IDE 插件市场中也上架了 <code>Projector</code><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>，但这个是把本机 IDE 当服务端来用的）。</p>
+<p>当通过浏览器访问 Projector 时，IDE 的快捷键会与浏览器本身的快捷键冲突，例如选择代码块的快捷键 <code>Ctrl</code> + <code>w</code><sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>在 Chromium/Firefox/Safari 中是关闭当前标签页。所以为了使用快捷键还有复制粘贴功能，最好还是下载独立的 Projector 客户端。</p>
 <h3 id="启用自签证书的-https">启用自签证书的 HTTPS</h3>
-<p>本文初次写成于 2021 年 3 月，但当 4 月我在另一台机器上部署完 Projector 后发现即使用 Projector 客户端去连也不能将其中的文本复制粘贴到其它程序中。在 JetBrains 的 bug 跟踪系统 YouTrack 上有人<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>解释是新版本的服务端后只有在 localhost 部署或启用 HTTPS 后才能跨程序复制粘贴，同时给出了对于 <a href="https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/accessing/#incomplete-clipboard-synchronization" target="_blank" rel="noopener noreffer">不完整剪贴板同步实现过程的官方文档</a>。</p>
-<p>就个人+内网使用来说，自签 HTTPS 证书是比较简单的方式。此处给出自签证书的启用方法，至于使用可信任证书颁发机构给域名颁发的证书，可以参考链接 3 自述文件的 FAQ 部分<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>。</p>
+<p>本文初次写成于 2021 年 3 月，但当 4 月我在另一台机器上部署完 Projector 后发现即使用 Projector 客户端去连也不能将其中的文本复制粘贴到其它程序中。在 JetBrains 的 bug 跟踪系统 YouTrack 上有人<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>解释是新版本的服务端后只有在 localhost 部署或启用 HTTPS 后才能跨程序复制粘贴，同时给出了对于 <a href="https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/accessing/#incomplete-clipboard-synchronization" target="_blank" rel="noopener noreffer">不完整剪贴板同步实现过程的官方文档</a>。</p>
+<p>就个人+内网使用来说，自签 HTTPS 证书是比较简单的方式。此处给出自签证书的启用方法，至于使用可信任证书颁发机构给域名颁发的证书，可以参考链接 3 自述文件的 FAQ 部分<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>。</p>
 <p>在命令行中交互式启动自签 HTTPS 证书：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -326,52 +414,55 @@ root@machine:~# projector run
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 所有可用命令</span>
-projector config <span class="o">(</span>--help<span class="o">)</span>
-
-<span class="c1"># 列出所有配置的名称</span>
-projector config list
-
-<span class="c1"># 展示选定配置的详情</span>
-projector config show
-<span class="c1"># 这里的信息要比 ~/.projector/configs/PyCharm/config.ini 更详细，</span>
-<span class="c1"># 也有一个布尔的 &#34;Projector uses secure config (https/wss)= 0&#34;</span>
-
-<span class="c1"># 交互式修改配置</span>
-projector config edit
-<span class="c1"># 只需给 Use secure connection? 一个 y 的回答</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 所有可用命令</span>
+</span></span><span class="line"><span class="cl">projector config <span class="o">(</span>--help<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 列出所有配置的名称</span>
+</span></span><span class="line"><span class="cl">projector config list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 展示选定配置的详情</span>
+</span></span><span class="line"><span class="cl">projector config show
+</span></span><span class="line"><span class="cl"><span class="c1"># 这里的信息要比 ~/.projector/configs/PyCharm/config.ini 更详细，</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 也有一个布尔的 &#34;Projector uses secure config (https/wss)= 0&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 交互式修改配置</span>
+</span></span><span class="line"><span class="cl">projector config edit
+</span></span><span class="line"><span class="cl"><span class="c1"># 只需给 Use secure connection? 一个 y 的回答</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>修改完毕后再 <code>projector run</code> 就能看到终端中提示要从 <code>~/.projector/ssl/ca.crt</code> 安装证书，有意思的是这个证书下载下来是 0KB，无法安装。我最后是通过直接在 Chrome 访问 <code>https://&lt;projector-server-address&gt;:&lt;projector-port&gt;</code> -&gt; 导出证书 -&gt; 文件管理器安装。</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p><a href="https://stackoverflow.com/questions/65869296/installing-pip-is-not-working-in-python-3-6">https://stackoverflow.com/questions/65869296/installing-pip-is-not-working-in-python-3-6</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://stackoverflow.com/questions/65869296/installing-pip-is-not-working-in-python-3-6" target="_blank" rel="noopener noreffer">https://stackoverflow.com/questions/65869296/installing-pip-is-not-working-in-python-3-6</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p><a href="https://youtrack.jetbrains.com/issue/PRJ-302">https://youtrack.jetbrains.com/issue/PRJ-302</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://youtrack.jetbrains.com/issue/PRJ-302" target="_blank" rel="noopener noreffer">https://youtrack.jetbrains.com/issue/PRJ-302</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p><a href="https://stackoverflow.com/questions/58591889/how-i-can-upgrade-my-ubuntu-python3-7-to-python3-8-latest-version">https://stackoverflow.com/questions/58591889/how-i-can-upgrade-my-ubuntu-python3-7-to-python3-8-latest-version</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://stackoverflow.com/questions/58591889/how-i-can-upgrade-my-ubuntu-python3-7-to-python3-8-latest-version" target="_blank" rel="noopener noreffer">https://stackoverflow.com/questions/58591889/how-i-can-upgrade-my-ubuntu-python3-7-to-python3-8-latest-version</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p><a href="https://github.com/JetBrains/projector-installer#projector-command-is-unavailable">https://github.com/JetBrains/projector-installer#projector-command-is-unavailable</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://github.com/JetBrains/projector-installer#projector-command-is-unavailable" target="_blank" rel="noopener noreffer">https://github.com/JetBrains/projector-installer#projector-command-is-unavailable</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
-<p><a href="https://stackoverflow.com/questions/61236544/clion-pycharm-phpstorm-intellij-wont-start-says-ide-has-not-been-initialized/61237140#61237140">https://stackoverflow.com/questions/61236544/clion-pycharm-phpstorm-intellij-wont-start-says-ide-has-not-been-initialized/61237140#61237140</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://stackoverflow.com/questions/61236544/clion-pycharm-phpstorm-intellij-wont-start-says-ide-has-not-been-initialized/61237140#61237140" target="_blank" rel="noopener noreffer">https://stackoverflow.com/questions/61236544/clion-pycharm-phpstorm-intellij-wont-start-says-ide-has-not-been-initialized/61237140#61237140</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p><a href="https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/jetbrains/#known-problems">https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/jetbrains/#known-problems</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/jetbrains/#known-problems" target="_blank" rel="noopener noreffer">https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/jetbrains/#known-problems</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7" role="doc-endnote">
-<p><a href="https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection">https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection</a> <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://plugins.jetbrains.com/plugin/16015-projector" target="_blank" rel="noopener noreffer">https://plugins.jetbrains.com/plugin/16015-projector</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:8" role="doc-endnote">
-<p><a href="https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0">https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0</a> <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection" target="_blank" rel="noopener noreffer">https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:9" role="doc-endnote">
-<p><a href="https://github.com/JetBrains/projector-installer#secure-connection">https://github.com/JetBrains/projector-installer#secure-connection</a> <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0" target="_blank" rel="noopener noreffer">https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p><a href="https://github.com/JetBrains/projector-installer#secure-connection" target="_blank" rel="noopener noreffer">https://github.com/JetBrains/projector-installer#secure-connection</a>&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -507,254 +598,72 @@ projector config edit
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p><a href="https://solutions.clarivate.com.cn/products/web-of-science%E6%A0%B8%E5%BF%83%E5%90%88%E9%9B%86%E9%81%B4%E9%80%89%E6%A0%87%E5%87%86/" target="_blank" rel="noopener noreffer">科睿唯安网站上关于 Web of Science™ 核心合集的遴选标准</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://solutions.clarivate.com.cn/products/web-of-science%E6%A0%B8%E5%BF%83%E5%90%88%E9%9B%86%E9%81%B4%E9%80%89%E6%A0%87%E5%87%86/" target="_blank" rel="noopener noreffer">科睿唯安网站上关于 Web of Science™ 核心合集的遴选标准</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p><a href="https://clarivate.com.tw/products/web-of-science/databases" target="_blank" rel="noopener noreffer">科睿唯安网站上关于 Web of Science™ 核心合辑的介绍</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://clarivate.com.tw/products/web-of-science/databases" target="_blank" rel="noopener noreffer">科睿唯安网站上关于 Web of Science™ 核心合辑的介绍</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p><a href="https://clarivate.com.tw/products/web-of-science/databases#standard-text-3:~:text=%e5%8d%80%e5%9f%9f%e6%80%a7%e8%b3%87%e6%96%99%e5%ba%ab" target="_blank" rel="noopener noreffer">科睿唯安网站上关于 Web of Science™ 核心合辑中区域性资料库的介绍</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://clarivate.com.tw/products/web-of-science/databases#standard-text-3:~:text=%e5%8d%80%e5%9f%9f%e6%80%a7%e8%b3%87%e6%96%99%e5%ba%ab" target="_blank" rel="noopener noreffer">科睿唯安网站上关于 Web of Science™ 核心合辑中区域性资料库的介绍</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p><a href="https://clarivate.com.tw/products/journal-citation-reports" target="_blank" rel="noopener noreffer">科睿唯安网站上关于期刊引证报告的介绍</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://clarivate.com.tw/products/journal-citation-reports" target="_blank" rel="noopener noreffer">科睿唯安网站上关于期刊引证报告的介绍</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
-<p><a href="https://zh.wikipedia.org/wiki/%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a#%e6%8c%87%e6%a8%99:~:text=%e6%8c%87%e6%a0%87[%e7%bc%96%e8%be%91],%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a%e9%80%8f%e8%bf%87%e9%87%8f%e5%8c%96%e5%bc%95%e7%94%a8%e6%96%87%e7%8c%ae%e7%9a%84%e7%bb%9f%e8%ae%a1%e8%b5%84%e8%ae%af%ef%bc%8c%e4%ba%8e%e6%af%8f%e5%b9%b4%e5%ba%a6%e5%8f%91%e8%a1%a8%e4%b8%8b%e5%88%97%e8%af%84%e6%af%94%e6%8c%87%e6%a0%87%e5%b9%b6%e4%ba%88%e4%bb%a5%e6%8e%92%e5%90%8d%ef%bc%9a" target="_blank" rel="noopener noreffer">维基百科条目「期刊引证报告」中关于指标的解释</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a#%e6%8c%87%e6%a8%99:~:text=%e6%8c%87%e6%a0%87[%e7%bc%96%e8%be%91],%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a%e9%80%8f%e8%bf%87%e9%87%8f%e5%8c%96%e5%bc%95%e7%94%a8%e6%96%87%e7%8c%ae%e7%9a%84%e7%bb%9f%e8%ae%a1%e8%b5%84%e8%ae%af%ef%bc%8c%e4%ba%8e%e6%af%8f%e5%b9%b4%e5%ba%a6%e5%8f%91%e8%a1%a8%e4%b8%8b%e5%88%97%e8%af%84%e6%af%94%e6%8c%87%e6%a0%87%e5%b9%b6%e4%ba%88%e4%bb%a5%e6%8e%92%e5%90%8d%ef%bc%9a" target="_blank" rel="noopener noreffer">维基百科条目「期刊引证报告」中关于指标的解释</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p><a href="http://www.ei-cn.com/About/5.html" target="_blank" rel="noopener noreffer">第三方网站「EI学术」上对EI的简介</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="http://www.ei-cn.com/About/5.html" target="_blank" rel="noopener noreffer">第三方网站「EI学术」上对EI的简介</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
-]]></description></item><item><title>博客当前施工进展</title><link>https://xuchunqiu.github.io/blog-construction-progress/</link><pubDate>Tue, 10 Nov 2020 17:10:30 +0800</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/blog-construction-progress/</guid><description><![CDATA[<h1 id="静态网站生成器">静态网站生成器</h1>
-<blockquote>
-<p>static site generator / web template system</p>
-</blockquote>
-<p>可选包括 Jekyll、Hexo、Pelican、Gridea、Hugo ……</p>
-<p>前几日看到新闻说 <a href="https://www.solidot.org/story?sid=65959" target="_blank" rel="noopener noreffer">KDE.org 迁移到 Hugo</a>，所以我现在有些倾向于它。</p>
-<h2 id="践行web-内容无障碍指南httpswwww3orgtranslationswcag21-zh">践行<a href="https://www.w3.org/Translations/WCAG21-zh" target="_blank" rel="noopener noreffer">《Web 内容无障碍指南》</a></h2>
-<p>对于一个没有前端开发经验的人来说自己从头做起未免步子迈太大，找个无障碍优化做得比较好的 <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">Hugo 主题</a> 才是个现实的解决办法。根据 accessible/accessibility 标签筛选出了以下博客主题： <a href="https://themes.gohugo.io/hugo-theme-zzo" target="_blank" rel="noopener noreffer">Zzo</a>、<a href="https://themes.gohugo.io/hugo-theme-color-your-world" target="_blank" rel="noopener noreffer">Color Your World</a>、<a href="https://themes.gohugo.io/hugo-terrassa-theme" target="_blank" rel="noopener noreffer">Terrassa</a>、<a href="https://themes.gohugo.io/hugo-theme-zen" target="_blank" rel="noopener noreffer">Zen</a>、<a href="https://themes.gohugo.io/cupper-hugo-theme" target="_blank" rel="noopener noreffer">Cupper</a>、<a href="https://themes.gohugo.io/accessible-minimalism-hugo-theme" target="_blank" rel="noopener noreffer">Accessible Minimalism</a></p>
-<p>从 W3C 列出的 <a href="https://www.w3.org/WAI/ER/tools" target="_blank" rel="noopener noreffer">Web Accessibility Evaluation Tools List</a> 中选了一个在线测试工具 <a href="https://www.webaccessibility.com" target="_blank" rel="noopener noreffer">WebAccessibility</a> 进行测试，测试结果如下（测试进行于2020年11月9日，测试结果仅能代表此刻的情况）。</p>
-<table>
-<thead>
-<tr>
-<th>theme name</th>
-<th>test url</th>
-<th style="text-align:center">number of violations</th>
-<th style="text-align:center">compliance score</th>
-<th>personal evaluation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Zzo</td>
-<td><a href="https://themes.gohugo.io/theme/hugo-theme-zzo/">https://themes.gohugo.io/theme/hugo-theme-zzo/</a></td>
-<td style="text-align:center">27</td>
-<td style="text-align:center">85%</td>
-<td>garish</td>
-</tr>
-<tr>
-<td>Color Your World</td>
-<td><a href="https://themes.gohugo.io/theme/hugo-theme-color-your-world/">https://themes.gohugo.io/theme/hugo-theme-color-your-world/</a></td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">91%</td>
-<td></td>
-</tr>
-<tr>
-<td>Terrassa</td>
-<td><a href="https://themes.gohugo.io/theme/hugo-terrassa-theme/">https://themes.gohugo.io/theme/hugo-terrassa-theme/</a></td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">87%</td>
-<td>comfortable</td>
-</tr>
-<tr>
-<td>Zen</td>
-<td><a href="https://themes.gohugo.io/theme/hugo-theme-zen/">https://themes.gohugo.io/theme/hugo-theme-zen/</a></td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">88%</td>
-<td>basic black and white blog style</td>
-</tr>
-<tr>
-<td>Cupper</td>
-<td><a href="https://themes.gohugo.io/theme/cupper-hugo-theme/">https://themes.gohugo.io/theme/cupper-hugo-theme/</a></td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">91%</td>
-<td>black and white but too sharp</td>
-</tr>
-<tr>
-<td>Accessible Minimalism</td>
-<td><a href="https://themes.gohugo.io/theme/accessible-minimalism-hugo-theme/">https://themes.gohugo.io/theme/accessible-minimalism-hugo-theme/</a></td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">91%</td>
-<td>too crude</td>
-</tr>
-</tbody>
-</table>
-<p>可是老实说上边这些我都不 100% 合我心意，就 Demo 的展示内容来说像走入了两种极端：极简或是花里胡哨。在 blog 标签下发现了这个功能和质感都恰到好处为 <a href="https://themes.gohugo.io/hugo-eureka" target="_blank" rel="noopener noreffer">Eureka</a> 的主题，虽然没有 accessible 标签但 <a href="https://www.webaccessibility.com" target="_blank" rel="noopener noreffer">WebAccessibility</a> 合规成绩 92%，更重要的是开发者是中文母语者——这个主题的中文显示效果不会差。</p>
-<h2 id="hugo-101">Hugo 101</h2>
-<ul>
-<li>系统环境：Windows 10</li>
-<li>终端：Windows PowerShell</li>
-</ul>
-<h3 id="安装">安装</h3>
-<blockquote>
-<p><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
-</blockquote>
-<p>按照官方文档中的 Quick Install 部分，在 <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">releases</a> 页下载 <code>hugo_0.78.1_Windows-64bit.zip</code> 解压后的 <code>hugo.exe</code> 放入本机的某一路径如 <code>D:\Hugo\hugo_0.78.1</code> 。此时就能执行 Hugo 的命令了，可通过如下命令测试：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">D:</span><span class="p">\</span><span class="n">Hugo</span><span class="p">\</span><span class="n">hugo_0</span><span class="p">.</span><span class="n">78</span><span class="p">.</span><span class="n">1</span><span class="p">\</span><span class="n">hugo</span><span class="p">.</span><span class="n">exe</span> <span class="n">help</span>  <span class="c"># 输出 Hugo 的命令手册</span>
-<span class="c"># 为了省略前面的路径，接下来需要添加环境变量</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>将路径 <code>D:\Hugo\hugo_0.78.1</code> 添加入用户变量 <code>PATH</code> ，而后重启使其生效。接下来使用如下命令测试：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">hugo</span> <span class="n">help</span>  <span class="c"># 输出 Hugo 的命令手册</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="使用">使用</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">hugo</span>  <span class="c"># 将当前工作目录作为输入，根据该路径下的 config 文件/文件夹生成静态网站内容至 .\public</span>
-
-<span class="c"># config 文件或是 config 文件夹是并列的两种配置方式，前者可以通过用 Hugo 创建站点来生成</span>
-<span class="n">hugo</span> <span class="n">new</span> <span class="n">site</span> <span class="p">&lt;</span><span class="n">your_site_name</span><span class="p">&gt;</span>
-<span class="n">tree</span>
-<span class="p">.</span>
-<span class="err">└──</span> <span class="p">&lt;</span><span class="n">your_site_name</span><span class="p">&gt;</span>
-    <span class="err">├──</span> <span class="n">archetypes</span>
-    <span class="err">│</span>   <span class="err">└──</span> <span class="k">default</span><span class="p">.</span><span class="nb">md
-</span><span class="nb"></span>    <span class="err">├──</span> <span class="n">config</span><span class="p">.</span><span class="n">toml</span>
-    <span class="err">├──</span> <span class="n">content</span>
-    <span class="err">├──</span> <span class="n">data</span>
-    <span class="err">├──</span> <span class="n">layouts</span>
-    <span class="err">├──</span> <span class="n">static</span>
-    <span class="err">└──</span> <span class="n">themes</span>
-<span class="c"># 接下来对于站点 &lt;your_site_name&gt; 的操作都要在其根目录下进行</span>
-<span class="nb">cd </span><span class="p">&lt;</span><span class="n">your_site_name</span><span class="p">&gt;</span>
-<span class="n">hugo</span> <span class="n">new</span> <span class="n">content</span><span class="p">/</span><span class="n">new_post</span><span class="p">.</span><span class="nb">md </span> <span class="c"># 创建新文章</span>
-
-<span class="n">hugo</span> <span class="n">server</span>  <span class="c"># 生成一个本地测试站点，注意：所有文件头为 draft: true 的 markdown 文件都不会被处理与显示；</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="应用主题">应用主题</h4>
-<blockquote>
-<p><a href="https://www.wangchucheng.com/zh/docs/eureka/getting-started/">https://www.wangchucheng.com/zh/docs/eureka/getting-started/</a></p>
-</blockquote>
-<p>进入站点根目录，初始化一个 Hugo Module，名字可以自定义，以后永远不会用到。然后从 GitHub 下载 Eureka 主题的 <a href="https://github.com/wangchucheng/hugo-eureka/tree/master/exampleSite" target="_blank" rel="noopener noreffer">config 文件夹</a> 到站点根目录，修改 <code>&lt;your_site_name&gt;/config/_default/config.toml</code> 的配置，然后删除 <code>&lt;your_site_name&gt;/config.toml</code> 。接下来就可以生成测试站点了。</p>
-<h4 id="客制化">客制化</h4>
-<h3 id="部署">部署</h3>
-<p><a href="https://github.com/marketplace/actions/hugo-to-gh-pages">https://github.com/marketplace/actions/hugo-to-gh-pages</a></p>
-<p><a href="https://gist.github.com/lisez/41cebe4eb9190a5c5e879fee5933beb1">https://gist.github.com/lisez/41cebe4eb9190a5c5e879fee5933beb1</a></p>
-<h4 id="处理-google-search-console-验证">处理 Google Search Console 验证</h4>
-<p>暂时无法通过 <code>Google Analytics（分析）</code> 的方式验证所有权，加上没有添加独立域名，导致唯一可用的验证方式是 <code>HTML 标记</code> —— 向网站根目录上传一个 Google 提供的 HTML 文件并一直保持。</p>
-<p>尝试单独把这个 html 文件 commit 到 <code>xuchunqiu/xuchunqiu.github.io</code>，顺利通过验证；然而上面 GitHub Action 部署过程中默认的 <code>--cleanDestinationDir</code> 运行参数会使得仓库 <code>xuchunqiu/xuchunqiu.github.io</code> 中的原始内容在更新后被完全清空（包括单独 commit 的 HTML 文件）。</p>
-<p>解决思路有二：修改 GitHub Action、让 Hugo 生成静态网页时把这个 HTML 加进去。</p>
-<p>后者在 Hugo 的 <a href="https://gohugo.io/getting-started/directory-structure/" target="_blank" rel="noopener noreffer">文档</a> 中有特别提到，文件夹 <code>static</code> 适合用来存储 Google Search Console 的验证用 HTML：</p>
-<blockquote>
-<p>static: Stores all the static content: images, CSS, JavaScript, etc. When Hugo builds your site, all assets inside your static directory are copied over as-is. A good example of using the static folder is for verifying site ownership on Google Search Console, where you want Hugo to copy over a complete HTML file without modifying its content.</p>
-</blockquote>
-<h2 id="todo">TODO</h2>
-<ul>
-<li>
-<p><i class="far fa-square fa-fw"></i> 寻找国内友好的图床</p>
-</li>
-<li>
-<p><i class="far fa-square fa-fw"></i> 添加 Gitalk 评论区</p>
-</li>
-<li>
-<p><i class="far fa-square fa-fw"></i> 熟悉发布博文到 GitHub Pages 的工作流</p>
-<ul>
-<li><i class="far fa-square fa-fw"></i> 统一 commit 样式（约定式提交？）</li>
-</ul>
-</li>
-<li>
-<p><i class="far fa-square fa-fw"></i> 践行 <a href="https://github.com/sparanoid/chinese-copywriting-guidelines" target="_blank" rel="noopener noreffer">《中文排版方案指北》</a></p>
-</li>
-<li>
-<p><i class="far fa-square fa-fw"></i> 迁移 Dropbox 内的笔记</p>
-</li>
-<li>
-<p><i class="far fa-square fa-fw"></i> 迁移 Notion 内的知识库</p>
-</li>
-</ul>
 ]]></description></item><item><title>如何在 Ubuntu 上安装配置 Rime 输入法</title><link>https://xuchunqiu.github.io/install-and-setup-rime-on-ubuntu/</link><pubDate>Fri, 24 May 2019 01:04:47 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-and-setup-rime-on-ubuntu/</guid><description><![CDATA[<p>Ubuntu 上比较流行又好装的中文输入法应该就只有 <a href="https://pinyin.sogou.com/linux/" target="_blank" rel="noopener noreffer">搜狗输入法 for Linux</a> 一款了，但如果你追求简洁纯粹，那 <a href="https://rime.im" target="_blank" rel="noopener noreffer">Rime 输入法</a> 或许是你的菜。</p>
 <p>Rime 是一款由 <a href="https://github.com/lotem" target="_blank" rel="noopener noreffer">佛振</a> 主导开发的自由软件，支持在 Windows、macOS 和 Linux 操作系统上运行。它的优点是干净纯粹支持高度的客制化，缺点是较差的联想功能（自己慢慢养词库或者导入其它输入法的词库）和比较复杂的配置。本文将专注于介绍 Rime 在安装阶段的配置过程。</p>
 <h2 id="1-基本安装">1. 基本安装</h2>
 <p>在 <a href="https://rime.im/download/#Linux" target="_blank" rel="noopener noreffer">Rime 下载页面的 Linux 章节</a> 中给出了基于 IBus 和 Fcitx 两种输入法框架的安装指导，我这里是选择 IBus 框架：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install ibus-rime
-<span class="c1"># 可选：安装双拼</span>
-sudo apt-get install librime-data-double-pinyin 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install ibus-rime
+</span></span><span class="line"><span class="cl"><span class="c1"># 可选：安装双拼</span>
+</span></span><span class="line"><span class="cl">sudo apt-get install librime-data-double-pinyin 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="2-切换到-ibus">2. 切换到 IBus</h2>
 <p>从启动台打开「输入法」或在终端中使用命令开启：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">im-config
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">im-config
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后选择 <code>ibus</code></p>
 <h2 id="3-添加-rime-到-ibus">3. 添加 Rime 到 IBus</h2>
 <p>在终端中使用以下命令开启 IBus 设置：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ibus-setup
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ibus-setup
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在输入法中添加 <code>Chinese - Rime</code>。如果看不到这一项，需要在系统设置的语言中添加中文并拖动到最顶，然后登出系统以使新的语言设置生效。</p>
 <h2 id="4-切换-ibus-engine-到-rime">4. 切换 IBus engine 到 Rime</h2>
 <p>使用如下命令切换到 Rime：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ibus engine rime
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ibus engine rime
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition tip open">
         <div class="details-summary admonition-title">
@@ -763,19 +672,19 @@ sudo apt-get install librime-data-double-pinyin
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 列出所有可用引擎</span>
-ibus list-engine
-
-<span class="c1"># 查看当前使用引擎</span>
-ibus engine
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 列出所有可用引擎</span>
+</span></span><span class="line"><span class="cl">ibus list-engine
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看当前使用引擎</span>
+</span></span><span class="line"><span class="cl">ibus engine
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -784,11 +693,11 @@ ibus engine
 <p>修改配置文件 <code>~/.config/ibus/rime/default.yaml</code> ，依照现有布局加入条目：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml">- <span class="l">schema：double_pinyin_flypy</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="l">schema：double_pinyin_flypy</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后在输入时就能通过 <code>ctrl</code> + `/`` 呼出方案选单。</p>
 <div class="details admonition tip open">
@@ -804,16 +713,16 @@ ibus engine
 <p>appimage 格式深度截图的下载地址已经失效，但依然可以从互联网档案馆上 <a href="https://web.archive.org/web/20201120043221/https://github-production-release-asset-2e65be.s3.amazonaws.com/110259696/6110e818-0909-11e8-92a8-e734dc188fe0?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201120%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20201120T043221Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=134866f6be04ad00a4eaf1a2aa00604d5fbfd4fe5f9597a94a2a92da3d758053&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=110259696&amp;response-content-disposition=attachment%3B%20filename%3DDeepin_Screenshot_4.0.10.4-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noopener noreffer">下载（35.7 MB）</a>。</p>
 <h2 id="1-下载深度截图">1. 下载深度截图</h2>
 <p>从以下地址下载第三方打包的深度截图：</p>
-<p>~~<a href="https://github.com/ZetaoYang/deepin-app-package/releases~~">https://github.com/ZetaoYang/deepin-app-package/releases~~</a></p>
+<p><del><a href="https://github.com/ZetaoYang/deepin-app-package/releases" target="_blank" rel="noopener noreffer">https://github.com/ZetaoYang/deepin-app-package/releases</a></del></p>
 <h2 id="2-运行">2. 运行</h2>
 <p>首先添加执行权限</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">chmod +x ./Deepin_Screenshot-x86_64.AppImage
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x ./Deepin_Screenshot-x86_64.AppImage
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>使用方法：</p>
 <ul>
@@ -822,46 +731,46 @@ ibus engine
 </ul>
 <h2 id="3-让深度截图在-ubuntu-启动台显示">3. 让深度截图在 Ubuntu 启动台显示</h2>
 <h3 id="31-appimagelauncher-法"><del>3.1 AppImageLauncher 法</del></h3>
-<p>AppImageLauncher 顾名思义是一个可以快速把 appimage 软件加入启动台的工具。只需要从 <a href="https://github.com/TheAssassin/AppImageLauncher/releases">https://github.com/TheAssassin/AppImageLauncher/releases</a> 下载的合适版本，然后执行以下命令安装</p>
+<p>AppImageLauncher 顾名思义是一个可以快速把 appimage 软件加入启动台的工具。只需要从 <a href="https://github.com/TheAssassin/AppImageLauncher/releases" target="_blank" rel="noopener noreffer">https://github.com/TheAssassin/AppImageLauncher/releases</a> 下载的合适版本，然后执行以下命令安装</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo dpkg -i ~/Downloads/appimagelauncher_1.0.3-travis508.git20190223.0c6d768_amd64.deb
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dpkg -i ~/Downloads/appimagelauncher_1.0.3-travis508.git20190223.0c6d768_amd64.deb
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>理论上再次双击之前的 Deepin_Screenshot_4.0.10.4-x86_64.AppImage 就可以初始化 AppImageLauncher，进而可以把 Deepin_Screenshot_4.0.10.4-x86_64.AppImage 显示在 LaunchPad。不幸的是我双击后遇到闪退。</p>
 <h3 id="32-手动法">3.2 手动法</h3>
-<p>此方法适用于所有只能命令行启动的程序，只需要在 /usr/share/applications/ 下添加一个配置文件就能让程序显示在 Ubuntu 启动台上。但在开始之前，为了美观还需要一个合适的图标，我是从 <a href="http://appstore.deepin.com/data/v1/workaround/metadata/deepin-screenshot/meta/icons/deepin-screenshot.svg">http://appstore.deepin.com/data/v1/workaround/metadata/deepin-screenshot/meta/icons/deepin-screenshot.svg</a> 下载图标，然后用在线工具转为PNG格式备用。</p>
+<p>此方法适用于所有只能命令行启动的程序，只需要在 /usr/share/applications/ 下添加一个配置文件就能让程序显示在 Ubuntu 启动台上。但在开始之前，为了美观还需要一个合适的图标，我是从 <a href="http://appstore.deepin.com/data/v1/workaround/metadata/deepin-screenshot/meta/icons/deepin-screenshot.svg" target="_blank" rel="noopener noreffer">http://appstore.deepin.com/data/v1/workaround/metadata/deepin-screenshot/meta/icons/deepin-screenshot.svg</a> 下载图标，然后用在线工具转为PNG格式备用。</p>
 <p>按照 <a href="https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86" target="_blank" rel="noopener noreffer">文件系统层次结构标准</a> 为深度截图在 <code>/opt</code> 下创建目录：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /opt/deepinscreenshot
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir /opt/deepinscreenshot
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后把 appimage 程序和 PNG 格式的图标复制进去：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo cp ~/Downloads/Deepin_Screenshot_4.0.10.4-x86_64.AppImage /opt/deepinscreenshot/
-sudo cp ~/Downloads/deepin-screenshot-24px.png /opt/deepinscreenshot/
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cp ~/Downloads/Deepin_Screenshot_4.0.10.4-x86_64.AppImage /opt/deepinscreenshot/
+</span></span><span class="line"><span class="cl">sudo cp ~/Downloads/deepin-screenshot-24px.png /opt/deepinscreenshot/
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><del>注入灵魂</del> 注册应用程序到启动台：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo vim /usr/share/applications/biubiubiu.desktop
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /usr/share/applications/biubiubiu.desktop
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition info open">
         <div class="details-summary admonition-title">
@@ -870,7 +779,7 @@ sudo cp ~/Downloads/deepin-screenshot-24px.png /opt/deepinscreenshot/
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -883,18 +792,18 @@ sudo cp ~/Downloads/deepin-screenshot-24px.png /opt/deepinscreenshot/
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
-Name=biubiubiu
-Name[zh_CN]=深度截图
-Exec=/opt/deepinscreenshot/Deepin_Screenshot_4.0.10.4-x86_64.AppImage
-Icon=/opt/deepinscreenshot/deepin-screenshot-24px.png
-Terminal=false
-X-MultipleArgs=false
-Type=Application
-Encoding=UTF-8
-Categories=Application;
-StartupNotify=false
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Desktop Entry]
+</span></span><span class="line"><span class="cl">Name=biubiubiu
+</span></span><span class="line"><span class="cl">Name[zh_CN]=深度截图
+</span></span><span class="line"><span class="cl">Exec=/opt/deepinscreenshot/Deepin_Screenshot_4.0.10.4-x86_64.AppImage
+</span></span><span class="line"><span class="cl">Icon=/opt/deepinscreenshot/deepin-screenshot-24px.png
+</span></span><span class="line"><span class="cl">Terminal=false
+</span></span><span class="line"><span class="cl">X-MultipleArgs=false
+</span></span><span class="line"><span class="cl">Type=Application
+</span></span><span class="line"><span class="cl">Encoding=UTF-8
+</span></span><span class="line"><span class="cl">Categories=Application;
+</span></span><span class="line"><span class="cl">StartupNotify=false
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -908,29 +817,25 @@ StartupNotify=false
 <ul>
 <li>环境配置简单。深度学习相关的很多软件包都是预装好的，省事省时；</li>
 <li>网络环境通畅。数据中心带宽大，下载数据集嗖嗖的；
-<figure>
-     <figcaption>
+<figure><figcaption>
             <h4>下载预训练模型的速度</h4>
         </figcaption>
 </figure>
 </li>
 <li>GPU 够用。原来白天能分到 Telsa T4，现在白天也只有 Tesla K80 了，但起码 11.4GB 的显存是实打实的；
-<figure>
-     <figcaption>
+<figure><figcaption>
             <h4>在 code cell 中使用 !nvidia-smi 命令查看 GPU 信息</h4>
         </figcaption>
 </figure>
 </li>
 <li>支持 bash 命令。bash 命令想要在 code cell 里执行只需每行前加 <code>!</code> 就可以了；
-<figure>
-     <figcaption>
+<figure><figcaption>
             <h4>Colab 环境中 /bin 目录的内容</h4>
         </figcaption>
 </figure>
 </li>
 <li>支持在线修改。对于大型工程，其代码必然分散在项目的各个文件夹里，以前想修改文件内容需要下载到本地修改然后再上传，十分繁琐。2019 年 10 月 4 日 Colab 支持了从文件树双击打开、修改文件。
-<figure>
-     <figcaption>
+<figure><figcaption>
             <h4>@GoogleColab 的推文截图</h4>
         </figcaption>
 </figure>
@@ -940,15 +845,13 @@ StartupNotify=false
 <h3 id="colab-的缺点">Colab 的缺点</h3>
 <ul>
 <li>资源自动回收。据说是运行 12 小时后自动回收所有资源（另外实际经验是如果浏览器与 Colab 的连接不幸中断数小时也会触发回收），GPU 需要重新申请是其次，重要的是保存运行结果的临时硬盘空间也会被回收掉。所以可以考虑把 Google Drive 挂载上去然后结果直接存在里边，这就会带来下面第二个缺点；
-<figure>
-     <figcaption>
+<figure><figcaption>
             <h4>Colab 临时硬盘有 359 GB</h4>
         </figcaption>
 </figure>
 </li>
 <li>与 Google Drive 不能无缝整合。同一份代码，直接在 Colab 临时硬盘空间运行与克隆到被挂载到 Colab 的 Google Drive 运行有明显可感的降速，瓶颈可能是 Google Drive 本身存储介质的 I/O 性能；
-<figure>
-     <figcaption>
+<figure><figcaption>
             <h4>Colab 临时硬盘与挂载的 Google Drive 在 Colab 中读写速度对比</h4>
         </figcaption>
 </figure>
@@ -987,7 +890,7 @@ StartupNotify=false
 <li><code>%reset</code> 清空 namespace</li>
 <li><code>%load</code> 加载代码到前端（可以是链接）</li>
 </ul>
-<p><a href="http://nbviewer.jupyter.org/github/supergis/git_notebook/blob/master/pystart/jupyter_magics.ipynb">http://nbviewer.jupyter.org/github/supergis/git_notebook/blob/master/pystart/jupyter_magics.ipynb</a></div>
+<p><a href="http://nbviewer.jupyter.org/github/supergis/git_notebook/blob/master/pystart/jupyter_magics.ipynb" target="_blank" rel="noopener noreffer">http://nbviewer.jupyter.org/github/supergis/git_notebook/blob/master/pystart/jupyter_magics.ipynb</a></div>
         </div>
     </div>
 <h2 id="0x02-使用-ipdb-进行调试">0x02 使用 ipdb 进行调试</h2>
@@ -997,7 +900,7 @@ StartupNotify=false
         </div>
         <div class="details-content">
             <div class="admonition-content"><p>常规的 Python 交互式 debug 工具是 pdb，它可以让我们 <strong><ruby>单步<rt>Step Trough</rt></ruby></strong> 调试；IPython 改进版的 pdb 被称为 ipdb 。</p>
-<p><a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb">https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb</a></p>
+<p><a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb" target="_blank" rel="noopener noreffer">https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb</a></p>
 </div>
         </div>
     </div>
@@ -1009,7 +912,7 @@ StartupNotify=false
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1018,14 +921,14 @@ StartupNotify=false
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-
-<span class="k">def</span> <span class="nf">func2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>    
-    <span class="k">return</span> <span class="n">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -1038,7 +941,7 @@ StartupNotify=false
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1053,20 +956,20 @@ StartupNotify=false
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-
-  File <span class="s2">&#34;&lt;ipython-input-4-b2e110f6fc8f&gt;&#34;</span>, line 1, in &lt;module&gt;
-    func2<span class="o">(</span>1<span class="o">)</span>
-
-<span class="m">1</span> frames
-  File <span class="s2">&#34;&lt;ipython-input-1-d849e34d61fb&gt;&#34;</span>, line 7, in func2
-    <span class="k">return</span> func1<span class="o">(</span>a, b<span class="o">)</span>
-
-  File <span class="s2">&#34;&lt;ipython-input-1-d849e34d61fb&gt;&#34;</span>, line 2, in func1
-    <span class="k">return</span> a / b
-
-ZeroDivisionError: division by zero
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;&lt;ipython-input-4-b2e110f6fc8f&gt;&#34;</span>, line 1, in &lt;module&gt;
+</span></span><span class="line"><span class="cl">    func2<span class="o">(</span>1<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">1</span> frames
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;&lt;ipython-input-1-d849e34d61fb&gt;&#34;</span>, line 7, in func2
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> func1<span class="o">(</span>a, b<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;&lt;ipython-input-1-d849e34d61fb&gt;&#34;</span>, line 2, in func1
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> a / b
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ZeroDivisionError: division by zero
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -1079,7 +982,7 @@ ZeroDivisionError: division by zero
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1105,31 +1008,31 @@ ZeroDivisionError: division by zero
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d849e34d61fb</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="n">func1</span><span class="p">()</span>
-      <span class="mi">1</span> <span class="k">def</span> <span class="nf">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="o">----&gt;</span> <span class="mi">2</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-      <span class="mi">3</span> 
-
-<span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">up</span>
-<span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d849e34d61fb</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">func2</span><span class="p">()</span>
-      <span class="mi">5</span>     <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
-      <span class="mi">6</span>     <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="o">----&gt;</span> <span class="mi">7</span>     <span class="k">return</span> <span class="n">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="n">ipdb</span><span class="o">&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="mi">1</span>
-<span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">up</span>
-<span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">b2e110f6fc8f</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">func2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">down</span>
-<span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d849e34d61fb</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">func2</span><span class="p">()</span>
-      <span class="mi">5</span>     <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
-      <span class="mi">6</span>     <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="o">----&gt;</span> <span class="mi">7</span>     <span class="k">return</span> <span class="n">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">quit</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d849e34d61fb</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="n">func1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">1</span> <span class="k">def</span> <span class="nf">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">----&gt;</span> <span class="mi">2</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">3</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">up</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d849e34d61fb</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">func2</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">5</span>     <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">6</span>     <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="o">----&gt;</span> <span class="mi">7</span>     <span class="k">return</span> <span class="n">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ipdb</span><span class="o">&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">up</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">b2e110f6fc8f</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">func2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">down</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d849e34d61fb</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">func2</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">5</span>     <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">6</span>     <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="o">----&gt;</span> <span class="mi">7</span>     <span class="k">return</span> <span class="n">func1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ipdb</span><span class="o">&gt;</span> <span class="n">quit</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -1197,7 +1100,7 @@ ZeroDivisionError: division by zero
 </tr>
 </tbody>
 </table>
-<p><a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb#scrollTo=MNC9gzvgplsp">https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb#scrollTo=MNC9gzvgplsp</a></div>
+<p><a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb#scrollTo=MNC9gzvgplsp" target="_blank" rel="noopener noreffer">https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb#scrollTo=MNC9gzvgplsp</a></div>
         </div>
     </div>
 <p>上述例子调用 ipdb 发生在产生异常之后，目的是为了<strong>修改程序中的错误</strong>；如果我们的程序运行良好，想通过调试<strong>观察函数调用</strong>，就不能再用简单的行魔法命令 <code>%debug</code> 而是为其加上参数甚至变成单元命令。</p>
@@ -1226,10 +1129,8 @@ ZeroDivisionError: division by zero
         </div>
         <div class="details-content">
             <div class="admonition-content">  <figure>
-     
 </figure>
   <figure>
-     
 </figure>
 </div>
         </div>
@@ -1243,7 +1144,6 @@ ZeroDivisionError: division by zero
         </div>
         <div class="details-content">
             <div class="admonition-content">  <figure>
-     
 </figure>
 </div>
         </div>
@@ -1259,15 +1159,15 @@ ZeroDivisionError: division by zero
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 安装 ipdb</span>
-<span class="c1"># P.S. 按 https://stackoverflow.com/a/32409822/8178171 的讨论也可以使用 pdb，那么下面加断点时也要改成 pdb</span>
-!pip3 install ipdb
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 安装 ipdb</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># P.S. 按 https://stackoverflow.com/a/32409822/8178171 的讨论也可以使用 pdb，那么下面加断点时也要改成 pdb</span>
+</span></span><span class="line"><span class="cl">!pip3 install ipdb
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -1280,13 +1180,13 @@ ZeroDivisionError: division by zero
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 源程序想设置断点处：添加此行</span>
-<span class="kn">import</span> <span class="nn">ipdb</span><span class="p">;</span> <span class="n">ipdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 源程序想设置断点处：添加此行</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ipdb</span><span class="p">;</span> <span class="n">ipdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -1298,7 +1198,6 @@ ZeroDivisionError: division by zero
         </div>
         <div class="details-content">
             <div class="admonition-content"><figure>
-     
 </figure>
 </div>
         </div>
@@ -1308,44 +1207,44 @@ ZeroDivisionError: division by zero
 <h2 id="1-安装-deepin-wine-环境">1. 安装 Deepin wine 环境</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 下载</span>
-git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
-<span class="c1"># 执行安装脚本</span>
-sudo sh ./deepin-wine-for-ubuntu/install.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 下载</span>
+</span></span><span class="line"><span class="cl">git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行安装脚本</span>
+</span></span><span class="line"><span class="cl">sudo sh ./deepin-wine-for-ubuntu/install.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="2-安装-deepin-版-tim-安装包">2. 安装 Deepin 版 TIM 安装包</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 下载</span>
-wget http://packages.deepin.com/deepin/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_2.0.0deepin4_i386.deb
-<span class="c1"># 解包安装</span>
-sudo dpkg -i ./Downloads/deepin.com.qq.office_2.0.0deepin4_i386.deb
-<span class="c1"># 在 Ubuntu 的 Lauchpad 应已出现 TIM 的图标，单击启动、登录，应该就可以正常使用了</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 下载</span>
+</span></span><span class="line"><span class="cl">wget http://packages.deepin.com/deepin/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_2.0.0deepin4_i386.deb
+</span></span><span class="line"><span class="cl"><span class="c1"># 解包安装</span>
+</span></span><span class="line"><span class="cl">sudo dpkg -i ./Downloads/deepin.com.qq.office_2.0.0deepin4_i386.deb
+</span></span><span class="line"><span class="cl"><span class="c1"># 在 Ubuntu 的 Lauchpad 应已出现 TIM 的图标，单击启动、登录，应该就可以正常使用了</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="3-可选解决在高分屏-gui-过小的问题">3. 可选：解决在高分屏 GUI 过小的问题</h2>
 <p>使用如下命令调出 wine 的配置页面：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">WINEPREFIX</span><span class="o">=</span>~/.deepinwine/Deepin-TIM/ deepin-wine winecfg
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">WINEPREFIX</span><span class="o">=</span>~/.deepinwine/Deepin-TIM/ deepin-wine winecfg
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在 Graphics 选项卡中往大调整 Screen resolution 的值，调好后重新运行 TIM 即可看到效果。</p>
 ]]></description></item></channel></rss>

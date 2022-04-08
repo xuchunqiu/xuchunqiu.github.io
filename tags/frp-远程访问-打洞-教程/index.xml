@@ -34,7 +34,7 @@
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -49,20 +49,20 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ini" data-lang="ini"> <span class="k">[common]</span>
- <span class="c1"># VPS 上 frps 的连接信息</span>
- <span class="na">server_addr</span> <span class="o">=</span> <span class="s">IP 地址</span>
-
- <span class="na">server_port</span> <span class="o">=</span> <span class="s">端口号</span>
-
- <span class="na">authentication_method</span> <span class="o">=</span> <span class="s">token</span>
-
- <span class="na">authenticate_new_work_conns</span> <span class="o">=</span> <span class="s">true</span>
-
- <span class="na">token</span> <span class="o">=</span> <span class="s">认证信息</span>
-
- <span class="na">includes</span> <span class="o">=</span> <span class="s">frpc_workstation_public.ini, frpc_personal.ini   </span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"> <span class="k">[common]</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># VPS 上 frps 的连接信息</span>
+</span></span><span class="line"><span class="cl"> <span class="na">server_addr</span> <span class="o">=</span> <span class="s">IP 地址</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="na">server_port</span> <span class="o">=</span> <span class="s">端口号</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="na">authentication_method</span> <span class="o">=</span> <span class="s">token</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="na">authenticate_new_work_conns</span> <span class="o">=</span> <span class="s">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="na">token</span> <span class="o">=</span> <span class="s">认证信息</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="na">includes</span> <span class="o">=</span> <span class="s">frpc_workstation_public.ini, frpc_personal.ini   </span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -74,7 +74,7 @@
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -93,24 +93,24 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ini" data-lang="ini"> <span class="k">[AIMAX_Web]</span>
- <span class="c1"># 连接协议</span>
- <span class="na">type</span> <span class="o">=</span> <span class="s">stcp</span>
-
- <span class="c1"># 本机 frpc 的角色是服务使用者</span>
- <span class="na">role</span> <span class="o">=</span> <span class="s">visitor</span>
-
- <span class="c1"># 与工作站上 frpc 完全一致的校验信息</span>
- <span class="na">server_name</span> <span class="o">=</span> <span class="s">workstation_AIMAX_Web</span>
-
- <span class="na">sk</span> <span class="o">=</span> <span class="s">另一组认证信息</span>
-
- <span class="c1"># 本机监听地址</span>
- <span class="na">bind_addr</span> <span class="o">=</span> <span class="s">127.0.0.1</span>
-
- <span class="c1"># 本机监听端口。指定访问 AIMAX 网页的端口号</span>
- <span class="na">bind_port</span> <span class="o">=</span> <span class="s">8081  </span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"> <span class="k">[AIMAX_Web]</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 连接协议</span>
+</span></span><span class="line"><span class="cl"> <span class="na">type</span> <span class="o">=</span> <span class="s">stcp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="c1"># 本机 frpc 的角色是服务使用者</span>
+</span></span><span class="line"><span class="cl"> <span class="na">role</span> <span class="o">=</span> <span class="s">visitor</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="c1"># 与工作站上 frpc 完全一致的校验信息</span>
+</span></span><span class="line"><span class="cl"> <span class="na">server_name</span> <span class="o">=</span> <span class="s">workstation_AIMAX_Web</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="na">sk</span> <span class="o">=</span> <span class="s">另一组认证信息</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="c1"># 本机监听地址</span>
+</span></span><span class="line"><span class="cl"> <span class="na">bind_addr</span> <span class="o">=</span> <span class="s">127.0.0.1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="c1"># 本机监听端口。指定访问 AIMAX 网页的端口号</span>
+</span></span><span class="line"><span class="cl"> <span class="na">bind_port</span> <span class="o">=</span> <span class="s">8081  </span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -127,20 +127,20 @@
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">./frpc.exe -c ./frpc.ini
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./frpc.exe -c ./frpc.ini
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>-c</code> 参数指定 config 文件，由于 frpc 默认会使用当前工作区下的 <code>frpc.ini</code> 文件。因此可以简化为：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">./frpc
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./frpc
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -167,13 +167,13 @@
 <p>最基本的 *.ini 文件如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[section]</span>
-<span class="na">name</span><span class="o">=</span><span class="s">value</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[section]</span>
+</span></span><span class="line"><span class="cl"><span class="na">name</span><span class="o">=</span><span class="s">value</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>一个 section 对应一个服务，section 的名字完全不重要，写得自己能理解就好（可用中文）；</li>
@@ -200,7 +200,7 @@
         <div class="details-content">
             <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -222,27 +222,27 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[service1]</span>
-<span class="c1"># 固定不变</span>
-<span class="na">type</span> <span class="o">=</span> <span class="s">stcp</span>
-<span class="c1"># 固定不变</span>
-<span class="na">role</span> <span class="o">=</span> <span class="s">visitor</span>
-<span class="c1"># service_name, sk 必须严格与服务端配置完全对应</span>
-<span class="na">service_name</span> <span class="o">=</span> <span class="s">user_projector</span>
-<span class="na">sk</span> <span class="o">=</span> <span class="s">一个密码</span>
-<span class="c1"># 本机监听地址。可改为 0.0.0.0 以允许本机和所在局域网内其它设备访问</span>
-<span class="na">bind_addr</span> <span class="o">=</span> <span class="s">127.0.0.1</span>
-<span class="c1"># 本机监听端口。可自定，要求不同服务的本机监听端口不能重复</span>
-<span class="na">bind_port</span> <span class="o">=</span> <span class="s">8083</span>
-
-<span class="k">[service2]</span>
-<span class="na">type</span> <span class="o">=</span> <span class="s">stcp</span>
-<span class="na">role</span> <span class="o">=</span> <span class="s">visitor</span>
-<span class="na">server_name</span> <span class="o">=</span> <span class="s">user_ssh</span>
-<span class="na">sk</span> <span class="o">=</span> <span class="s">另一个密码</span>
-<span class="na">bind_addr</span> <span class="o">=</span> <span class="s">127.0.0.1</span>
-<span class="na">bind_port</span> <span class="o">=</span> <span class="s">8084</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[service1]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 固定不变</span>
+</span></span><span class="line"><span class="cl"><span class="na">type</span> <span class="o">=</span> <span class="s">stcp</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 固定不变</span>
+</span></span><span class="line"><span class="cl"><span class="na">role</span> <span class="o">=</span> <span class="s">visitor</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># service_name, sk 必须严格与服务端配置完全对应</span>
+</span></span><span class="line"><span class="cl"><span class="na">service_name</span> <span class="o">=</span> <span class="s">user_projector</span>
+</span></span><span class="line"><span class="cl"><span class="na">sk</span> <span class="o">=</span> <span class="s">一个密码</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 本机监听地址。可改为 0.0.0.0 以允许本机和所在局域网内其它设备访问</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind_addr</span> <span class="o">=</span> <span class="s">127.0.0.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 本机监听端口。可自定，要求不同服务的本机监听端口不能重复</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind_port</span> <span class="o">=</span> <span class="s">8083</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[service2]</span>
+</span></span><span class="line"><span class="cl"><span class="na">type</span> <span class="o">=</span> <span class="s">stcp</span>
+</span></span><span class="line"><span class="cl"><span class="na">role</span> <span class="o">=</span> <span class="s">visitor</span>
+</span></span><span class="line"><span class="cl"><span class="na">server_name</span> <span class="o">=</span> <span class="s">user_ssh</span>
+</span></span><span class="line"><span class="cl"><span class="na">sk</span> <span class="o">=</span> <span class="s">另一个密码</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind_addr</span> <span class="o">=</span> <span class="s">127.0.0.1</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind_port</span> <span class="o">=</span> <span class="s">8084</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>

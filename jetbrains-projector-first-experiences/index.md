@@ -187,17 +187,17 @@ root@machine:~# projector run
 
 此处仅列举我在实际体验中觉得很糟心的地方，其它问题可以在链接 2 的 Known problems[^6] 部分查看。
 
-### 快捷键冲突剪贴板共享
+### 快捷键冲突和剪贴板共享
 
-Projector 的服务端是安装在远程 Linux 环境中，然后通过本地浏览器或下载链接 5 的客户端使用（这里需要提一句的是 JetBrains 家 IDE 的 `Settings`-`Plugins`-`Marketplace` 中也上架了 `Projector`，但这个是把本机 IDE 当服务端来用的）。
+Projector 的服务端是安装在远程 Linux 环境中，然后通过本地浏览器或下载链接 5 的客户端使用（这里需要提一句的是 JetBrains 的 IDE 插件市场中也上架了 `Projector`[^7]，但这个是把本机 IDE 当服务端来用的）。
 
-当通过浏览器访问 Projector 时，IDE 的快捷键会与浏览器本身的快捷键冲突，例如选择代码块的快捷键 `Ctrl` + `w`[^7]在 Chromium/Firefox/Safari 中是关闭当前标签页。所以为了使用快捷键还有复制粘贴功能，最好还是下载独立的 Projector 客户端。
+当通过浏览器访问 Projector 时，IDE 的快捷键会与浏览器本身的快捷键冲突，例如选择代码块的快捷键 `Ctrl` + `w`[^8]在 Chromium/Firefox/Safari 中是关闭当前标签页。所以为了使用快捷键还有复制粘贴功能，最好还是下载独立的 Projector 客户端。
 
 ### 启用自签证书的 HTTPS
 
-本文初次写成于 2021 年 3 月，但当 4 月我在另一台机器上部署完 Projector 后发现即使用 Projector 客户端去连也不能将其中的文本复制粘贴到其它程序中。在 JetBrains 的 bug 跟踪系统 YouTrack 上有人[^8]解释是新版本的服务端后只有在 localhost 部署或启用 HTTPS 后才能跨程序复制粘贴，同时给出了对于 [不完整剪贴板同步实现过程的官方文档](https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/accessing/#incomplete-clipboard-synchronization)。
+本文初次写成于 2021 年 3 月，但当 4 月我在另一台机器上部署完 Projector 后发现即使用 Projector 客户端去连也不能将其中的文本复制粘贴到其它程序中。在 JetBrains 的 bug 跟踪系统 YouTrack 上有人[^9]解释是新版本的服务端后只有在 localhost 部署或启用 HTTPS 后才能跨程序复制粘贴，同时给出了对于 [不完整剪贴板同步实现过程的官方文档](https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/accessing/#incomplete-clipboard-synchronization)。
 
-就个人+内网使用来说，自签 HTTPS 证书是比较简单的方式。此处给出自签证书的启用方法，至于使用可信任证书颁发机构给域名颁发的证书，可以参考链接 3 自述文件的 FAQ 部分[^9]。
+就个人+内网使用来说，自签 HTTPS 证书是比较简单的方式。此处给出自签证书的启用方法，至于使用可信任证书颁发机构给域名颁发的证书，可以参考链接 3 自述文件的 FAQ 部分[^10]。
 
 在命令行中交互式启动自签 HTTPS 证书：
 
@@ -232,8 +232,10 @@ projector config edit
 
 [^6]: https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/jetbrains/#known-problems
 
-[^7]: https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection
+[^7]: https://plugins.jetbrains.com/plugin/16015-projector
 
-[^8]: https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0
+[^8]: https://www.jetbrains.com/help/idea/working-with-source-code.html#editor_code_selection
 
-[^9]: https://github.com/JetBrains/projector-installer#secure-connection
+[^9]: https://youtrack.jetbrains.com/issue/PRJ-426#focus=Comments-27-4816576.0-0
+
+[^10]: https://github.com/JetBrains/projector-installer#secure-connection
