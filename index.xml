@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>春秋碎碎念</title><link>https://xuchunqiu.github.io/</link><description>这是我的自留地</description><generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor><webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Tue, 08 Mar 2022 01:37:19 +0000</lastBuildDate><atom:link href="https://xuchunqiu.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>远程开发工具 JetBrains Gateway 初体验</title><link>https://xuchunqiu.github.io/jetbrains-gateway-first-experiences/</link><pubDate>Tue, 08 Mar 2022 01:37:19 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/jetbrains-gateway-first-experiences/</guid><description><![CDATA[<p>在去年写完 <a href="https://xuchunqiu.me/jetbrains-projector-first-experiences/" target="_blank" rel="noopener noreffer">Projector 的体验</a> 之后，我就已经没有再使用过它了，原因如下：</p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CQCQ 收到未？</title><link>https://xuchunqiu.me/</link><description>欢迎来到我的菜园子</description><generator>Hugo -- gohugo.io</generator><managingEditor>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</managingEditor><webMaster>xuchunqiu(#)st.xatu.edu.cn (xuchunqiu)</webMaster><lastBuildDate>Tue, 08 Mar 2022 01:37:19 +0000</lastBuildDate><atom:link href="https://xuchunqiu.me/index.xml" rel="self" type="application/rss+xml"/><item><title>远程开发工具 JetBrains Gateway 初体验</title><link>https://xuchunqiu.me/jetbrains-gateway-first-experiences/</link><pubDate>Tue, 08 Mar 2022 01:37:19 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/jetbrains-gateway-first-experiences/</guid><description><![CDATA[<p>在去年写完 <a href="https://xuchunqiu.me/jetbrains-projector-first-experiences/" target="_blank" rel="noopener noreffer">Projector 的体验</a> 之后，我就已经没有再使用过它了，原因如下：</p>
 <ul>
 <li>必须安装客户端才能使用快捷键</li>
 <li>服务端非本机部署时，必须在客户端主机上安装自签证书才能使用复制粘贴功能</li>
@@ -86,7 +86,7 @@
 </span></span><span class="line"><span class="cl">user@machine:~# <span class="nb">kill</span> <span class="m">738</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>JetBrains Projector 使用初体验</title><link>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</link><pubDate>Tue, 06 Jul 2021 10:22:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/jetbrains-projector-first-experiences/</guid><description><![CDATA[<p>Projector 是 JetBrains 新推出的远程开发解决方案。实现上是在远程主机上部署 IDE 服务端然后在本地浏览器中或本地客户端中访问，本文记录了安装步骤和使用体验。</p>
+</div>]]></description></item><item><title>JetBrains Projector 使用初体验</title><link>https://xuchunqiu.me/jetbrains-projector-first-experiences/</link><pubDate>Tue, 06 Jul 2021 10:22:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/jetbrains-projector-first-experiences/</guid><description><![CDATA[<p>Projector 是 JetBrains 新推出的远程开发解决方案。实现上是在远程主机上部署 IDE 服务端然后在本地浏览器中或本地客户端中访问，本文记录了安装步骤和使用体验。</p>
 <h2 id="0x00-可能有用的链接">0x00 可能有用的链接</h2>
 <ol>
 <li>官方博客介绍：<a href="https://blog.jetbrains.com/zh-hans/blog/2021/03/25/projector-ide/" target="_blank" rel="noopener noreffer">使用 Projector 远程访问 IDE</a></li>
@@ -466,7 +466,7 @@
 </li>
 </ol>
 </section>
-]]></description></item><item><title>什么是 SCI</title><link>https://xuchunqiu.github.io/what-is-sci/</link><pubDate>Wed, 11 Nov 2020 10:29:37 +0800</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/what-is-sci/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>什么是 SCI</title><link>https://xuchunqiu.me/what-is-sci/</link><pubDate>Wed, 11 Nov 2020 10:29:37 +0800</pubDate><author>Author</author><guid>https://xuchunqiu.me/what-is-sci/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-11-11/2020-11-11-001.png" referrerpolicy="no-referrer">
             </div><h1 id="影响因子">影响因子</h1>
 <blockquote>
@@ -617,7 +617,7 @@
 </li>
 </ol>
 </section>
-]]></description></item><item><title>如何在 Ubuntu 上安装配置 Rime 输入法</title><link>https://xuchunqiu.github.io/install-and-setup-rime-on-ubuntu/</link><pubDate>Fri, 24 May 2019 01:04:47 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-and-setup-rime-on-ubuntu/</guid><description><![CDATA[<p>Ubuntu 上比较流行又好装的中文输入法应该就只有 <a href="https://pinyin.sogou.com/linux/" target="_blank" rel="noopener noreffer">搜狗输入法 for Linux</a> 一款了，但如果你追求简洁纯粹，那 <a href="https://rime.im" target="_blank" rel="noopener noreffer">Rime 输入法</a> 或许是你的菜。</p>
+]]></description></item><item><title>如何在 Ubuntu 上安装配置 Rime 输入法</title><link>https://xuchunqiu.me/install-and-setup-rime-on-ubuntu/</link><pubDate>Fri, 24 May 2019 01:04:47 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/install-and-setup-rime-on-ubuntu/</guid><description><![CDATA[<p>Ubuntu 上比较流行又好装的中文输入法应该就只有 <a href="https://pinyin.sogou.com/linux/" target="_blank" rel="noopener noreffer">搜狗输入法 for Linux</a> 一款了，但如果你追求简洁纯粹，那 <a href="https://rime.im" target="_blank" rel="noopener noreffer">Rime 输入法</a> 或许是你的菜。</p>
 <p>Rime 是一款由 <a href="https://github.com/lotem" target="_blank" rel="noopener noreffer">佛振</a> 主导开发的自由软件，支持在 Windows、macOS 和 Linux 操作系统上运行。它的优点是干净纯粹支持高度的客制化，缺点是较差的联想功能（自己慢慢养词库或者导入其它输入法的词库）和比较复杂的配置。本文将专注于介绍 Rime 在安装阶段的配置过程。</p>
 <h2 id="1-基本安装">1. 基本安装</h2>
 <p>在 <a href="https://rime.im/download/#Linux" target="_blank" rel="noopener noreffer">Rime 下载页面的 Linux 章节</a> 中给出了基于 IBus 和 Fcitx 两种输入法框架的安装指导，我这里是选择 IBus 框架：</p>
@@ -708,7 +708,7 @@
             <div class="admonition-content">更多配置教程请查阅 <a href="https://rime.im/docs/" target="_blank" rel="noopener noreffer">Rime 帮助文档</a></div>
         </div>
     </div>
-]]></description></item><item><title>如何在 Ubuntu 上安装深度截图</title><link>https://xuchunqiu.github.io/install-deepin-screenshot-on-ubuntu/</link><pubDate>Mon, 25 Feb 2019 09:11:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-deepin-screenshot-on-ubuntu/</guid><description><![CDATA[<h1 id="update">Update</h1>
+]]></description></item><item><title>如何在 Ubuntu 上安装深度截图</title><link>https://xuchunqiu.me/install-deepin-screenshot-on-ubuntu/</link><pubDate>Mon, 25 Feb 2019 09:11:06 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/install-deepin-screenshot-on-ubuntu/</guid><description><![CDATA[<h1 id="update">Update</h1>
 <p>深度截图目前已有 <a href="https://www.deepin.org/zh/original/deepin-screenshot/" target="_blank" rel="noopener noreffer">官方介绍</a>、<a href="https://wiki.deepin.org/wiki/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE" target="_blank" rel="noopener noreffer">使用说明</a>，但依然没有提供从深度商店外安装深度截图的教程。</p>
 <p>appimage 格式深度截图的下载地址已经失效，但依然可以从互联网档案馆上 <a href="https://web.archive.org/web/20201120043221/https://github-production-release-asset-2e65be.s3.amazonaws.com/110259696/6110e818-0909-11e8-92a8-e734dc188fe0?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201120%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20201120T043221Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=134866f6be04ad00a4eaf1a2aa00604d5fbfd4fe5f9597a94a2a92da3d758053&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=110259696&amp;response-content-disposition=attachment%3B%20filename%3DDeepin_Screenshot_4.0.10.4-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noopener noreffer">下载（35.7 MB）</a>。</p>
 <h2 id="1-下载深度截图">1. 下载深度截图</h2>
@@ -809,7 +809,7 @@
         </div>
     </div>
 <p>然后就可以在 LaunchPad 看到图标了，鼠标拖拽即可固定到 dock 栏。</p>
-]]></description></item><item><title>Google Colab 真的可以 debug 吗？</title><link>https://xuchunqiu.github.io/can-we-really-debug-in-google-colab/</link><pubDate>Mon, 25 Feb 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/can-we-really-debug-in-google-colab/</guid><description><![CDATA[<p><a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="noopener noreffer">Colaboratory</a>（简称 Colab）是 Google 推出的免费、在线、具有 GPU 的 <a href="https://jupyter.org/" target="_blank" rel="noopener noreffer">JupyterLab</a> 环境，它的底层是一个虚拟的 Linux 系统，所以你在里面执行 Linux 命令也是没有问题的。</p>
+]]></description></item><item><title>Google Colab 真的可以 debug 吗？</title><link>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</link><pubDate>Mon, 25 Feb 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</guid><description><![CDATA[<p><a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="noopener noreffer">Colaboratory</a>（简称 Colab）是 Google 推出的免费、在线、具有 GPU 的 <a href="https://jupyter.org/" target="_blank" rel="noopener noreffer">JupyterLab</a> 环境，它的底层是一个虚拟的 Linux 系统，所以你在里面执行 Linux 命令也是没有问题的。</p>
 <p>我的本科毕业设计是做的深度学习相关的内容，但自己笔记本电脑里的 GTX 950M（2G）显卡一跑代码就爆显存，所以不夸张地说我是全靠 Colab 才顺利毕业。</p>
 <p>扯远了，本文主要是测试一下 Colab 调试代码的方法，结论就是对于结构比较复杂的代码 Colab 并不能很好地完成调试。</p>
 <h2 id="0x00-一些-colab-使用心得">0x00 一些 Colab 使用心得</h2>
@@ -1202,7 +1202,7 @@
 </div>
         </div>
     </div>
-]]></description></item><item><title>如何在 Ubuntu 上安装 QQ</title><link>https://xuchunqiu.github.io/install-qq-on-ubuntu/</link><pubDate>Mon, 25 Feb 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.github.io/install-qq-on-ubuntu/</guid><description><![CDATA[<h1 id="update">Update</h1>
+]]></description></item><item><title>如何在 Ubuntu 上安装 QQ</title><link>https://xuchunqiu.me/install-qq-on-ubuntu/</link><pubDate>Mon, 25 Feb 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/install-qq-on-ubuntu/</guid><description><![CDATA[<h1 id="update">Update</h1>
 <p>深度的 <a href="https://wiki.deepin.org/" target="_blank" rel="noopener noreffer">维基页面</a> 现在已经列出了直接使用 <code>apt</code> 命令安装 <a href="https://wiki.deepin.org/wiki/QQ%E8%BD%BB%E8%81%8A%E7%89%88" target="_blank" rel="noopener noreffer">QQ轻聊版</a>、<a href="https://wiki.deepin.org/wiki/QQ" target="_blank" rel="noopener noreffer">QQ 标准版</a> 的方法。</p>
 <h2 id="1-安装-deepin-wine-环境">1. 安装 Deepin wine 环境</h2>
 <div class="highlight"><div class="chroma">
