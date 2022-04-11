@@ -617,7 +617,308 @@
 </li>
 </ol>
 </section>
-]]></description></item><item><title>Google Colab 真的可以 debug 吗？</title><link>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</link><pubDate>Wed, 16 Oct 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</guid><description><![CDATA[<p><a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="noopener noreffer">Colaboratory</a>（简称 Colab）是 Google 推出的免费、在线、具有 GPU 的 <a href="https://jupyter.org/" target="_blank" rel="noopener noreffer">JupyterLab</a> 环境，它的底层是一个虚拟的 Linux 系统，所以你在里面执行 Linux 命令也是没有问题的。</p>
+]]></description></item><item><title>配置 OpenSSH 的公钥匙认证</title><link>https://xuchunqiu.me/use-public-key-authentication-in-openssh/</link><pubDate>Mon, 05 Oct 2020 03:41:14 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/use-public-key-authentication-in-openssh/</guid><description><![CDATA[<h2 id="0x00-前言">0x00 前言</h2>
+<p><a href="https://www.ssh.com/ssh/" target="_blank" rel="noopener noreffer">https://www.ssh.com/ssh/</a> 上的文档写得很详细但有些散碎，本文对配置 OpenSSH 公钥认证的环节进行了整理。</p>
+<p>如果你还不了解什么是公钥认证的话，可以看： <a href="https://www.ssh.com/ssh/public-key-authentication" target="_blank" rel="noopener noreffer">https://www.ssh.com/ssh/public-key-authentication</a></p>
+<h3 id="公私钥长什么样">公私钥长什么样？</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># https://www.ssh.com/ssh/key/#what-do-ssh-keys-look-like:~:text=An%20authorized%20key%20can%20look%20like%20this%3A</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 公钥 a.k.a. public key a.k.a. authorized key</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 尾部是生成密钥对的 &lt;用户名&gt;@&lt;主机名&gt;</span>
+</span></span><span class="line"><span class="cl">ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN+Mh3U/3We4VYtV1QmWUFIzFLTUeegl1Ao5/QGtCRGAZn8bxX9KlCrrWISIjSYAwCajIEGSPEZwPNMBoK8XD8Q<span class="o">=</span> ylo@klar
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 私钥 a.k.a. private key a.k.a. identity key</span>
+</span></span><span class="line"><span class="cl">-----BEGIN EC PRIVATE KEY-----
+</span></span><span class="line"><span class="cl">MHcCAQEEIJWbvSW7h50HPwG+bWR3DXgQ6YhOxYbe0ifr1rRUvsUuoAoGCCqGSM49
+</span></span><span class="line"><span class="cl">AwEHoUQDQgAE34yHdT/dZ7hVi1XVCZZQUjMUtNR56CXUCjn9Aa0JEYBmfxvFf0qU
+</span></span><span class="line"><span class="cl"><span class="nv">KutYhIiNJgDAJqMgQZI8RnA80wGgrxcPxA</span><span class="o">==</span>
+</span></span><span class="line"><span class="cl">-----END EC PRIVATE KEY-----
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接下来本文将以 Windows 作为本机系统、Ubuntu 作为远程主机系统演示公钥认证的配置过程。</p>
+<h2 id="0x01-本机使用-ssh-keygen-生成公私钥对">0x01 本机使用 <code>ssh-keygen</code> 生成公私钥对</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># PowerShell</span>
+</span></span><span class="line"><span class="cl">ssh-keygen.exe
+</span></span><span class="line"><span class="cl"><span class="c1"># 默认输出到 C:\Users\$ENV:USERNAME\.ssh\ 下的 id_rsa</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># WSL</span>
+</span></span><span class="line"><span class="cl">ssh-keygen
+</span></span><span class="line"><span class="cl"><span class="c1"># 默认输出到 ~/.ssh/ 下的 id_rsa</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>密码（passphrase）对私钥的加密效果使得第三方即使获得私钥也无法完成认证过程。</p>
+<figure>
+</figure>
+
+<p>需要说明的是，在手动指定密钥对的保存路径时，如果只写文件名，默认是放在启动 <code>ssh-keygen</code> 时所在的工作目录中。</p>
+<h2 id="0x02-将公钥内容写入远程主机的-sshauthorized_keys-文件中">0x02 将公钥内容写入远程主机的 <code>~/.ssh/authorized_keys</code> 文件中</h2>
+<blockquote>
+<p><code>authorized_keys</code> 文件保存允许通过公钥授权来经 SSH 登录服务器者的公钥，每行保存一个，空行或是井号会被忽略。</p>
+<p>它通常位于 <code>~/.ssh/authorized_keys</code>（许多 OpenSSH 的版本也会使用 <code>~/ssh/authorized_keys2</code>），而对一些使用客制化 OpenSSH 构建的组织来说，这个默认路径可能有变化。</p>
+<p><a href="https://www.ssh.com/ssh/authorized_keys/openssh" target="_blank" rel="noopener noreffer">Configuring authorized_keys for OpenSSH</a></p>
+</blockquote>
+<h3 id="方法-1使用-ssh-copy-id">方法 1：使用 <code>ssh-copy-id</code></h3>
+<p><code>ssh-copy-id</code> 用于在远程主机上添加公钥，它的操作逻辑为：</p>
+<ol>
+<li>远程服主机的 <code>~/.ssh</code> 路径是否存在？创建：下一步</li>
+<li>远程主机的 <code>~/.ssh/authorized_keys</code> 文件是否存在？创建：下一步</li>
+<li>（当没有使用 <code>-f</code>(orce) 时）远程主机的 <code>authorized_keys</code> 文件是否已包含本次要配置的公钥？跳过：添加，下一步</li>
+<li>远程主机的 <code>authorized_keys</code> 文件权限是否仅有当前用户可写入？不变：修改</li>
+</ol>
+<p>其可选参数为：</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-f</code></td>
+<td>Don&rsquo;t check if the key is already configured as an authorized key on the server. Just add it. This can result in multiple copies of the key in authorized_keys files.</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td>Specifies the identity file that is to be copied (default is ~/.ssh/id_rsa). If this option is not provided, this adds all keys listed by ssh-add -L. Note: it can be multiple keys and adding extra authorized keys can easily happen accidentally! If ssh-add -L returns no keys, then the most recently modified key matching ~/.ssh/id*.pub, excluding those matching ~/.ssh/*-cert.pub, will be used.</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>Just print the key(s) that would be installed, without actually installing them.</td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>Connect to the specifed SSH port on the server, instead of the default port 22.</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>help</td>
+</tr>
+</tbody>
+</table>
+<p>关于 <code>ssh-copy-id</code> 的更多介绍见：<a href="https://www.ssh.com/ssh/copy-id" target="_blank" rel="noopener noreffer">ssh-copy-id for copying SSH keys to servers</a>，也可直接跳转到 <a href="https://www.ssh.com/ssh/copy-id#troubleshooting:~:text=key.-,Troubleshooting" target="_blank" rel="noopener noreffer">Trouble shooting</a> 章节</p>
+<p>废话写完了，实际使用的命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i /mnt/c/Users/<span class="nv">$ENV</span>:USERNAME/.ssh/keypair/keyToGPUServer amax@192.168.50.50
+</span></span></code></pre></td></tr></table>
+</div>
+</div><figure>
+</figure>
+
+<p>可以注意到，已成功添加了一个公钥，但并不能按照提示所说直接使用 public key authentication，后续会在 #0x03 <a href="#0x03" rel="">#0x03</a> 的方法 2 中进行解释。</p>
+<h3 id="方法-2手动拷贝">方法 2：手动拷贝</h3>
+<p>手动拷贝本机公钥内容到远程主机的 <code>~/.ssh/authorized_keys</code> 文件有很多方法，此处以 <code>scp</code> 复制公钥到远程主机为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 先复制本机公钥到远程主机的 ~ 目录</span>
+</span></span><span class="line"><span class="cl">scp C:<span class="se">\U</span>sers<span class="se">\$</span>ENV:USERNAME<span class="se">\k</span>eyToGPUServer.pub amax@192.168.50.50:~
+</span></span></code></pre></td></tr></table>
+</div>
+</div><figure>
+</figure>
+
+<p>不过我这里的私钥权限太宽需要修改：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 当前用户只读</span>
+</span></span><span class="line"><span class="cl">chmod <span class="m">400</span> .ssh/keypair/keyToGPUServer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 当前用户读写</span>
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> .ssh/keypair/keyToGPUServer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>传输完成后登入远程主机，将公钥内容写入到 <code>~/.ssh/authorized_keys</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 此时仍然需要以账户密码登录</span>
+</span></span><span class="line"><span class="cl">ssh amax@192.168.50.50
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加到文件尾</span>
+</span></span><span class="line"><span class="cl">cat keyToGPUServer.pub &gt;&gt; ~/.ssh/authorized_keys
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="0x03-配置本机的私钥存储">0x03 配置本机的私钥存储</h2>
+<blockquote>
+<p>本地主机的 ssh 程序可通过：</p>
+<ol>
+<li>命令行（指 <code>ssh-agent</code> 工具）</li>
+<li>（用户）配置文件 <code>~/.ssh/config</code></li>
+<li>（全局）配置文件 <code>/etc/ssh/ssh_config</code></li>
+</ol>
+<p>来获得配置信息。三个位置的优先级由高到低，且在每个位置仅使用首个匹配成功的条目。</p>
+<p><a href="https://www.ssh.com/ssh/config" target="_blank" rel="noopener noreffer">https://www.ssh.com/ssh/config</a></p>
+</blockquote>
+<h3 id="方法-1向-ssh-agent-添加私钥">方法 1：向 <code>ssh-agent</code> 添加私钥</h3>
+<blockquote>
+<p><code>ssh-agent</code> 用于保存和管理用户的私钥和私钥密码，借助它我们可以实现单点登录（Single Sign-On, SSO）。</p>
+<p>在大多 Linux 系统中 <code>ssh-agent</code> 都已被自动配置且在登入时已启动。</p>
+<p><a href="https://www.ssh.com/ssh/agent" target="_blank" rel="noopener noreffer">https://www.ssh.com/ssh/agent</a></p>
+</blockquote>
+<p>使用如下命令向 <code>ssh-agent</code> 添加私钥：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 检查是否启动</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$SSH_AGENT_SOCK</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 手动启动</span>
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="sb">`</span>ssh-agent<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 显示 ssh-agent 已安装私钥</span>
+</span></span><span class="line"><span class="cl">ssh-add -l
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 从 ssh-agent 移除指定名称私钥（不删除密钥文件）</span>
+</span></span><span class="line"><span class="cl">ssh-add -d keyToGPUServer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 从 ssh-agent 移除所有已添加私钥（不删除密钥文件）</span>
+</span></span><span class="line"><span class="cl">ssh-add -D
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 从默认位置添加默认名称的私钥</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  ~/.ssh/id_rsa, .ssh/id_dsa, ~/.ssh/id_ecdsa, ~/.ssh/id_ed25519, and ~/.ssh/identity</span>
+</span></span><span class="line"><span class="cl">ssh-add
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 手动指定私钥位置和名称</span>
+</span></span><span class="line"><span class="cl">ssh-add keypair/keyToGPUServer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>测试：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 成功认证</span>
+</span></span><span class="line"><span class="cl">ssh amax@192.168.50.50
+</span></span><span class="line"><span class="cl">amax@admin:~$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="方法-2将私钥信息写入-sshconfig-文件">方法 2：将私钥信息写入 <code>~/.ssh/config</code> 文件</h3>
+<p>Windows 下的对应文件是在 <code>C:\Users\$ENV:USERNAME\.ssh\config</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># https://www.ssh.com/ssh/config/#configuring-public-key-authentication</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 这里的 Host 名称一定要起一个好记好输的，因为在之后使用 ssh 进行公钥认证时匹配的就是这里的 Host 名称</span>
+</span></span><span class="line"><span class="cl">Host GPU
+</span></span><span class="line"><span class="cl">    HostName 192.168.50.50
+</span></span><span class="line"><span class="cl">    User amax
+</span></span><span class="line"><span class="cl">    IdentityFile C:<span class="se">\U</span>sers<span class="se">\$</span>ENV:USERNAME<span class="se">\.</span>ssh<span class="se">\k</span>eypair<span class="se">\k</span>eyToGPUServer
+</span></span><span class="line"><span class="cl">    IdentitiesOnly yes
+</span></span><span class="line"><span class="cl">    Port <span class="m">22</span>
+</span></span><span class="line"><span class="cl">    ServerAliveInterval <span class="m">60</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>测试：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 如果前面还通过 ssh-agent 添加了相同的密钥，要先删除掉。因为找密钥的时候它的优先级更高</span>
+</span></span><span class="line"><span class="cl">ssh-add -d keyToGPUServer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 只能通过 Host 名称才不要密码</span>
+</span></span><span class="line"><span class="cl">ssh GPU
+</span></span><span class="line"><span class="cl">amax@admin:~$
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果是通过用户名主机名去登录就还得输入密码</span>
+</span></span><span class="line"><span class="cl">ssh amax@192.168.50.50
+</span></span><span class="line"><span class="cl">amax@192.168.50.50<span class="err">&#39;</span>s password:
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>Google Colab 真的可以 debug 吗？</title><link>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</link><pubDate>Wed, 16 Oct 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</guid><description><![CDATA[<p><a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="noopener noreffer">Colaboratory</a>（简称 Colab）是 Google 推出的免费、在线、具有 GPU 的 <a href="https://jupyter.org/" target="_blank" rel="noopener noreffer">JupyterLab</a> 环境，它的底层是一个虚拟的 Linux 系统，所以你在里面执行 Linux 命令也是没有问题的。</p>
 <p>我的本科毕业设计是做的深度学习相关的内容，但自己笔记本电脑里的 GTX 950M（2G）显卡一跑代码就爆显存，所以不夸张地说我是全靠 Colab 才顺利毕业。</p>
 <p>扯远了，本文主要是测试一下 Colab 调试代码的方法，结论就是对于结构比较复杂的代码 Colab 并不能很好地完成调试。</p>
 <h2 id="0x00-一些-colab-使用心得">0x00 一些 Colab 使用心得</h2>
