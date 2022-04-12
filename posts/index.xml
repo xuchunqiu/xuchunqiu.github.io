@@ -617,7 +617,7 @@
 </li>
 </ol>
 </section>
-]]></description></item><item><title>配置 OpenSSH 的公钥匙认证</title><link>https://xuchunqiu.me/use-public-key-authentication-in-openssh/</link><pubDate>Mon, 05 Oct 2020 03:41:14 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/use-public-key-authentication-in-openssh/</guid><description><![CDATA[<h2 id="0x00-前言">0x00 前言</h2>
+]]></description></item><item><title>配置 OpenSSH 的公钥认证</title><link>https://xuchunqiu.me/use-public-key-authentication-in-openssh/</link><pubDate>Mon, 05 Oct 2020 03:41:14 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/use-public-key-authentication-in-openssh/</guid><description><![CDATA[<h2 id="0x00-前言">0x00 前言</h2>
 <p><a href="https://www.ssh.com/ssh/" target="_blank" rel="noopener noreffer">https://www.ssh.com/ssh/</a> 上的文档写得很详细但有些散碎，本文对配置 OpenSSH 公钥认证的环节进行了整理。</p>
 <p>如果你还不了解什么是公钥认证的话，可以看： <a href="https://www.ssh.com/ssh/public-key-authentication" target="_blank" rel="noopener noreffer">https://www.ssh.com/ssh/public-key-authentication</a></p>
 <h3 id="公私钥长什么样">公私钥长什么样？</h3>
@@ -736,7 +736,7 @@
 </div><figure>
 </figure>
 
-<p>可以注意到，已成功添加了一个公钥，但并不能按照提示所说直接使用 public key authentication，后续会在 #0x03 <a href="#0x03" rel="">#0x03</a> 的方法 2 中进行解释。</p>
+<p>可以注意到，已成功添加了一个公钥，但并不能按照提示所说直接使用 public key authentication，后续会在 # 0x03 的 <a href="#%E6%96%B9%E6%B3%95-2%E5%B0%86%E7%A7%81%E9%92%A5%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5-sshconfig-%E6%96%87%E4%BB%B6" rel="">方法 2</a> 中进行解释。</p>
 <h3 id="方法-2手动拷贝">方法 2：手动拷贝</h3>
 <p>手动拷贝本机公钥内容到远程主机的 <code>~/.ssh/authorized_keys</code> 文件有很多方法，此处以 <code>scp</code> 复制公钥到远程主机为例：</p>
 <div class="highlight"><div class="chroma">
@@ -877,11 +877,9 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># https://www.ssh.com/ssh/config/#configuring-public-key-authentication</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 这里的 Host 名称一定要起一个好记好输的，因为在之后使用 ssh 进行公钥认证时匹配的就是这里的 Host 名称</span>
 </span></span><span class="line"><span class="cl">Host GPU
 </span></span><span class="line"><span class="cl">    HostName 192.168.50.50
 </span></span><span class="line"><span class="cl">    User amax
@@ -891,7 +889,8 @@
 </span></span><span class="line"><span class="cl">    ServerAliveInterval <span class="m">60</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>测试：</p>
+</div><p>这里的 Host 名称一定要起一个好记的，因为在之后使用 ssh 进行公钥认证时匹配的就是这里的 Host 名称而不再是 <code>&lt;username&gt;@&lt;ip-address&gt;</code>，本文第二张图下方没有成功通过公钥认证就是这个原因。</p>
+<p>测试：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1

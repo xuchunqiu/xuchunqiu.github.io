@@ -1,4 +1,4 @@
-# 配置 OpenSSH 的公钥匙认证
+# 配置 OpenSSH 的公钥认证
 
 
 ## 0x00 前言
@@ -81,7 +81,7 @@ ssh-copy-id -i /mnt/c/Users/$ENV:USERNAME/.ssh/keypair/keyToGPUServer amax@192.1
 
 {{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-10-05/002.png" title="" >}}
 
-可以注意到，已成功添加了一个公钥，但并不能按照提示所说直接使用 public key authentication，后续会在 #0x03 [#0x03](#0x03) 的方法 2 中进行解释。
+可以注意到，已成功添加了一个公钥，但并不能按照提示所说直接使用 public key authentication，后续会在 # 0x03 的 [方法 2](#%E6%96%B9%E6%B3%95-2%E5%B0%86%E7%A7%81%E9%92%A5%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5-sshconfig-%E6%96%87%E4%BB%B6) 中进行解释。
 
 ### 方法 2：手动拷贝
 
@@ -173,7 +173,6 @@ Windows 下的对应文件是在 `C:\Users\$ENV:USERNAME\.ssh\config`：
 
 ```bash
 # https://www.ssh.com/ssh/config/#configuring-public-key-authentication
-# 这里的 Host 名称一定要起一个好记好输的，因为在之后使用 ssh 进行公钥认证时匹配的就是这里的 Host 名称
 Host GPU
     HostName 192.168.50.50
     User amax
@@ -182,6 +181,8 @@ Host GPU
     Port 22
     ServerAliveInterval 60
 ```
+
+这里的 Host 名称一定要起一个好记的，因为在之后使用 ssh 进行公钥认证时匹配的就是这里的 Host 名称而不再是 `<username>@<ip-address>`，本文第二张图下方没有成功通过公钥认证就是这个原因。
 
 测试：
 
