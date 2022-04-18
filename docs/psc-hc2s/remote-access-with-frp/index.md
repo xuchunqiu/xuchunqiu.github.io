@@ -1,10 +1,10 @@
-# 使用 frp 进行远程访问
+# 如何使用 frp 安全访问实验室深度学习工作站
 
 # 简介
 
 之前使用的公共节点 Zerotier 在学校之外的打洞成功率很差，因此换用 [frp](https://github.com/fatedier/frp) 。两者工作原理类似——依赖具有公网 IP 的中心节点中转。frp 的中心节点只能自建但相应的稳定性更优。
 
-frp 可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。frp 的可执行文件包括服务端（frps）与客户端（frpc），前者运行在具有公网 IP 的节点，后者运行在公网无法直接访问的、提供/使用服务的节点。`.ini` 后缀的文件记录了 frp节点间（不单是 frpc 与 frps，还包括 frpc 之间）的连接信息。
+frp 基于认证的 `stcp(secret tcp)` 模式可以将内网服务安全地暴露到公网。frp 的可执行文件包括服务端（frps）与客户端（frpc），前者运行在具有公网 IP 的节点，后者运行在公网无法直接访问的、提供/使用服务的节点。`.ini` 后缀的文件记录了 frp节点间（不单是 frpc 与 frps，还包括 frpc 之间）的连接信息。
 
 ![frp 的原理图示](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/frp%E7%9A%84%E5%8E%9F%E7%90%86.png)
 

@@ -917,7 +917,7 @@
 </span></span><span class="line"><span class="cl">amax@192.168.50.50<span class="err">&#39;</span>s password:
 </span></span></code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>Google Colab 真的可以 debug 吗？</title><link>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</link><pubDate>Wed, 16 Oct 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</guid><description><![CDATA[<p><a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="noopener noreffer">Colaboratory</a>（简称 Colab）是 Google 推出的免费、在线、具有 GPU 的 <a href="https://jupyter.org/" target="_blank" rel="noopener noreffer">JupyterLab</a> 环境，它的底层是一个虚拟的 Linux 系统，所以你在里面执行 Linux 命令也是没有问题的。</p>
+</div>]]></description></item><item><title>在 Google Colab 上 Debug 的正确方式</title><link>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</link><pubDate>Wed, 16 Oct 2019 08:24:22 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/can-we-really-debug-in-google-colab/</guid><description><![CDATA[<p><a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="noopener noreffer">Colaboratory</a>（简称 Colab）是 Google 推出的免费、在线、具有 GPU 的 <a href="https://jupyter.org/" target="_blank" rel="noopener noreffer">JupyterLab</a> 环境，它的底层是一个虚拟的 Linux 系统，所以你在里面执行 Linux 命令也是没有问题的。</p>
 <p>我的本科毕业设计是做的深度学习相关的内容，但自己笔记本电脑里的 GTX 950M（2G）显卡一跑代码就爆显存，所以不夸张地说我是全靠 Colab 才顺利毕业。</p>
 <p>扯远了，本文主要是测试一下 Colab 调试代码的方法，结论就是对于结构比较复杂的代码 Colab 并不能很好地完成调试。</p>
 <h2 id="0x00-一些-colab-使用心得">0x00 一些 Colab 使用心得</h2>
@@ -1310,7 +1310,7 @@
 </div>
         </div>
     </div>
-]]></description></item><item><title>在 Colab 上跑 Faster R-CNN</title><link>https://xuchunqiu.me/run-faster-r-cnn-on-colab/</link><pubDate>Mon, 23 Sep 2019 13:08:02 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/run-faster-r-cnn-on-colab/</guid><description><![CDATA[<h2 id="0x00-相关链接">0x00 相关链接</h2>
+]]></description></item><item><title>在 Colab 运行 Faster R-CNN 时的问题简记</title><link>https://xuchunqiu.me/run-faster-r-cnn-on-colab/</link><pubDate>Mon, 23 Sep 2019 13:08:02 +0000</pubDate><author>Author</author><guid>https://xuchunqiu.me/run-faster-r-cnn-on-colab/</guid><description><![CDATA[<h2 id="0x00-相关链接">0x00 相关链接</h2>
 <ul>
 <li>使用 Pytorch 框架下实现的 Faster R-CNN：<a href="https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0" target="_blank" rel="noopener noreffer">jwyang/faster-rcnn.pytorch</a></li>
 <li>主要参考文章：<a href="https://www.twblogs.net/a/5cb44531bd9eee48d788c415" target="_blank" rel="noopener noreffer">使用 colab 訓練 faster-rcnn</a></li>

@@ -1,4 +1,4 @@
-# 在 Colab 上跑 Faster R-CNN
+# 在 Colab 运行 Faster R-CNN 时的问题简记
 
 
 ## 0x00 相关链接

@@ -1,4 +1,4 @@
-# Google Colab 真的可以 debug 吗？
+# 在 Google Colab 上 Debug 的正确方式
 
 
 [Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb)（简称 Colab）是 Google 推出的免费、在线、具有 GPU 的 [JupyterLab](https://jupyter.org/) 环境，它的底层是一个虚拟的 Linux 系统，所以你在里面执行 Linux 命令也是没有问题的。
