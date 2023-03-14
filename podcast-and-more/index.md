@@ -35,7 +35,7 @@
 
 2019 年机缘巧合之下参加了 The Type 在广州举办的《平面之道》线下放映，有幸蹭到了 The Type 小伙伴们的合影：
 
-![跟 The Type 小伙伴们的合影](/images/me_wath_the_type.jpg)
+![跟 The Type 小伙伴们的合影](me_wath_the_type.jpg)
 
 ## 每期都要「军备竞赛」的节目
 
