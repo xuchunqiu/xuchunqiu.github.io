@@ -13,21 +13,22 @@
 
 - 环境配置简单。深度学习相关的很多软件包都是预装好的，省事省时；
 - 网络环境通畅。数据中心带宽大，下载数据集嗖嗖的；
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-001.png" title="下载预训练模型的速度" >}}
+
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/nEALSm.png" title="下载预训练模型的速度" >}}
 - GPU 够用。原来白天能分到 Telsa T4，现在白天也只有 Tesla K80 了，但起码 11.4GB 的显存是实打实的；
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-002.png" title="在 code cell 中使用 !nvidia-smi 命令查看 GPU 信息" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/rxgsF2.png" title="在 code cell 中使用 !nvidia-smi 命令查看 GPU 信息" >}}
 - 支持 bash 命令。bash 命令想要在 code cell 里执行只需每行前加 `!` 就可以了；
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-003.png" title="Colab 环境中 /bin 目录的内容" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/5VxaAu.png" title="Colab 环境中 /bin 目录的内容" >}}
 - 支持在线修改。对于大型工程，其代码必然分散在项目的各个文件夹里，以前想修改文件内容需要下载到本地修改然后再上传，十分繁琐。2019 年 10 月 4 日 Colab 支持了从文件树双击打开、修改文件。
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-004.png" title="@GoogleColab 的推文截图" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/NVdQxL.png" title="@GoogleColab 的推文截图" >}}
 - 更多 Colab 特性可以查看 [Google 的说明文档](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
 
 ### Colab 的缺点
 
 - 资源自动回收。据说是运行 12 小时后自动回收所有资源（另外实际经验是如果浏览器与 Colab 的连接不幸中断数小时也会触发回收），GPU 需要重新申请是其次，重要的是保存运行结果的临时硬盘空间也会被回收掉。所以可以考虑把 Google Drive 挂载上去然后结果直接存在里边，这就会带来下面第二个缺点；
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-005.png" title="Colab 临时硬盘有 359 GB" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/R4dbbh.png" title="Colab 临时硬盘有 359 GB" >}}
 - 与 Google Drive 不能无缝整合。同一份代码，直接在 Colab 临时硬盘空间运行与克隆到被挂载到 Colab 的 Google Drive 运行有明显可感的降速，瓶颈可能是 Google Drive 本身存储介质的 I/O 性能；
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-006.png" title="Colab 临时硬盘与挂载的 Google Drive 在 Colab 中读写速度对比" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/AFUhBL.png" title="Colab 临时硬盘与挂载的 Google Drive 在 Colab 中读写速度对比" >}}
 再者，即使 I/O 跟得上，Google Drive 提供的 15G 免费存储空间对于大数据集来说远远不够；
 - 不易使用图形化监测工具如 Tensorboard / Visdom 。没有官方解决方案，必须依靠奇技淫巧——换用 TensorBoardX、给 Visdom 套上反向代理。
 
@@ -173,13 +174,13 @@ https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/
 
 - `%debug –breakpoint <FILE>:<LINE>` 结果：无法调起 ipdb 交互式调试提示符。只会显示一个不响应 ipdb 命令的输入框。
   {{< admonition type=example title="Jupyter code cell and output" open=true >}}
-  {{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-007.png" title="" >}}
-  {{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-008.png" title="" >}}
+  {{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/sRJns0.png" title="" >}}
+  {{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/d2MiBu.png" title="" >}}
   {{< /admonition >}}
 
 - `%%debug –breakpoint <FILE>:<LINE>` 结果：无法运行到标记的断点。Python 处理基本调试器函数的 bdb 模块出现异常，未搜到解决方法。尝试不加 `-b` 参数异常不变。
   {{< admonition type=example title="Jupyter code cell and output" open=true >}}
-  {{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-009.png" title="" >}}
+  {{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/eOipjo.png" title="" >}}
   {{< /admonition >}}
 
 #### 可行方式
@@ -205,5 +206,5 @@ import ipdb; ipdb.set_trace()
 实际效果如下：
 
 {{< admonition type=example title="Jupyter code cell and output" open=true >}}
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2019-10-16/2019-10-16-010.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/Ta7Bi9.png" title="" >}}
 {{< /admonition >}}

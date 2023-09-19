@@ -40,7 +40,7 @@ ssh-keygen
 
 密码（passphrase）对私钥的加密效果使得第三方即使获得私钥也无法完成认证过程。
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-10-05/001.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/VChEYJ.png" title="" >}}
 
 需要说明的是，在手动指定密钥对的保存路径时，如果只写文件名，默认是放在启动 `ssh-keygen` 时所在的工作目录中。
 
@@ -79,7 +79,7 @@ ssh-keygen
 ssh-copy-id -i /mnt/c/Users/$ENV:USERNAME/.ssh/keypair/keyToGPUServer amax@192.168.50.50
 ```
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-10-05/002.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/OtgHKL.png" title="" >}}
 
 可以注意到，已成功添加了一个公钥，但并不能按照提示所说直接使用 public key authentication，后续会在 # 0x03 的 [方法 2](#%E6%96%B9%E6%B3%95-2%E5%B0%86%E7%A7%81%E9%92%A5%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5-sshconfig-%E6%96%87%E4%BB%B6) 中进行解释。
 
@@ -92,7 +92,7 @@ ssh-copy-id -i /mnt/c/Users/$ENV:USERNAME/.ssh/keypair/keyToGPUServer amax@192.1
 scp C:\Users\$ENV:USERNAME\keyToGPUServer.pub amax@192.168.50.50:~
 ```
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-10-05/003.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/b6wHRc.png" title="" >}}
 
 不过我这里的私钥权限太宽需要修改：
 

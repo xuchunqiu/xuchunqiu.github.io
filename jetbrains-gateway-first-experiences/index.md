@@ -26,7 +26,7 @@
 
 目前下载到的应该都 [抢先体验计划]^(Early Access Programs) 的版本，截止本文写就时最新的版本是 `2022.1 Beta (221.5080.102)`，安装好后的主界面如下；
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2022-03-08/2022-03-08-001.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/4Osjk5.png" title="" >}}
 
 共有 SSH、JebBrains Space 和 共享链接 三种启动 Gateway 客户端的方式。区别如下：
 
@@ -36,19 +36,19 @@
 
 接下来就选择 SSH，提供远程 Linux 主机的连接信息：
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2022-03-08/2022-03-08-002.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/dccPNb.png" title="" >}}
 
 成功后就可以选择需要在远程主机上安装哪个 IDE 服务端（在 Gateway 中被称为 Backend）。当前有 IDEA、CLion、GoLand、PhpStorm、PyCharm、Rider、RubyMine 和 WebStorm 可选（EAP 的 Gateway 看到的 IDE 也都是 [EAP]^(Early Access Programs) 或 [RC]^(Release Candidate) 版），但都不提供社区版的选项：
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2022-03-08/2022-03-08-003.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/J7Xm4B.png" title="" >}}
 
 默认是直接从互联网下载 IDE Backend 安装到远程主机的 `~/. cache/JetBrains/RemoteDev/dist`，也可以手动上传安装包和指定安装路径：
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2022-03-08/2022-03-08-004.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/ULOAnF.png" title="" >}}
 
 等待下载和安装过程完成，就会在本机自动打开 Gateway Client 了，与正常的 IDE 稍有区别的是多了一些连接状态的显示。整体上 Gateway 服务端的安装实在是比 Projector 省心太多。
 
-{{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2022-03-08/2022-03-08-005.png" title="" >}}
+{{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/UarbpT.png" title="" >}}
 
 ## 0x02 Gateway 的使用感受
 
@@ -58,7 +58,7 @@
 2. 比起 Projector 或是 VNC 方案，Gateway 画面永远不会糊。
 3. 剪贴板共享功能开箱即用。
 4. 支持将远程主机端口映射到本地。这个主要是因为我的远程主机是一个 Docker 环境，在创建好后就不能添加端口映射了，但 Gateway Client 的 `Settings`-`Tools`- `Port Forwarding` 里可以很方便地添加端口映射：
-   {{< figure src="https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2022-03-08/2022-03-08-006.png" title="" >}}
+   {{< figure src="https://image.assets.xuchunqiu.com/img/2023/09/MVZl3P.png" title="" >}}
 
 ### 缺点
 

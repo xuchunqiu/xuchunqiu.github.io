@@ -6,7 +6,7 @@
 
 frp 基于认证的 `stcp(secret tcp)` 模式可以将内网服务安全地暴露到公网。frp 的可执行文件包括服务端（frps）与客户端（frpc），前者运行在具有公网 IP 的节点，后者运行在公网无法直接访问的、提供/使用服务的节点。`.ini` 后缀的文件记录了 frp节点间（不单是 frpc 与 frps，还包括 frpc 之间）的连接信息。
 
-![frp 的原理图示](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/frp%E7%9A%84%E5%8E%9F%E7%90%86.png)
+![frp 的原理图示](https://image.assets.xuchunqiu.com/img/2023/09/ADIOPI.png)
 
 我们在阿里云上租用的 VPS 运行着 frps（连接不同 frpc 的桥梁），当前工作站上运行着 frpc（提供服务），而各位同学要在自己的电脑上同样运行 frpc（使用服务）。
 
@@ -16,11 +16,11 @@ frp 基于认证的 `stcp(secret tcp)` 模式可以将内网服务安全地暴�
 
 1. 从 [发布页面](https://github.com/fatedier/frp/releases) 下载  frpc。建议与 VPS 上运行的 frps 保持一致的版本（0.37.1）以减少出现问题的可能性。
    
-   ![发布页截图及下载说明](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/frp%E5%8F%91%E5%B8%83%E9%A1%B5%E5%8F%8A%E4%B8%8B%E8%BD%BD%E8%AF%B4%E6%98%8E.png)
+   ![发布页截图及下载说明](https://image.assets.xuchunqiu.com/img/2023/09/RjW7i1.png)
    
 2. 解压压缩包并精简。frp 没有安装的概念，但下载到的压缩包是个大杂烩，可以按照下图删掉浅蓝色标注的文件/文件夹。
    
-   ![压缩包内容介绍](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/frp%E5%8E%8B%E7%BC%A9%E5%8C%85%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D.png)
+   ![压缩包内容介绍](https://image.assets.xuchunqiu.com/img/2023/09/Ur6w5t.png)
    
 3. 下载基本的 `*.ini` 文件。在解压目录中创建以下文件（覆盖原来的 `frpc.ini`）。这两个文件的内容未来修改的可能性非常低。
 
@@ -74,7 +74,7 @@ frp 基于认证的 `stcp(secret tcp)` 模式可以将内网服务安全地暴�
    
 4. 运行 frpc。打开本机上的终端，进入 frp 的解压目录，或者使用 `Shift` + `鼠标右键` 的方式快速进入。
    
-   ![快速在指定文件夹下启动终端的方法](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/%E5%BF%AB%E9%80%9F%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%A4%B9%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF.png)
+   ![快速在指定文件夹下启动终端的方法](https://image.assets.xuchunqiu.com/img/2023/09/yhOJIk.png)
    
    执行以下命令即可启动 frpc。
    {{< admonition type=example title="启动 frpc（Windows）" open=true >}}
@@ -90,7 +90,7 @@ frp 基于认证的 `stcp(secret tcp)` 模式可以将内网服务安全地暴�
 
    接下来打开本机浏览器访问 127.0.0.1:8081 即可访问到 AIMAX 的网页了：
 
-   ![成功访问远端页面](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/%E7%A4%BA%E4%BE%8B-%E6%88%90%E5%8A%9F%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%AB%AF%E9%A1%B5%E9%9D%A2.png)
+   ![成功访问远端页面](https://image.assets.xuchunqiu.com/img/2023/09/NxFza6.png)
 
    {{< admonition type=tip title="如何停止 frpc？" open=true >}}
    如需结束 frpc，在启动 frpc 的终端窗口内使用 `Ctrl` + `c`。
@@ -104,7 +104,7 @@ frp 基于认证的 `stcp(secret tcp)` 模式可以将内网服务安全地暴�
 
 因为 AIMAX 本身的一些问题，导致远程访问下所有交互式开发环境都无法进入，但像创建交互式开发、上传下载私有/共享数据等操作是没问题的。
 
-![不能直接进入交互式开发环境](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/%E7%A4%BA%E4%BE%8B-%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%BC%80%E5%8F%91.png)
+![不能直接进入交互式开发环境](https://image.assets.xuchunqiu.com/img/2023/09/A7QFnX.png)
 
 暂时的解决方案是对交互式开发里需要用到的每一个端口都生成一段 frpc 的配置（约定该文件的名称为 `frpc_personal.ini` ），因此需要同学们对 `*.ini` 文件的结构有一定概念。
 
@@ -157,12 +157,12 @@ bind_port = 8084
 ```
 {{< /admonition >}}
 
-![成功地访问了两个远程服务](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/%E7%A4%BA%E4%BE%8B-%E6%88%90%E5%8A%9F%E8%AE%BF%E9%97%AE%E4%B8%A4%E4%B8%AA%E8%BF%9C%E7%AB%AF%E9%A1%B5%E9%9D%A2.png)
+![成功地访问了两个远程服务](https://image.assets.xuchunqiu.com/img/2023/09/KP6j49.png)
 
 # 根据 frpc 日志故障排除
 
 注意必须先在终端中启动 frpc，才能通过浏览器（或其它软件）访问到 frpc 提供的远程页面。启动 frpc 的终端会输出日志。下图展示了如何根据日志信息分析可能的问题。其中3、4是要访问对应服务才能看出的错误。
 
-![根据日志信息判断可能的问题](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/remote-access-with-frp/%E6%A0%B9%E6%8D%AE%E6%97%A5%E5%BF%97%E8%BF%9B%E8%A1%8C%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4.png)
+![根据日志信息判断可能的问题](https://image.assets.xuchunqiu.com/img/2023/09/FRJJwy.png)
 
 

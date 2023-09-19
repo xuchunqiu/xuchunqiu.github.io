@@ -34,7 +34,7 @@
 
 ## 平台架构
 
-![来自 AMAX 官网的架构图。内容描述：由下至上共有基础设施层、资源调度层、应用服务层、业务领域层。其中基础设施层是CPU、TPU、GPU、FPGA、高速以太网、Infiniband、NFS、FlusterFS；资源调度层以 Kubernetes 为基础管理多个容器；应用服务层列出的深度学习框架包括 PyTorch、Caffe、TensorFlow、MXNet，它们之上是 CNN、VGG、ResNet、YOLO、RNN，再之上是模型开发、训练、验证、测试、部署；业务领域层包括金融、教育、医疗、制造、自然语言处理、图像识别、语音识别](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/docs/PSC-HC2S/AI-Max-product-architecture.png)
+![来自 AMAX 官网的架构图。内容描述：由下至上共有基础设施层、资源调度层、应用服务层、业务领域层。其中基础设施层是CPU、TPU、GPU、FPGA、高速以太网、Infiniband、NFS、FlusterFS；资源调度层以 Kubernetes 为基础管理多个容器；应用服务层列出的深度学习框架包括 PyTorch、Caffe、TensorFlow、MXNet，它们之上是 CNN、VGG、ResNet、YOLO、RNN，再之上是模型开发、训练、验证、测试、部署；业务领域层包括金融、教育、医疗、制造、自然语言处理、图像识别、语音识别](https://image.assets.xuchunqiu.com/img/2023/09/1bY0vP.png)
 
 对于用户来说，唯一需要了解并使用的就是 Docker。
 
@@ -60,7 +60,7 @@ Docker 有三个基本概念：
 
 在 AI Max 中进行训练的主要原因是可以实现平台和宿主机、平台内不同用户、同用户不同项目（在该平台中被称为「任务」或「应用」）间环境的 **隔离** 和 **快速重建**。
 
-![nvidia-docker 架构图。内容描述：由下至上依次为：NVIDIA GPUs(@Server)、CUDA Driver(@Host OS)、Docker Engine(@Host OS)、CONTAINER(@Container OS User Space,CUDA Toolkit、Applications)](https://cloud.githubusercontent.com/assets/3028125/12213714/5b208976-b632-11e5-8406-38d379ec46aa.png)
+![nvidia-docker 架构图。内容描述：由下至上依次为：NVIDIA GPUs(@Server)、CUDA Driver(@Host OS)、Docker Engine(@Host OS)、CONTAINER(@Container OS User Space,CUDA Toolkit、Applications)](https://image.assets.xuchunqiu.com/img/2023/09/saJJOo.png)
 
 #### 获取 Docker 镜像
 

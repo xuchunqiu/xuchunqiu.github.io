@@ -135,7 +135,7 @@ EI数据来源于 3 千种工程类期刊以及 9 万多种会议录，每周更
 
 [WoS 與 WOK、JCR、ESI 之間的關係？](http://tul.blog.ntu.edu.tw/archives/8330)：
 
-![一张描述 WoS、JCR、ESI关系的树状图。图片内容：WoS（含SCIE、SSCI、A&HCI等）为树根，左分叉为JCR（运用SCIE、SSCI资料，提供Impact Factor等期刊评鉴指标），右分叉为ESI（同样运用SCIE、SSCI资料，筛选高被引的文章、机构、期刊、学者）](https://raw.githubusercontent.com/xuchunqiu/personal-blog-resources/main/posts/2020-11-11/2020-11-11-002.jpg)
+![一张描述 WoS、JCR、ESI关系的树状图。图片内容：WoS（含SCIE、SSCI、A&HCI等）为树根，左分叉为JCR（运用SCIE、SSCI资料，提供Impact Factor等期刊评鉴指标），右分叉为ESI（同样运用SCIE、SSCI资料，筛选高被引的文章、机构、期刊、学者）](https://image.assets.xuchunqiu.com/img/2023/09/XgKwgg.png)
 
 [SCI 與 SCIE 的區別](http://tul.blog.ntu.edu.tw/archives/8333)：1. SCI为光盘形式，现已停止发行发布；后者为网页服务 2. 两者评选标准相同
 
