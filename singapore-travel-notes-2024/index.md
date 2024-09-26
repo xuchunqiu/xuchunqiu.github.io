@@ -53,9 +53,9 @@
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/VKlSXb.png" caption="提前收藏的骑行路线" >}}
 
-虽是放弃了踩单车的念头，行程中间我还是有留意当地交通对骑行的友善程度，CBD 坡少路宽但完全没有单车道只能使用机动车道，都是些骑行装备点满、花鼓声震天的骑行爱好者（路边有颇多临街健身房还有在大楼阴凉下跑步的人）；租屋区路窄又较多起伏，有分离的行人和自行车道，大多是来往附近交通枢纽的人骑着很平民的自行车。陆路交通管理局（[LTA]^(Land Transport Authority)）提供了 [在线自行车道地图](https://www.lta.gov.sg/content/ltagov/en/map/cycle.html)，感兴趣的可以去看看。
+虽是放弃了踩单车的念头，行程中间我还是有留意当地交通对骑行的友善程度，CBD 坡少路宽但完全没有单车道只能使用机动车道，都是些骑行装备点满、花鼓声震天的骑行爱好者（路边有颇多临街健身房还有在大楼阴凉下跑步的人）；组屋区路窄又较多起伏，有分离的行人和自行车道，大多是来往附近交通枢纽的人骑着很平民的自行车。陆路交通管理局（[LTA]^(Land Transport Authority)）提供了 [在线自行车道地图](https://www.lta.gov.sg/content/ltagov/en/map/cycle.html)，感兴趣的可以去看看。
 
-拜访组屋区是本次行程的重点，为此专门留出一天的时间，在新加坡北部的区域中心兀兰（Woodlands）逛了一大圈，又去参观了负责营造组屋的建屋局（[HDB]^(Housing & Development Board)）的 LIVINGSPACE Gallery。根据后者的介绍，作为新国政府给公民提供的公共住房，新国有 80% 的人口居住在租屋区。
+拜访组屋区是本次行程的重点，为此专门留出一天的时间，在新加坡北部的区域中心兀兰（Woodlands）逛了一大圈，又去参观了负责营造组屋的建屋局（[HDB]^(Housing & Development Board)）的 LIVINGSPACE Gallery。根据后者的介绍，作为新国政府给公民提供的公共住房，新国有 80% 的人口居住在组屋区。
 
 {{< mapbox lng=103.7738519 lat=1.4327121 zoom=10 marked=false light-style="mapbox://mapbox.terrain-rgb" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" >}}
 
