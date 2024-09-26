@@ -1,4 +1,4 @@
-# Singapore Travel Notes 2024
+# 新游散记
 
 
 初中地理课本上的「亚洲四小龙」、《全球猎身》里印度 IT 劳工赴美的跳板、《新兵正传》中每个男性公民都需要服役的国度，这是我为数不多的对新加坡的认知。2024 年初新加坡开始对中国免签，8 月份终于抽出时间开启了人生首次出国旅行。
@@ -49,7 +49,7 @@ They will find easier and more comfortable ways to fulfill that last mile journe
 
 拜访组屋区是本次行程的重点，为此专门留出一天的时间，在新加坡北部的区域中心兀兰（Woodlands）逛了一大圈，又去参观了负责营造组屋的建屋局（[HDB]^(Housing & Development Board)）的 LIVINGSPACE Gallery。根据后者的介绍，作为新国政府给公民提供的公共住房，新国有 80% 的人口居住在租屋区。
 
-{{< mapbox lng=37.453 lat=1.433 zoom=10 marked=false light-style="mapbox://styles/mapbox/terrain-rgb" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" >}}
+{{< mapbox lng=103.7738519 lat=1.4327121 zoom=10 marked=false light-style="mapbox://mapbox.terrain-rgb" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" >}}
 
 我的步行路线是从地铁马西岭站出发，顺时针绕一个大圈，最后走下来全程大约 14 公里。适逢中元节，楼下草地上摆了许多公共的焚烧桶，不少鸽子聚集在祭品附近大快朵颐。
 
