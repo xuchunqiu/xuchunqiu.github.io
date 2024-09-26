@@ -57,7 +57,9 @@
 
 拜访组屋区是本次行程的重点，为此专门留出一天的时间，在新加坡北部的区域中心兀兰（Woodlands）逛了一大圈，又去参观了负责营造组屋的建屋局（[HDB]^(Housing & Development Board)）的 LIVINGSPACE Gallery。根据后者的介绍，作为新国政府给公民提供的公共住房，新国有 80% 的人口居住在组屋区。
 
-{{< mapbox lng=103.7738519 lat=1.4327121 zoom=10 marked=false light-style="mapbox://mapbox.terrain-rgb" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" >}}
+{{< mapbox lng=103.7738519 lat=1.4327121 zoom=18 marked=false light-style="mapbox://mapbox.terrain-rgb" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" >}}
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/LzZKsV.png" caption="兀兰某条行人和自行车道连接处的减速装置是两扇错开的小门" >}}
 
 我的步行路线是从地铁马西岭站出发，顺时针绕一个大圈，最后走下来全程大约 14 公里。适逢中元节，楼下草地上摆了许多公共的焚烧桶，不少鸽子聚集在祭品附近大快朵颐。
 
@@ -103,7 +105,7 @@
 
 这次旅行吃的方面考虑到价格几乎都在熟食中心（Hawker Centre）解决，唯一一次团餐是十几个人一起吃文东记，餐牌价格给人的感觉是如果无视汇率直接看作人民币的话几乎跟广州相当，但菜式就麻麻地。所以第二天早上在 Maxwell 看室友从天天直接端了半只鸡回来我是一点都不出奇。
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/sDJGTp.png" caption="跟室友在 Maxwell Hawker Centre 的第一餐" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/Jyt6ZW.png" caption="跟室友在 Maxwell Hawker Centre 的第一餐" >}}
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/c8de9a.png" caption="天天海南鸡饭餐牌" >}}
 
