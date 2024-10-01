@@ -1,19 +1,19 @@
 # 新游漫记
 
 
-初中地理课本上的「亚洲四小龙」、《全球猎身》里印度 IT 劳工赴美的跳板、《新兵正传》中每个男性公民都需要服役的国度，这是我为数不多的对新加坡的认知。2024 年初新加坡开始对中国免签，8 月份终于抽出时间开启了人生首次出国旅行。
+地理课上的「亚洲四小龙」、《全球猎身》里印度 IT 劳工赴美的跳板、《新兵正传》中每个男性公民都需要服役的国度，在这个火热的 8 月，我终于在新加坡开启了人生首次出国旅行。
 
-行程上计划呆四天三晚——周五周一请假凑一个四天小长假出来。打开 Airbnb 订房时真的被价格吓到：四五百 RMB 一晚只能住胶囊旅馆，只能咬咬牙选了八百 RMB 的酒店双床房，还好最后有队友拼房回血。另外需要提前准备的是各种卡：**电话卡**、**公交卡**、**入境卡**。
+行程上计划呆四天三晚——周五周一请假凑一个四天小长假出来。打开 Airbnb 订房时真的被价格吓到：四五百 RMB 一晚只能住胶囊旅馆，只能咬咬牙选了八百 RMB 的酒店双床房（还好有拼到室友）。除了酒店还需要提前准备的是各种卡：**电话卡**、**公交卡**、**入境卡**。
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/v5Ue8c.png" caption="住了三晚的双床房，临街但并不吵" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/v5Ue8c.png" caption="住了三晚的双床房，临街但隔音还可以" >}}
 
 {{< admonition type=info title="汇率小助手" open=true >}}
-我去的时候 1 SGD ≈ 5.4 RMB
+我去这几天 1 SGD ≈ 5.4 RMB
 {{< /admonition >}}
 
-**电话卡** 其实一般出国上网最容易的是国内卡开漫游，或者买境外流量包，但出于互联网洁癖的考虑还是想买个预付费卡。POC 推荐了 [Singtel](https://www.singtel.com/personal/products-services/mobile/prepaid-plans/hi-tourist)、[M1](https://www.m1.com.sg/mobile/prepaid-plans/tourist-sim)、[StarHub](https://www.starhub.com/personal/mobile/mobile-phones-plans/prepaid-cards/travel-sim.html) 三家本地运营商，它们的预付费最低都是 12 SGD 有 100 GB 流量、不同额度的漫游 + 本地通话 + 短信，也支持 eSIM。100 GB 流量有点太多了，相较来说我更想要 5G 的低延迟，所以最后转投 CMLink（中国移动国际）买了 36.8 HKD 的新马泰四天不限量 eSIM 纯流量卡。跟我原本想买的 M1 相比，它的优点是：5G（漫游到 Singtel）、在线购买后直接写卡、不需要登记护照。
+**电话卡** 因为手机支持 eSIM，我选择直接跳过国内卡开漫游或买境外流量包的步骤，直接买预付费卡。POC 推荐了 [Singtel](https://www.singtel.com/personal/products-services/mobile/prepaid-plans/hi-tourist)、[M1](https://www.m1.com.sg/mobile/prepaid-plans/tourist-sim)、[StarHub](https://www.starhub.com/personal/mobile/mobile-phones-plans/prepaid-cards/travel-sim.html) 三家本地运营商，它们最平都是 12 SGD 有 100 GB 流量、不同额度的漫游 + 本地通话 + 短信。100 GB 流量有点太多了，相较来说我更想要 5G 的低延迟，所以最后转投 CMLink（中国移动国际）买了 36.8 HKD 的新马泰四天不限量 eSIM 纯流量卡。跟我原本想买的 M1 相比，它的优点是：5G（漫游到 Singtel）、在线购买后直接写卡、不需要登记护照。
 
-**公交卡**可以买本地人用的 EZ-Link 然后按每一程收费，也可以买 SG Tourist Pass 在连续的 1、2、3 天内不限次数乘坐公共交通，再或者直接刷 VISA/Master 信用卡。SG Tourist Pass 这些年涨了好几次价目前 3 天版是 29 SGD，不过它的日期计算是按自然日，如果我呆 4 天就要买多一张 1 天版总价去到 46 SGD。实际我全程刷招行的全币卡最后账单上是 126.14 RMB（约 23 SGD）。
+**公交卡** 可以买本地人用的 EZ-Link 然后按每一程收费，也可以买 SG Tourist Pass 在连续的 1、2、3 天内不限次数乘坐公共交通，再或者直接刷 VISA/Master 信用卡。SG Tourist Pass 这些年涨了好几次价目前 3 天版是 29 SGD，不过它的日期计算是按自然日，如果我呆 4 天就要买多一张 1 天版总价去到 46 SGD。实际我全程刷招行的全币卡最后账单上是 126.14 RMB（约 23 SGD）。
 
 **入境卡**（[SGAC]^(SG Arrival Card)）并不是 VISA，办理是完全自助的也绝对不会收费。需要填写的信息有护照、联系资料、停留时间、航班号、新加坡住址（酒店名称是单选框而不是文本框）、入境前离境后的城市。可以在移民与关卡局（[ICA]^(Immigration & Checkpoints Authority)）[网站](https://eservices.ica.gov.sg/sgarrivalcard/) 或使用手机应用程序 MyICA Mobile 填写，最早是入境前三日最晚是飞机落地后入境刷护照前，SGAC 填完会给一个条形码但其实不会用到，因为入境只在闸机上刷了护照，可能是 SGAC 的信息已经跟护照号自动绑定了。
 
@@ -29,19 +29,19 @@
 
 当然作为游客坐地铁只是赶时间的权宜之计，如果时间充裕我更愿意搭巴士看街景。[新加坡巴士地铁都是按里程收费](https://www.ptc.gov.sg/fare-regulation/bus-rail/fare-structure)，所以巴士下车也要拍卡。另外上车招手才停、下车提前按铃（几乎所有立柱上都有，室友多次对我悄无声息的按铃手法表示震惊），如果某站无人上落司机就一脚油门扬长而去。
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/SNd0m7.png" caption="从 Night Safari 出来搭巴士返市区时司机开得很猛，加上路面的起伏有种低配过山车的感觉" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/SNd0m7.png" caption="从夜间动物园搭巴士返市区时司机开得很猛，加上路面的起伏有种低配过山车的感觉" >}}
 
-巴士、地铁之外，新加坡人如何解决公共交通出行的「最后一公里」？首先排除一个错误答案：共享单车。新加坡是有共享单车的，只是这几天见到的总数不超过 10 辆而且压根没见人骑。在 Reddit 上看到一个高赞评论是：
+巴士、地铁之外，新加坡人如何解决公共交通出行的「最后一公里」？首先排除一个错误答案：共享单车。新加坡是有共享单车的，只是这几天见到的总数不超过十辆而且压根没见人骑。在 Reddit 上看到一个高赞回复是：
 
 > Those who like cycling, will already have their own nice bicycles.
 >
-> *喜欢骑自行车的人，已经自己买好车了。*
->
 > Those who may need it for their last mile journey, probably not going to rent a bicycle to cycle under SG’s insane weather and roads.
-> 
-> *需要自行车接驳最后一公里的人，可能不会选择在新加坡糟糕的天气和路况下租车。*
 >
 > They will find easier and more comfortable ways to fulfill that last mile journey.
+>
+> *喜欢骑自行车的人，已经自己买好车了。*
+> 
+> *需要自行车接驳最后一公里的人，可能不会选择在新加坡糟糕的天气和路况下租车。*
 >
 > *ta 们会寻找更简单、更舒适的方法来完成这最后一公里。*
 > 
@@ -61,13 +61,13 @@
 
 {{< mapbox lng=103.7738519 lat=1.4327121 zoom=15 marked=true >}}
 
-我的步行路线是从地铁马西岭站出发，顺时针绕一个大圈，最后走下来全程大约 14 公里。适逢中元节，楼下草地上摆了许多公共的焚烧桶，不少鸽子聚集在祭品附近大快朵颐。
+我的步行路线是从地铁马西岭（Marsiling）站出发，顺时针绕一个大圈，最后走下来全程大约 14 公里。适逢中元节，楼下草地上摆了许多公共的焚烧桶，不少鸽子聚集在祭品附近大快朵颐。
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/fKU9k9.png" caption="正在被使用的焚烧桶" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/fKU9k9.png" caption="当地居民正在使用焚烧桶" >}}
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/cths57.png" caption="偷吃祭品的鸽子" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/cths57.png" caption="旁边偷吃祭品的鸽子" >}}
 
-大概这些组屋是不同年代落成的关系，不同社区的建筑样式各不相同，但整体上一层都是架空层所以通风非常好，架空层在一些角落位放置桌椅或垃圾桶，而自行车的停车区域可能划在架空层，也可能是楼外露天的一个小区域（基本每栋楼都有，所以不会给太大）。至于汽车、摩托车会在建筑附近的空地或地下设置专门的停车格，并且沿途所见的全部停车场出入口都不是使用摄像头识别车牌，最开始我注意到这点是因为它不像国内始终有一盏明晃晃的 LED 灯对外猛照，等回家开始查资料的时候却发现在 HDB 的网页上却坦言它们使用摄像头识别车牌：
+大概这些组屋是不同年代落成的关系，不同社区的建筑样式各不相同，但整体上一层都是架空层所以通风非常好，架空层在一些角落位放置桌椅或垃圾桶，而自行车的停车区域可能划在架空层里面，也可能是楼外露天的一个小区域（基本每栋楼都有，所以不会给太大）。至于汽车、摩托车会在建筑附近的空地或地下设置专门的停车格，并且沿途所见的全部停车场出入口都不是使用摄像头识别车牌，最开始我注意到这点是因为见不到补光灯，等回家开始查资料的时候却在 HDB 的网站上看到它们说是使用摄像头识别车牌：
 
 > Do I have to start and end a parking session? 
 >
@@ -79,7 +79,7 @@
 > 
 > https://www.hdb.gov.sg/car-parks/parkinghdb/FAQs
 
-这是怎么回事？难道我眼花了？别着急，在相同的页面继续往下读，可以看到在解释为什么会收到 HDB 停车场未付费通知时，有如下描述：
+这是怎么回事？难道我眼花了？别着急，在相同的页面继续往下读，在解释为什么会收到 HDB 停车场未付费通知时，有这样的描述：
 
 > The motorist had exited the gantry before the parking system could identify, compute and deduct the parking fees from the cash card in the In-Vehicle Unit. Motorists are required to slow down at the exit gantries, in the same way that they would exit a car park equipped with the Electronic Parking System. 
 >
@@ -93,7 +93,7 @@
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/sDJGTp.png" caption="有盖人行道的垂直多孔挡板" >}}
 
-这种连接处的挡板有时也会变为鱼鳞状，通风效果更佳：
+这种连接处的挡板有时也会演变为鱼鳞状，通风效果更佳：
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/7F24MC.png" caption="有盖人行道的鱼鳞状挡板" >}}
 
@@ -101,9 +101,9 @@
 
 可能是规划如此，我走过的组屋楼下几乎是没有商业配套的，理发店、日用品店、餐饮店只在其中一个社区里是配齐的；有的社区甚至什么店都没有。当地居民可能要走一段距离去附近的商业中心、地铁站才能找到这些服务。有趣的是我在郊区、CBD 步行时也会有类似感觉——走了很远连卖水的便利店都找不到。
 
-说到步行感受还有两点值得提及，首先路面完全没有任何破损或坑洼不平，配套的无障碍通道非常细致，会在很自然的位置出现不用专门寻找。另一点是虽然搭乘巴士时发现新加坡的车辆没有在经过斑马线时必须减速的规定，但当我以行人的身份过马路时所有车辆都一定会停车礼让。在写这段时找到一篇更专业的观察手记，索性一并放进来：《[新加坡深度考察：解析銀髮區與道路設計細節](https://eyesonplace.net/2023/03/22/22677/)》。
+说到步行感受还有两点值得提及，首先路面完全没有任何破损或坑洼不平，配套的无障碍通道非常细致，会在很自然的位置出现不用专门寻找。另一点是虽然搭乘巴士时发现新加坡的法律大概是没有车辆经过斑马线必须减速的条文，但当我以行人的身份过马路时所有车辆都一定会停车礼让。在写这段时找到一篇更专业的观察手记，索性一并放进来：《[新加坡深度考察：解析銀髮區與道路設計細節](https://eyesonplace.net/2023/03/22/22677/)》。
 
-这次旅行吃的方面考虑到价格几乎都在小贩中心（Hawker Centre）解决，唯一一次团餐是十几个人一起吃文东记，餐牌价格给人的感觉是如果无视汇率直接看作人民币的话几乎跟广州相当，但菜式就麻麻地。所以第二天早上在 Maxwell 看室友从天天直接端了半只鸡回来我是一点都不出奇。
+这次旅行吃的方面考虑到价格几乎都在小贩中心（Hawker Centre）解决，唯一一次团餐是十几个人一起吃文东记，餐牌价格给人的感觉是如果直接看成人民币在广州来说也算偏贵的一档，口味也没有特别惊艳。所以第二天早上在 Maxwell 看室友从天天直接端了半只鸡回来我是一点都不出奇。
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/Jyt6ZW.png" caption="跟室友在 Maxwell Food Centre 的第一餐" >}}
 
@@ -111,7 +111,7 @@
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/pdGx85.png" caption="菜头粿和蚝煎都太碎了，不推荐" >}}
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/eciksH.png" caption="晚上在文东记吃粤菜" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/09/eciksH.png" caption="晚上在文东记开了两张枱" >}}
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/26RaEU.png" caption="次日的早餐之一：叻沙" >}}
 
@@ -119,4 +119,6 @@
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/Hz2nRp.png" caption="室友次日的早餐：在天天叫了半只鸡" >}}
 
-其实也逛了几个展览，不过并没有什么特别的印象索性就写到这里吧。出国玩真的比国内有趣多了，不知道下次会去哪里。
+其实也逛了几个展，最大的感受不是展览内容，而是和室友一致认为它们在验票环节实在太宽松了，不知道该归结为社会互信还是刑罚严苛。为了避免被钻空子这里就不过多展开。
+
+出国玩真的比国内有趣多了，不知道下次会去哪里。
