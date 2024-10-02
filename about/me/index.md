@@ -11,4 +11,4 @@
 
 ---
 
-* 本静态博客基于 [Hugo](https://gohugo.io) 的 [DoIt 主题](https://github.com/HEIGE-PCloud/DoIt) 使用 [hugo-gh-pages](https://github.com/chabad360/hugo-gh-pages) 构建，图片资源存储在 [Cloudflare R2](https://www.cloudflare.com/zh-cn/developer-platform/r2/)，域名邮箱使用 iCloud+。*
+*本静态博客基于 [Hugo](https://gohugo.io) 的 [DoIt 主题](https://github.com/HEIGE-PCloud/DoIt) 使用 [hugo-gh-pages](https://github.com/chabad360/hugo-gh-pages) 构建，图片资源存储在 [Cloudflare R2](https://www.cloudflare.com/zh-cn/developer-platform/r2/)，域名邮箱使用 iCloud+。*
