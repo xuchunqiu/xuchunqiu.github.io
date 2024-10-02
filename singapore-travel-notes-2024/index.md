@@ -11,7 +11,7 @@
 我去这几天 1 SGD ≈ 5.4 RMB
 {{< /admonition >}}
 
-**电话卡** 因为手机支持 eSIM，我选择直接跳过国内卡开漫游或买境外流量包的步骤，直接买预付费卡。POC 推荐了 [Singtel](https://www.singtel.com/personal/products-services/mobile/prepaid-plans/hi-tourist)、[M1](https://www.m1.com.sg/mobile/prepaid-plans/tourist-sim)、[StarHub](https://www.starhub.com/personal/mobile/mobile-phones-plans/prepaid-cards/travel-sim.html) 三家本地运营商，它们最平都是 12 SGD 有 100 GB 流量、不同额度的漫游 + 本地通话 + 短信。100 GB 流量有点太多了，相较来说我更想要 5G 的低延迟，所以最后转投 CMLink（中国移动国际）买了 36.8 HKD 的新马泰四天不限量 eSIM 纯流量卡。跟我原本想买的 M1 相比，它的优点是：5G（漫游到 Singtel）、在线购买后直接写卡、不需要登记护照。
+**电话卡** 因为手机支持 eSIM，我选择跳过国内卡开漫游或买境外流量包的步骤，直接买预付费卡。PoC 推荐了 [Singtel](https://www.singtel.com/personal/products-services/mobile/prepaid-plans/hi-tourist)、[M1](https://www.m1.com.sg/mobile/prepaid-plans/tourist-sim)、[StarHub](https://www.starhub.com/personal/mobile/mobile-phones-plans/prepaid-cards/travel-sim.html) 三家本地运营商，它们最平都是 12 SGD 有 100 GB 流量、不同额度的漫游 + 本地通话 + 短信。100 GB 流量有点太多了，相较来说我更想要 5G 的低延迟，所以最后转投 CMLink（中国移动国际）买了 36.8 HKD 的新马泰四天不限量 eSIM 纯流量卡。跟我原本想买的 M1 相比，它的优点是：5G（漫游到 Singtel）、在线购买后直接写卡、不需要登记护照。
 
 **公交卡** 可以买本地人用的 EZ-Link 然后按每一程收费，也可以买 SG Tourist Pass 在连续的 1、2、3 天内不限次数乘坐公共交通，再或者直接刷 VISA/Master 信用卡。SG Tourist Pass 这些年涨了好几次价目前 3 天版是 29 SGD，不过它的日期计算是按自然日，如果我呆 4 天就要买多一张 1 天版总价去到 46 SGD。实际我全程刷招行的全币卡最后账单上是 126.14 RMB（约 23 SGD）。
 
@@ -61,7 +61,7 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/LzZKsV.png" caption="兀兰某条行人和自行车道连接处的减速装置是两扇错开的小门" >}}
 
-之所以逛组屋是因为在播客上搜新加坡的内容时，听了「壮游者」的《182-新加坡-从隔房到组屋-大巴窑-防爆屋-红豆汤圆和牛车水的故事》（[Podcast](https://podcasts.apple.com/my/podcast/182-%E6%96%B0%E5%8A%A0%E5%9D%A1-%E4%BB%8E%E9%9A%94%E6%88%BF%E5%88%B0%E7%BB%84%E5%B1%8B-%E5%A4%A7%E5%B7%B4%E7%AA%91-%E9%98%B2%E7%88%86%E5%B1%8B-%E7%BA%A2%E8%B1%86%E6%B1%A4%E5%9C%86%E5%92%8C%E7%89%9B%E8%BD%A6%E6%B0%B4%E7%9A%84%E6%95%85%E4%BA%8B/id1471628291?i=1000636644852)，[小宇宙](https://www.xiaoyuzhoufm.com/episode/656487dbfef6ec4bfb5523b4)），嘉宾是祖籍顺德但从小在新加坡长大的 Jasmine。我在 Tripadvisor 上也找到了 Jasmine 的游览项目：「[政府组屋 - 进入建屋局心脏地带](https://cn.tripadvisor.com/AttractionProductReview-g294265-d15689462-Public_Housing_Into_the_HDB_Heartlands-Singapore.html)」，只是 52 USD 的价格让我却步。索性自己 DIY 在北部的区域中心兀兰（Woodlands）逛了一大圈，又去参观了负责营造组屋的建屋局（[HDB]^(Housing & Development Board)）的 LIVINGSPACE Gallery。根据后者的介绍，作为新国政府给公民提供的公共住房，新国有 80% 的人口居住在组屋区。
+之所以逛组屋是因为在播客上搜新加坡的内容时，听了「壮游者」的《182-新加坡-从隔房到组屋-大巴窑-防爆屋-红豆汤圆和牛车水的故事》（[Podcast](https://podcasts.apple.com/my/podcast/182-%E6%96%B0%E5%8A%A0%E5%9D%A1-%E4%BB%8E%E9%9A%94%E6%88%BF%E5%88%B0%E7%BB%84%E5%B1%8B-%E5%A4%A7%E5%B7%B4%E7%AA%91-%E9%98%B2%E7%88%86%E5%B1%8B-%E7%BA%A2%E8%B1%86%E6%B1%A4%E5%9C%86%E5%92%8C%E7%89%9B%E8%BD%A6%E6%B0%B4%E7%9A%84%E6%95%85%E4%BA%8B/id1471628291?i=1000636644852)，[小宇宙](https://www.xiaoyuzhoufm.com/episode/656487dbfef6ec4bfb5523b4)），嘉宾是祖籍顺德但从小在新加坡长大的 Jasmine。我在 Tripadvisor 上也找到了 Jasmine 的游览项目：「[政府组屋 - 进入建屋局心脏地带](https://cn.tripadvisor.com/AttractionProductReview-g294265-d15689462-Public_Housing_Into_the_HDB_Heartlands-Singapore.html)」，只是 65 SGD 的价格实在让人却步。索性自己 DIY 在北部的区域中心兀兰（Woodlands）逛了一大圈，又去参观了负责营造组屋的建屋局（[HDB]^(Housing & Development Board)）的 LIVINGSPACE Gallery。根据后者的介绍，作为新国政府给公民提供的公共住房，新国有 80% 的人口居住在组屋区。
 
 {{< mapbox lng=103.7738519 lat=1.4327121 zoom=15 marked=true >}}
 
@@ -101,7 +101,7 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/c3zOw7.png" caption="Google 街景中的 HDB 管理的 WLW25 停车场出入口处" >}}
 
-上图中蓝色顶棚的是有盖人行道，很明显可以看到右边更低的平面是为了不阻挡二层住户的采光，但这个角度不太容易看到的是在两个平面之间有一道垂直的多孔挡板来给下面的行人遮光的同时兼顾给楼上住户通风：
+上图中蓝色顶棚的是有盖人行道，很明显可以看到右边更低的平面是为了不阻挡二层住户的采光，但这个角度不易看到的是在两个平面之间有一道垂直的多孔挡板来给下面的行人遮光的同时兼顾给楼上住户通风：
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/sDJGTp.png" caption="有盖人行道的垂直多孔挡板" >}}
 
@@ -135,6 +135,6 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 其实也逛了几个展，最大的感受不是展览本身，而是和室友一致认为它们在验票环节实在太宽松了，不知道该归结为社会互信还是刑罚严苛。为了避免被钻空子这里就不过多展开。
 
-如果说这次旅行有什么遗憾的话，首先是网购的热带风情花衬衫在物流到广州后被意外遣送北京导致我没有穿上；其次是出发前一晚被空调冻感冒了全程体力不在线；最后是我出发就关了国内 IM 的消息推送好巧不巧有朋友这期间联系不上我。或许可能也许我该提前找个庙拜拜的。
+如果说这次旅行有什么遗憾的话，首先是网购的热带风情花衬衫在物流到广州后被意外遣送北京导致我没有穿上；其次是出发前一晚被空调冻感冒了全程体力不在线；还有因为关了国内 IM 的消息推送好巧不巧有朋友这期间联系不上我。或许可能也许我该提前找个庙拜拜的。
 
 出国玩真的比国内有趣多了，不知道下次会去哪里。
