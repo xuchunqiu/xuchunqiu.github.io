@@ -33,19 +33,23 @@
 
 巴士、地铁之外，新加坡人如何解决公共交通出行的「最后一公里」？首先排除一个错误答案：共享单车。新加坡是有共享单车的，只是这几天见到的总数不超过十辆而且压根没见人骑。在 Reddit 上看到一个高赞回复是：
 
-> Those who like cycling, will already have their own nice bicycles.
->
-> Those who may need it for their last mile journey, probably not going to rent a bicycle to cycle under SG’s insane weather and roads.
->
-> They will find easier and more comfortable ways to fulfill that last mile journey.
->
-> *喜欢骑自行车的人，已经自己买好车了。*
-> 
-> *需要自行车接驳最后一公里的人，大概不会想在新加坡糟糕的天气和路况下租车。*
->
-> *ta 们会寻找更简单、更舒适的方法来完成这最后一公里。*
-> 
-> https://www.reddit.com/r/singapore/comments/1bnzobz/why_is_it_so_hard_for_bikesharing_companies_to/
+{{< admonition type=quote title="Why is it so hard for bike-sharing companies to survive in Singapore" open=true >}}
+
+Those who like cycling, will already have their own nice bicycles.
+
+Those who may need it for their last mile journey, probably not going to rent a bicycle to cycle under SG’s insane weather and roads.
+
+They will find easier and more comfortable ways to fulfill that last mile journey.
+
+*喜欢骑自行车的人，已经自己买好车了。*
+
+*需要自行车接驳最后一公里的人，大概不会想在新加坡糟糕的天气和路况下租车。*
+
+*ta 们会寻找更简单、更舒适的方法来完成这最后一公里。*
+
+https://www.reddit.com/r/singapore/comments/1bnzobz
+
+{{< /admonition >}}
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/hmxiNA.png" caption="在 CBD 见到的两辆共享单车，分别来自 Anywheel 和 HelloRide" >}}
 
@@ -69,21 +73,29 @@
 
 大概这些组屋是不同年代落成的关系，不同社区的建筑样式各不相同，但整体上一层都是架空层所以通风非常好，架空层在一些角落位放置桌椅或垃圾桶，而自行车的停车区域可能划在架空层里面，也可能是楼外露天的一个小区域（基本每栋楼都有，所以不会给太大）。至于汽车、摩托车会在建筑附近的空地或地下设置专门的停车格，并且沿途所见的全部停车场出入口都不是使用摄像头识别车牌，最开始我注意到这点是因为见不到补光灯，等回家开始查资料的时候却在 HDB 的网站上看到它们说是使用摄像头识别车牌：
 
-> Do I have to start and end a parking session? 
->
-> *我需要手动开始和结束停车过程吗？*
->
-> Nope, you do not need to manually start or end any parking session. Your parking session will begin automatically when you enter the car park Your vehicle number will be recognized by the cameras that are equipped with Licence Plate Recognition technology. Simpy Park and Go!
->
-> *不需要，您不需要手动开始或结束停车过程。当您进入停车场时，您本次停车将自动开始。您的车牌号码将被配备车牌识别技术的摄像头识别。只需停好并离开即可！*
-> 
-> https://www.hdb.gov.sg/car-parks/parkinghdb/FAQs
+{{< admonition type=quote title="Parking@HDB FAQs" open=true >}}
+
+ Do I have to start and end a parking session? 
+
+ *我需要手动开始和结束停车过程吗？*
+
+ Nope, you do not need to manually start or end any parking session. Your parking session will begin automatically when you enter the car park our vehicle number will be recognized by the cameras that are equipped with Licence Plate Recognition technology. Simpy Park and Go!
+
+ *不需要，您不需要手动开始或结束停车过程。当您进入停车场时，您本次停车将自动开始。您的车牌号码将被配备车牌识别技术的摄像头识别。只需停好并离开即可！*
+ 
+ https://www.hdb.gov.sg/car-parks/parkinghdb/FAQs
+
+ {{< /admonition >}}
 
 这是怎么回事？难道我眼花了？别着急，在相同的页面继续往下读，在解释为什么会收到 HDB 停车场未付费通知时，有这样的描述：
 
-> The motorist had exited the gantry before the parking system could identify, compute and deduct the parking fees from the cash card in the In-Vehicle Unit. Motorists are required to slow down at the exit gantries, in the same way that they would exit a car park equipped with the Electronic Parking System. 
->
-> *司机在停车系统能够识别、计算并从车载单元的现金卡中扣除停车费之前就已经驶出闸门。司机需要在出口闸门处减速，就像在配备电子停车系统的停车场出口一样。*
+{{< admonition type=quote title="Parking@HDB FAQs" open=true >}}
+
+ The motorist had exited the gantry before the parking system could identify, compute and deduct the parking fees from the cash card in the In-Vehicle Unit. Motorists are required to slow down at the exit gantries, in the same way that they would exit a car park equipped with the Electronic Parking System. 
+
+ *司机在停车系统能够识别、计算并从车载单元的现金卡中扣除停车费之前就已经驶出闸门。司机需要在出口闸门处减速，就像在配备电子停车系统的停车场出口一样。*
+
+ {{< /admonition >}}
 
 这里的 In-Vehicle Unit 是所有在新加坡注册车辆都需要强制安装的车辆识别和计费装置，[如果不安装的话每次通过新加坡的电子道路收费（[ERP]^(Electronic Road Pricing)）闸门都会被罚款 70 SGD](https://onemotoring.lta.gov.sg/content/onemotoring/home/driving/ERP/ERP.html#_Paying_ERP)。用 Google 街景检查兀兰的某个 HDB 停车场也可以见到闸机上方是一个不带摄像头的感应模块：
 
@@ -103,7 +115,7 @@
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/10/YH24Rn.png" caption="唯一遇到能接冰水的地方是新加坡华族文化中心" >}}
 
-说到步行感受还有两点值得提及，首先路面完全没有任何破损或坑洼不平，配套的无障碍通道非常细致，会在很自然的位置出现不用专门寻找。另一点是虽然搭乘巴士时发现新加坡的法律大概是没有车辆经过斑马线必须减速的条文，但当我以行人的身份过马路时所有车辆都一定会停车礼让。在写这段时找到一篇更专业的观察手记，索性一并放进来：《[新加坡深度考察：解析銀髮區與道路設計細節](https://eyesonplace.net/2023/03/22/22677/)》。
+说到步行感受还有两点值得提及，首先路面完全没有任何破损或坑洼不平，配套的无障碍通道非常细致，会在很自然的位置出现不用专门寻找。另一点是虽然搭乘巴士时发现新加坡的法律大概是没有车辆经过斑马线必须减速的条文，但当我以行人的身份走斑马线时所有车辆都一定会停车礼让。在写这段时找到一篇更专业的观察手记，索性一并放进来：《[新加坡深度考察：解析銀髮區與道路設計細節](https://eyesonplace.net/2023/03/22/22677/)》。
 
 这次旅行吃的方面考虑到钱包几乎都在小贩中心解决，唯一一次团餐是十几个人一起吃文东记，餐牌价格给人的感觉是如果直接看成人民币在广州来说也算偏贵的一档，口味也没有特别惊艳。所以第二天早上在 Maxwell 看室友从天天直接端了半只鸡回来我是一点都不出奇。
 
