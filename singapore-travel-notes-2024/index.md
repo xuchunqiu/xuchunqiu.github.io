@@ -73,7 +73,7 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/cths57.png" caption="旁边偷吃祭品的鸽子" >}}
 
-{{< image src="hhttps://image.assets.xuchunqiu.com/img/2024/10/3dG9TF.png" caption="另一处祭品，竟然有芬达" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/FuACj9.png" caption="另一处祭品，竟然有芬达" >}}
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/10/NIHhEz.png" caption="社区里有些吓人的木质小人" >}}
 
