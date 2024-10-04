@@ -69,9 +69,19 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/fKU9k9.png" caption="当地居民正在使用焚烧桶" >}}
 
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/88pIyq.png" caption="低配版焚烧桶" >}}
+
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/cths57.png" caption="旁边偷吃祭品的鸽子" >}}
 
-大概这些组屋是不同年代落成的关系，不同社区的建筑样式各不相同，但整体上一层都是架空层所以通风非常好，架空层在一些角落位放置桌椅或垃圾桶，而自行车的停车区域可能划在架空层里面，也可能是楼外露天的一个小区域（基本每栋楼都有，所以不会给太大）。至于汽车、摩托车会在建筑附近的空地或地下设置专门的停车格，并且沿途所见的全部停车场出入口都不是使用摄像头识别车牌，最开始我注意到这点是因为见不到补光灯，等回家开始查资料的时候却在 HDB 的网站上看到它们说是使用摄像头识别车牌：
+{{< image src="hhttps://image.assets.xuchunqiu.com/img/2024/10/3dG9TF.png" caption="另一处祭品，竟然有芬达" >}}
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/NIHhEz.png" caption="社区里有些吓人的木质小人" >}}
+
+大概这些组屋是不同年代落成的关系，不同社区的建筑样式各不相同，但整体上一层都是架空层所以通风非常好，架空层在一些角落位放置桌椅或垃圾桶，而自行车的停车区域可能划在架空层里面，也可能是楼外露天的一个小区域（基本每栋楼都有，所以不会给太大）。
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/JGPNlG.png" caption="汽车的露天停车格和后面的架空层" >}}
+
+至于汽车、摩托车会在建筑附近的空地或地下设置专门的停车格，并且沿途所见的全部停车场出入口都不是使用摄像头识别车牌，最开始我注意到这点是因为见不到补光灯，等回家开始查资料的时候却在 HDB 的网站上看到它们说是使用摄像头识别车牌：
 
 {{< admonition type=quote title="Parking@HDB FAQs" open=true >}}
 
@@ -109,13 +119,25 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/7F24MC.png" caption="有盖人行道的鱼鳞状挡板" >}}
 
-可能是在白天都得开灯的房子住久了的缘故，很自然地也会好奇组屋的采光如何。首先我路过这些地方即使在同一个社区的楼宇中也不会采用统一的朝向，这并非是基于容积率的考虑——楼间距还是很充裕的，能塞得下儿童活动区域或是小运动场。另一个观察是组屋的窗户都不大，在 HDB LIVINGSPACE Gallery 展示的一种组屋的快速施工方式是将每一层都模块化预制好然后吊起来拼接，但不可能每栋楼都是这么建然后为了结构强度只能开小窗吧，所以这个问题对我来说仍是有待探索。
+可能是在白天都得开灯的房子住久了的缘故，很自然地也会好奇组屋的采光如何。首先我路过这些地方即使在同一个社区的楼宇中也不会采用统一的朝向，这并非是基于容积率的考虑——楼间距还是很充裕的，能塞得下儿童活动区域或是小运动场。另一个观察是组屋的窗户都不大，在 HDB LIVINGSPACE Gallery 展示的一种组屋的快速施工方式是将每一层都模块化预制好然后吊起来拼接（本文头图也能看出这种迹象），但不可能每栋楼都是这么建然后为了结构强度只能开小窗吧，所以这个问题对我来说仍是有待探索。
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/tFJIBi.png" caption="组屋远景" >}}
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/3cAJs0.png" caption="坐在架空层休息的人，出面路灯杆上有两只鸽子" >}}
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/TSCjjU.png" caption="共和理工学院的水滴雕塑" >}}
 
 可能是规划如此，我走过的组屋楼下几乎是没有商业配套的，理发店、日用品店、餐饮店只在其中一个社区里是配齐的；有的社区甚至什么店都没有。当地居民可能要行一段距离去附近的商业中心、地铁站才能找到这些服务。有趣的是我在郊区、CBD 步行时也会有类似感觉——走了很远连卖水的便利店都找不到，只好留着空瓶期待遇到可以免费接水的小贩中心（Hawker Centre）或展览馆。
 
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/cxf8Wa.png" caption="地铁马西岭站的一层就是超市" >}}
+
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/10/YH24Rn.png" caption="唯一遇到能接冰水的地方是新加坡华族文化中心" >}}
 
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/kejCMH.png" caption="唯一遇到的冰淇淋自动贩卖机是在一栋组屋楼下" >}}
+
 说到步行感受还有两点值得提及，首先路面完全没有任何破损或坑洼不平，配套的无障碍通道非常细致，会在很自然的位置出现不用专门寻找。另一点是虽然搭乘巴士时发现新加坡的法律大概是没有车辆经过斑马线必须减速的条文，但当我以行人的身份走斑马线时所有车辆都一定会停车礼让。在写这段时找到一篇更专业的观察手记，索性一并放进来：《[新加坡深度考察：解析銀髮區與道路設計細節](https://eyesonplace.net/2023/03/22/22677/)》。
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/2PwjU7.png" caption="牛车水街景" >}}
 
 这次旅行吃的方面考虑到钱包几乎都在小贩中心解决，唯一一次团餐是十几个人一起吃文东记，餐牌价格给人的感觉是如果直接看成人民币在广州来说也算偏贵的一档，口味也没有特别惊艳。所以第二天早上在 Maxwell 看室友从天天直接端了半只鸡回来我是一点都不出奇。
 
@@ -133,8 +155,20 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/09/Hz2nRp.png" caption="室友次日的早餐：天天海南鸡饭" >}}
 
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/yIke7j.png" caption="最后一天的早餐：花生汤圆。吃完就跟香港朋友去爬山了" >}}
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/LauiKF.png" caption="小贩中心吃完东西要自己把餐具放在回收处。突然发现紫色公路车坐管后面装的是佳明 Varia RCT715 雷达" >}}
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/tXBeZ4.png" caption="Maxwell Food Centre 对面的佛牙寺" >}}
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/SxMPGQ.png" caption="天福宫" >}}
+
 其实也逛了几个展，最大的感受不是展览本身，而是和室友一致认为它们在验票环节实在太宽松了，不知道该归结为社会互信还是刑罚严苛。为了避免被钻空子这里就不过多展开。
 
 如果说这次旅行有什么遗憾的话，首先是网购的热带风情花衬衫在物流到广州后被意外遣送北京导致我没有穿上；其次是出发前一晚被空调冻感冒了全程体力不在线；还有因为关了国内 IM 的消息推送好巧不巧有朋友这期间联系不上我。或许可能也许我该提前找个庙拜拜的。
 
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/4or0bj.png" caption="珍爱生命，远离中通" >}}
+
 出国玩真的比国内有趣多了，不知道下次会去哪里。
+
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/zuuFUp.png" caption="离境航班上看到新加坡海峡中密密麻麻的航运船只" >}}
