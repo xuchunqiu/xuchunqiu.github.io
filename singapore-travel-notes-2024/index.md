@@ -165,10 +165,11 @@ https://www.reddit.com/r/singapore/comments/1bnzobz
 
 其实也逛了几个展，最大的感受不是展览本身，而是和室友一致认为它们在验票环节实在太宽松了，不知道该归结为社会互信还是刑罚严苛。为了避免被钻空子这里就不过多展开。
 
+{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/zuuFUp.png" caption="离境航班上见到新加坡海峡中密密麻麻的航运船只" >}}
+
 如果说这次旅行有什么遗憾的话，首先是网购的热带风情花衬衫在物流到广州后被意外遣送北京导致我没有穿上；其次是出发前一晚被空调冻感冒了全程体力不在线；还有因为关了国内 IM 的消息推送好巧不巧有朋友这期间联系不上我。或许可能也许我该提前找个庙拜拜的。
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2024/10/4or0bj.png" caption="珍爱生命，远离中通" >}}
 
 出国玩真的比国内有趣多了，不知道下次会去哪里。
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2024/10/zuuFUp.png" caption="离境航班上看到新加坡海峡中密密麻麻的航运船只" >}}
