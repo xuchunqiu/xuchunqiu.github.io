@@ -1,4 +1,59 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CQCQ 收到未？</title><link>https://xuchunqiu.com/</link><description>CQ 的个人生活志</description><generator>Hugo -- gohugo.io</generator><managingEditor>self@xuchunqiu[.]com (xuchunqiu)</managingEditor><webMaster>self@xuchunqiu[.]com (xuchunqiu)</webMaster><lastBuildDate>Wed, 02 Oct 2024 10:08:46 +0800</lastBuildDate><atom:link href="https://xuchunqiu.com/index.xml" rel="self" type="application/rss+xml"/><item><title>新游漫记</title><link>https://xuchunqiu.com/singapore-travel-notes-2024/</link><pubDate>Thu, 26 Sep 2024 01:56:21 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/singapore-travel-notes-2024/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CQCQ 收到未？</title><link>https://xuchunqiu.com/</link><description>CQ 的个人生活志</description><generator>Hugo -- gohugo.io</generator><managingEditor>self@xuchunqiu[.]com (xuchunqiu)</managingEditor><webMaster>self@xuchunqiu[.]com (xuchunqiu)</webMaster><lastBuildDate>Wed, 02 Oct 2024 08:22:34 +0000</lastBuildDate><atom:link href="https://xuchunqiu.com/index.xml" rel="self" type="application/rss+xml"/><item><title>运动手表不完全使用体验：Apple vs Garmin</title><link>https://xuchunqiu.com/switch-to-garmin-watch/</link><pubDate>Wed, 02 Oct 2024 08:22:34 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/switch-to-garmin-watch/</guid><description><![CDATA[<p>作为一个有轻度运动习惯（骑车、跑步、游泳、力量、HIIT，每周3～5次）的肥仔，我先后使用了三年多 Apple Watch Series 4、一年半 Garmin Enduro 2。本文不会对比具体的硬件型号+软件版本（有这方面需要请直接去看 <a href="https://www.dcrainmaker.com" target="_blank" rel="noopener noreferrer">DC Rainmaker</a>），而是希望根据我有限的体验对比两家做产品的思路差异。</p>
+<p>定这个标题的时候我有意避开了「智能手表」这个称呼，因为 Garmin 在跟手机的联动上只能说差强人意（当前没有 Android 设备所以以下表述中手机默认为 iPhone），具体原因后面会写到。</p>
+<h2 id="放弃-apple-watch-的契机" class="headerLink">
+    <a href="#%e6%94%be%e5%bc%83-apple-watch-%e7%9a%84%e5%a5%91%e6%9c%ba" class="header-mark"></a>放弃 Apple Watch 的契机</h2><p>我的 Apple Watch Series 4（GPS）是 2019 年从香港买完激活过 ECG（v1）才背回内地，用了三年多电池寿命下降到 80%，我不得不在公司留一块充电器才有足够的安全感。S4 从满电到自动关机大概能支撑 5～6 小时的骑行记录（关机前运动记录会自动结束，但要等重新充电开机后才能发送到手机），2023 年 9 月发布的 <a href="https://support.apple.com/zh-cn/guide/watch/apd4cbc876c7/10.0/watchos/10.0" target="_blank" rel="noopener noreferrer">iOS 17 带来了可以跟 Apple Watch 联动的骑行码表视图</a>，是否手表没电后手机可以接管 GPS 记录我不得而知，因为 2023 年 3 月我在天猫的「Garmin佳明海外旗舰店」购入了 Garmin Enduro 2。 正如前面提到的 S4 电池寿命告急，有次早上起床来不及补电就去爬山，结果没等下山手表就电量耗尽了，回家后越想越气连夜下单换表。</p>
+<h2 id="为什么不是-apple-watch-ultra" class="headerLink">
+    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e6%98%af-apple-watch-ultra" class="header-mark"></a>为什么不是 Apple Watch Ultra？</h2><p>Garmin 手表有很多细分产品线(铁三、跑步、潜水、高尔夫、航海……)去它 <a href="https://www.garmin.com.cn/products/wearables/?cat=watches" target="_blank" rel="noopener noreferrer">官网</a> 可以看到详尽的分类，我选择 Enduro 2 就是因为续航最长。<a href="https://www.apple.com.cn/watch/battery" target="_blank" rel="noopener noreferrer">Apple Watch Ultra 宣称有 12 小时的运动记录时长</a>，而作为当时 Garmin 续航最强的表 <a href="https://www.garmin.com.cn/products/wearables/enduro-2/#specsTab" target="_blank" rel="noopener noreferrer">Enduro 2 的运动记录时长是 68 小时</a>。</p>
+<h2 id="为什么不是高驰amazfit-这些国产表" class="headerLink">
+    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e6%98%af%e9%ab%98%e9%a9%b0amazfit-%e8%bf%99%e4%ba%9b%e5%9b%bd%e4%ba%a7%e8%a1%a8" class="header-mark"></a>为什么不是高驰、Amazfit 这些国产表？</h2><p>因为有用 Strava 汇总运动记录、<a href="https://github.com/yihong0618/running_page" target="_blank" rel="noopener noreferrer">running_page</a> 集中 <a href="https://biking.xuchunqiu.com" target="_blank" rel="noopener noreferrer">展示</a> 的习惯，这一点上作为国际大牌 Garmin 无疑是方便的。另一个原因是买自行车码表的时候还在上学预算有限选择了 Wahoo，现在有了积蓄正好来试试 Garmin 的手表。</p>
+<h2 id="锁区现状" class="headerLink">
+    <a href="#%e9%94%81%e5%8c%ba%e7%8e%b0%e7%8a%b6" class="header-mark"></a>锁区现状</h2><p>相信没人会喜欢花相同的钱买到被阉割的商品，但遗憾的是两家厂商的手表都存在锁区/阉割现象。</p>
+<p>正如前面提到的 Apple Watch 的 ECG 功能在早年因为医疗审批问题是无法直接开通的，比较有趣的是当时有人 <a href="https://v2ex.com/t/710861" target="_blank" rel="noopener noreferrer">在口岸将手机连上香港运营商信号后，不用过境就能开通 ECG</a>。更多 Apple 锁区的技术细节可以参考《<a href="https://sspai.com/prime/story/ios-feature-region-lock" target="_blank" rel="noopener noreferrer">iOS 如何按地区限制功能：浅析 MobileGestalt 与 Eligibility</a>》。2024 年的今天国行 Apple Watch 已经可以无痛开通 ECG 了，但随 WatchOS 11 推出的 <a href="https://www.v2ex.com/t/1075937" target="_blank" rel="noopener noreferrer">睡眠呼吸暂停功能又陷入了和 ECG 一样的轮回</a>。至于运动数据同步，手机上安装 Strava 后关联苹果健康即可。</p>
+<p>Garmin 这边的情况稍有不同，<a href="https://dailysync.vyzt.dev/docs/%E6%88%91%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%9B%BD%E9%99%85%E5%8C%BA%E8%BF%98%E6%98%AF%E4%B8%AD%E5%9B%BD%E5%8C%BA" target="_blank" rel="noopener noreferrer">中国区账号只能关联（也就是上传运动数据到）国内的第三方运动 App；国际区账号则可以关联 Strava。我买的外版手表则从软件上阉割了国内的两家付款码程序和公交卡</a>。国际区账号可以直接注册没有任何验证，手表付款很鸡肋可能在单独带蜂窝版（仅 Apple，Garmin 没有这种型号）出门时才会用到。地图方面 Garmin <del>有点坏</del>有点太合规了，以某些方式对中国大陆的用户（包括我）隐藏了等高线地图（TopoActivate China ML），目前我手表上原厂跟中国大陆有关的地图是「CN China NT 2023.20-NI」、「CN RDA China NT 2023.20-NI ALL」、「China DEM v1.00」。</p>
+<h2 id="喜欢-garmin-的点" class="headerLink">
+    <a href="#%e5%96%9c%e6%ac%a2-garmin-%e7%9a%84%e7%82%b9" class="header-mark"></a>喜欢 Garmin 的点</h2><ol>
+<li>Garmin 的按键操作逻辑是完整的，它甚至允许用户完全关闭触摸功能（充分考虑了登山带手套、潜水容易误触的场景）。实际上只要不看地图我也是关闭了触摸在用，一方面是 Garmin 的触摸操作不够精准不如用按键快速，另一方面也有利于省电。</li>
+<li>全天候的 HRV 检测。Apple Watch 的 HRV 检测频率非常低，从苹果健康里检查原始数据就能看到它一天只测量最多十几次。大概是处理器性能弱 + 电池大才给了 Garmin 这样的底气。也正因全天候的检测使得 Garmin 可以在此基础上通过 Firstbeat 的算法得到身体电量、压力指数。</li>
+<li>表盘信息量丰富，尽管在美观程度上不如 Apple Watch。Garmin 可以通过手机上的 ConnectIQ 应用程序向手表安装应用/表盘，我用了第三方表盘 <a href="https://apps.garmin.com/apps/034dc8d6-c695-4cbc-9193-ff2375e1e4e0" target="_blank" rel="noopener noreferrer">HIPERION</a> 同时查看日出日落、心率、压力分数、步数、步行距离、呼吸频率、血氧含量、身体电量。</li>
+<li>ANT+ 连接能力。ANT+ 是骑行配件普遍支持的互联协议，与更广为人知的蓝牙相比 ANT+ 支持多播，我的使用场景是同时在码表和手表上连接同一个踏频传感器，这样就有两份骑行记录互为备份。</li>
+<li>支持心率广播，可以替代心率带。我手机上至今还留着两个应用程序 <a href="https://apps.apple.com/us/app/heartcast-heart-rate-monitor/id1499771124" target="_blank" rel="noopener noreferrer">HeartCast</a>、[ECHO}(https://apps.apple.com/us/app/echo-watch-heart-rate-monitor/id1494679144)，它们的功能是获取 Apple Watch 的心率通过蓝牙发送到码表，这样骑行记录里就会包含心率数据了，这是我在没买心率带时候的权宜之计。实际可能途中我打开手机拍两张照片这个 app 的后台就被系统杀掉了，稳定性堪忧。所以很快我就买了心率带来用。心率带也不是完美的，穿上的时候把握不好松紧会勒，脱下的时候及时清洗避免生锈，导致我每次骑车都要花更多时间做好心理建设。当发现 Garmin 支持心率广播后立刻就不再使用心率带了。有些健身房的跑步机也支持接收心率广播展示你的实时心率。</li>
+<li>运动记录界面自由地定义栏位和数据。这个可以说 Garmin 就是按照码表的思路来布置的，从一～八栏（视表盘尺寸可能有差异）统统给你，每个栏位几十种数据可以选择。</li>
+<li>可以在网页上浏览健康数据。苹果健康里的数据只支持在移动设备上查看，而 Garmin 的主程序 Garmin Connect 同时也有网页版 <a href="https://connect.garmin.com" target="_blank" rel="noopener noreferrer">https://connect.garmin.com</a>。从功能上来说网页版是手机版的超集，提供了比手机版更全面的数据视图、训练指导。</li>
+<li>在记录运动的同时导航。这在户外运动的时候是蛮常见的需求，根据提前规划的路线进行 <strong><ruby>TBT<rt>Turn By Turn</rt></ruby></strong> 导航并在偏离路线时重新算路。我甚至可以武断地讲所有以运动为卖点的手表都会实现这个功能（只是某些厂商可能不支持开放且通用的 <strong><ruby><a href="https://www.topografix.com/gpx.asp" target="_blank" rel="noopener noreferrer">GPX</a><rt>Global Positioning XML</rt></ruby></strong> 轨迹格式；某些厂商的重新算路功能需要连接手机使用）。但 <a href="https://discussionschinese.apple.com/thread/254872040?sortBy=rank" target="_blank" rel="noopener noreferrer">截至 2024 年在 Apple Watch 上第一方的地图与运动仍是两个独立的 app</a>，第三方的 <a href="https://apps.apple.com/us/app/workoutdoors/id1241909999" target="_blank" rel="noopener noreferrer">WorkOutDoors</a> 售价 7.99 USD 支持 GPX 导入并在运动界面显示地图和回到/偏离路线提醒，遗憾的是它尚未实现 TBT 导航。</li>
+<li>离线地图。这是一个可能会有争议的点因为离线意味着会过时，但至少在没有信号的地方还能看地图。<a href="https://support.apple.com/zh-sg/guide/watch/apd0111bf788/10.0/watchos/10.0" target="_blank" rel="noopener noreferrer">WatchOS 10 加入了离线地图功能</a>，所以两者的差异只是地图服务提供商。</li>
+</ol>
+<h2 id="garmin-没有做好的点" class="headerLink">
+    <a href="#garmin-%e6%b2%a1%e6%9c%89%e5%81%9a%e5%a5%bd%e7%9a%84%e7%82%b9" class="header-mark"></a>Garmin 没有做好的点</h2><ol>
+<li>孱弱的处理器性能，这影响了很多细节，例如：
+<ol>
+<li>Garmin 的界面操作起来不跟手，不如 Apple Watch 丝滑。</li>
+<li>Garmin 在拖动、缩放地图时会有明显的重新绘制等待（根据网上的视频最顶级的旗舰机型也有此问题）。</li>
+<li>在做力量训练时我会尝试以微小幅度晃动手腕期望 Garmin 亮屏，但它就是检测不到。</li>
+<li>Garmin 导入 GPX 会有一个「计算路线」的过程，这至少涉及 TBT 的计算，还可能包含使用「China DEM v1.00」生成坡度信息。以一段 143 KM 的新路线为例，载入路线花了 14 s，计算路线花了 32 s。</li>
+</ol>
+</li>
+<li>与手机的互联生态，例如：
+<ol>
+<li>Apple Watch 在手表上截图是会自动进入手机相册的，而 Garmin 需要你用 USB 线连接电脑查看截图。</li>
+<li>iOS 中被设置为定时摘要的 app 通知会按与手机相同的逻辑推送，而 Garmin 则会立刻通知你。并且 Garmin 弹通知的时候开头数秒只显示 app 名称，要盯着手表发呆后才见到通知内容。</li>
+<li>Garmin 秒针经常慢几秒。在 Garmin 的文档中声称「<a href="https://support.garmin.com/zh-CN/?faq=uXR3bWcLnq6465i9tYA5iA" target="_blank" rel="noopener noreferrer">当设备与 Garmin connect mobile 配对同步后，设备可通过 app 同步获取手机时间</a>」，但即使我通过手表上的「同步时间」功能手动触发看起来也还是不准。按前面引用的文档 Garmin 也会自动通过 GPS 卫星授时，这个准不准我没有仔细测。</li>
+</ol>
+</li>
+<li>OTA 和软件生态，包括：
+<ol>
+<li>Apple Watch 长周期的系统更新和新功能下放真的是独一份，Garmin 三个月都不见得能更新一次系统，更遑论新功能下放了。这背后一方面是因为产品线丰富开发者力不从心，但很难不怀疑还有为促进新型号销量的商业考量。</li>
+<li>Garmin 的软件/表盘商店虽然也允许第三方开发者的存在，实际普遍都没什么亮点。不像 Apple Watch 因为高性能处理器和全面的 SDK 可以让一些第三方出品的运动或健康监测 app 比系统自带的更好用。</li>
+</ol>
+</li>
+<li>不应该存在的限制（以下数字可能因机型而异），包括：
+<ol>
+<li>闹钟最多定 10 个时间，即使所有闹钟都是关闭状态也不允许你添加第 11 个。</li>
+<li>从 ConnectIQ 安装的应用/表盘/数据字段合计最多 33 个。我目前还剩 59.60 MB 空间可以再安装 6 个，有趣的是如果把手表连接到电脑会看到储存空间还有足足 9 GB。</li>
+<li>在运动途中无法重新加载 GPX。这个需求的场景是在路途中间改变行程，用手机重新规划了另一条路线想走，但手表上只允许在地图上重新选择终点后使用机内导航提供的路线。</li>
+</ol>
+</li>
+</ol>
+]]></description></item><item><title>新游漫记</title><link>https://xuchunqiu.com/singapore-travel-notes-2024/</link><pubDate>Thu, 26 Sep 2024 01:56:21 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/singapore-travel-notes-2024/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://image.assets.xuchunqiu.com/img/2024/10/5x6JrO.png" referrerpolicy="no-referrer">
             </div><p>地理课上的「亚洲四小龙」、《全球猎身》里印度 IT 劳工赴美的跳板、《新兵正传》中每个男性公民都需要服役的国度，在这个火热的 8 月，我终于在新加坡开启了人生首次出国旅行。</p>
 <p>行程上计划呆四天三晚——周五周一请假凑一个四天小长假出来。打开 Airbnb 订房时真的被价格吓到：四五百 RMB 一晚只能住胶囊旅馆，只能咬咬牙选了八百 RMB 的酒店双床房（还好有拼到室友）。除了酒店还需要提前准备的是各种卡：<strong>电话卡</strong>、<strong>公交卡</strong>、<strong>入境卡</strong>。</p>
@@ -1775,304 +1830,4 @@
 </li>
 </ol>
 </section>
-]]></description></item><item><title>配置 OpenSSH 的公钥认证</title><link>https://xuchunqiu.com/use-public-key-authentication-in-openssh/</link><pubDate>Mon, 05 Oct 2020 03:41:14 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/use-public-key-authentication-in-openssh/</guid><description><![CDATA[<h2 id="0x00-前言" class="headerLink">
-    <a href="#0x00-%e5%89%8d%e8%a8%80" class="header-mark"></a>0x00 前言</h2><p><a href="https://www.ssh.com/ssh/" target="_blank" rel="noopener noreferrer">https://www.ssh.com/ssh/</a> 上的文档写得很详细但有些散碎，本文对配置 OpenSSH 公钥认证的环节进行了整理。</p>
-<p>如果你还不了解什么是公钥认证的话，可以看： <a href="https://www.ssh.com/ssh/public-key-authentication" target="_blank" rel="noopener noreferrer">https://www.ssh.com/ssh/public-key-authentication</a></p>
-<h3 id="公私钥长什么样" class="headerLink">
-    <a href="#%e5%85%ac%e7%a7%81%e9%92%a5%e9%95%bf%e4%bb%80%e4%b9%88%e6%a0%b7" class="header-mark"></a>公私钥长什么样？</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># https://www.ssh.com/ssh/key/#what-do-ssh-keys-look-like:~:text=An%20authorized%20key%20can%20look%20like%20this%3A</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 公钥 a.k.a. public key a.k.a. authorized key</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 尾部是生成密钥对的 &lt;用户名&gt;@&lt;主机名&gt;</span>
-</span></span><span class="line"><span class="cl">ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN+Mh3U/3We4VYtV1QmWUFIzFLTUeegl1Ao5/QGtCRGAZn8bxX9KlCrrWISIjSYAwCajIEGSPEZwPNMBoK8XD8Q<span class="o">=</span> ylo@klar
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 私钥 a.k.a. private key a.k.a. identity key</span>
-</span></span><span class="line"><span class="cl">-----BEGIN EC PRIVATE KEY-----
-</span></span><span class="line"><span class="cl">MHcCAQEEIJWbvSW7h50HPwG+bWR3DXgQ6YhOxYbe0ifr1rRUvsUuoAoGCCqGSM49
-</span></span><span class="line"><span class="cl">AwEHoUQDQgAE34yHdT/dZ7hVi1XVCZZQUjMUtNR56CXUCjn9Aa0JEYBmfxvFf0qU
-</span></span><span class="line"><span class="cl"><span class="nv">KutYhIiNJgDAJqMgQZI8RnA80wGgrxcPxA</span><span class="o">==</span>
-</span></span><span class="line"><span class="cl">-----END EC PRIVATE KEY-----
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>接下来本文将以 Windows 作为本机系统、Ubuntu 作为远程主机系统演示公钥认证的配置过程。</p>
-<h2 id="0x01-本机使用-ssh-keygen-生成公私钥对" class="headerLink">
-    <a href="#0x01-%e6%9c%ac%e6%9c%ba%e4%bd%bf%e7%94%a8-ssh-keygen-%e7%94%9f%e6%88%90%e5%85%ac%e7%a7%81%e9%92%a5%e5%af%b9" class="header-mark"></a>0x01 本机使用 <code>ssh-keygen</code> 生成公私钥对</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># PowerShell</span>
-</span></span><span class="line"><span class="cl">ssh-keygen.exe
-</span></span><span class="line"><span class="cl"><span class="c1"># 默认输出到 C:\Users\$ENV:USERNAME\.ssh\ 下的 id_rsa</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># WSL</span>
-</span></span><span class="line"><span class="cl">ssh-keygen
-</span></span><span class="line"><span class="cl"><span class="c1"># 默认输出到 ~/.ssh/ 下的 id_rsa</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>密码（passphrase）对私钥的加密效果使得第三方即使获得私钥也无法完成认证过程。</p>
-<figure><img src="https://image.assets.xuchunqiu.com/img/2023/09/VChEYJ.png"/>
-</figure>
-
-<p>需要说明的是，在手动指定密钥对的保存路径时，如果只写文件名，默认是放在启动 <code>ssh-keygen</code> 时所在的工作目录中。</p>
-<h2 id="0x02-将公钥内容写入远程主机的-sshauthorized_keys-文件中" class="headerLink">
-    <a href="#0x02-%e5%b0%86%e5%85%ac%e9%92%a5%e5%86%85%e5%ae%b9%e5%86%99%e5%85%a5%e8%bf%9c%e7%a8%8b%e4%b8%bb%e6%9c%ba%e7%9a%84-sshauthorized_keys-%e6%96%87%e4%bb%b6%e4%b8%ad" class="header-mark"></a>0x02 将公钥内容写入远程主机的 <code>~/.ssh/authorized_keys</code> 文件中</h2><blockquote>
-<p><code>authorized_keys</code> 文件保存允许通过公钥授权来经 SSH 登录服务器者的公钥，每行保存一个，空行或是井号会被忽略。</p>
-<p>它通常位于 <code>~/.ssh/authorized_keys</code>（许多 OpenSSH 的版本也会使用 <code>~/ssh/authorized_keys2</code>），而对一些使用客制化 OpenSSH 构建的组织来说，这个默认路径可能有变化。</p>
-<p><a href="https://www.ssh.com/ssh/authorized_keys/openssh" target="_blank" rel="noopener noreferrer">Configuring authorized_keys for OpenSSH</a></p>
-</blockquote>
-<h3 id="方法-1使用-ssh-copy-id" class="headerLink">
-    <a href="#%e6%96%b9%e6%b3%95-1%e4%bd%bf%e7%94%a8-ssh-copy-id" class="header-mark"></a>方法 1：使用 <code>ssh-copy-id</code></h3><p><code>ssh-copy-id</code> 用于在远程主机上添加公钥，它的操作逻辑为：</p>
-<ol>
-<li>远程服主机的 <code>~/.ssh</code> 路径是否存在？创建：下一步</li>
-<li>远程主机的 <code>~/.ssh/authorized_keys</code> 文件是否存在？创建：下一步</li>
-<li>（当没有使用 <code>-f</code>(orce) 时）远程主机的 <code>authorized_keys</code> 文件是否已包含本次要配置的公钥？跳过：添加，下一步</li>
-<li>远程主机的 <code>authorized_keys</code> 文件权限是否仅有当前用户可写入？不变：修改</li>
-</ol>
-<p>其可选参数为：</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-f</code></td>
-<td>Don&rsquo;t check if the key is already configured as an authorized key on the server. Just add it. This can result in multiple copies of the key in authorized_keys files.</td>
-</tr>
-<tr>
-<td><code>-i</code></td>
-<td>Specifies the identity file that is to be copied (default is ~/.ssh/id_rsa). If this option is not provided, this adds all keys listed by ssh-add -L. Note: it can be multiple keys and adding extra authorized keys can easily happen accidentally! If ssh-add -L returns no keys, then the most recently modified key matching ~/.ssh/id*.pub, excluding those matching ~/.ssh/*-cert.pub, will be used.</td>
-</tr>
-<tr>
-<td><code>-n</code></td>
-<td>Just print the key(s) that would be installed, without actually installing them.</td>
-</tr>
-<tr>
-<td><code>-p</code></td>
-<td>Connect to the specifed SSH port on the server, instead of the default port 22.</td>
-</tr>
-<tr>
-<td><code>-h</code></td>
-<td>help</td>
-</tr>
-</tbody>
-</table>
-<p>关于 <code>ssh-copy-id</code> 的更多介绍见：<a href="https://www.ssh.com/ssh/copy-id" target="_blank" rel="noopener noreferrer">ssh-copy-id for copying SSH keys to servers</a>，也可直接跳转到 <a href="https://www.ssh.com/ssh/copy-id#troubleshooting:~:text=key.-,Troubleshooting" target="_blank" rel="noopener noreferrer">Trouble shooting</a> 章节</p>
-<p>废话写完了，实际使用的命令如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i /mnt/c/Users/<span class="nv">$ENV</span>:USERNAME/.ssh/keypair/keyToGPUServer amax@192.168.50.50
-</span></span></code></pre></td></tr></table>
-</div>
-</div><figure><img src="https://image.assets.xuchunqiu.com/img/2023/09/OtgHKL.png"/>
-</figure>
-
-<p>可以注意到，已成功添加了一个公钥，但并不能按照提示所说直接使用 public key authentication，后续会在 # 0x03 的 <a href="#%E6%96%B9%E6%B3%95-2%E5%B0%86%E7%A7%81%E9%92%A5%E4%BF%A1%E6%81%AF%E5%86%99%E5%85%A5-sshconfig-%E6%96%87%E4%BB%B6" rel="">方法 2</a> 中进行解释。</p>
-<h3 id="方法-2手动拷贝" class="headerLink">
-    <a href="#%e6%96%b9%e6%b3%95-2%e6%89%8b%e5%8a%a8%e6%8b%b7%e8%b4%9d" class="header-mark"></a>方法 2：手动拷贝</h3><p>手动拷贝本机公钥内容到远程主机的 <code>~/.ssh/authorized_keys</code> 文件有很多方法，此处以 <code>scp</code> 复制公钥到远程主机为例：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 先复制本机公钥到远程主机的 ~ 目录</span>
-</span></span><span class="line"><span class="cl">scp C:<span class="se">\U</span>sers<span class="se">\$</span>ENV:USERNAME<span class="se">\k</span>eyToGPUServer.pub amax@192.168.50.50:~
-</span></span></code></pre></td></tr></table>
-</div>
-</div><figure><img src="https://image.assets.xuchunqiu.com/img/2023/09/b6wHRc.png"/>
-</figure>
-
-<p>不过我这里的私钥权限太宽需要修改：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 当前用户只读</span>
-</span></span><span class="line"><span class="cl">chmod <span class="m">400</span> .ssh/keypair/keyToGPUServer
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 当前用户读写</span>
-</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> .ssh/keypair/keyToGPUServer
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>传输完成后登入远程主机，将公钥内容写入到 <code>~/.ssh/authorized_keys</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 此时仍然需要以账户密码登录</span>
-</span></span><span class="line"><span class="cl">ssh amax@192.168.50.50
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 添加到文件尾</span>
-</span></span><span class="line"><span class="cl">cat keyToGPUServer.pub &gt;&gt; ~/.ssh/authorized_keys
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="0x03-配置本机的私钥存储" class="headerLink">
-    <a href="#0x03-%e9%85%8d%e7%bd%ae%e6%9c%ac%e6%9c%ba%e7%9a%84%e7%a7%81%e9%92%a5%e5%ad%98%e5%82%a8" class="header-mark"></a>0x03 配置本机的私钥存储</h2><blockquote>
-<p>本地主机的 ssh 程序可通过：</p>
-<ol>
-<li>命令行（指 <code>ssh-agent</code> 工具）</li>
-<li>（用户）配置文件 <code>~/.ssh/config</code></li>
-<li>（全局）配置文件 <code>/etc/ssh/ssh_config</code></li>
-</ol>
-<p>来获得配置信息。三个位置的优先级由高到低，且在每个位置仅使用首个匹配成功的条目。</p>
-<p><a href="https://www.ssh.com/ssh/config" target="_blank" rel="noopener noreferrer">https://www.ssh.com/ssh/config</a></p>
-</blockquote>
-<h3 id="方法-1向-ssh-agent-添加私钥" class="headerLink">
-    <a href="#%e6%96%b9%e6%b3%95-1%e5%90%91-ssh-agent-%e6%b7%bb%e5%8a%a0%e7%a7%81%e9%92%a5" class="header-mark"></a>方法 1：向 <code>ssh-agent</code> 添加私钥</h3><blockquote>
-<p><code>ssh-agent</code> 用于保存和管理用户的私钥和私钥密码，借助它我们可以实现单点登录（Single Sign-On, SSO）。</p>
-<p>在大多 Linux 系统中 <code>ssh-agent</code> 都已被自动配置且在登入时已启动。</p>
-<p><a href="https://www.ssh.com/ssh/agent" target="_blank" rel="noopener noreferrer">https://www.ssh.com/ssh/agent</a></p>
-</blockquote>
-<p>使用如下命令向 <code>ssh-agent</code> 添加私钥：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 检查是否启动</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$SSH_AGENT_SOCK</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 手动启动</span>
-</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="sb">`</span>ssh-agent<span class="sb">`</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 显示 ssh-agent 已安装私钥</span>
-</span></span><span class="line"><span class="cl">ssh-add -l
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 从 ssh-agent 移除指定名称私钥（不删除密钥文件）</span>
-</span></span><span class="line"><span class="cl">ssh-add -d keyToGPUServer
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 从 ssh-agent 移除所有已添加私钥（不删除密钥文件）</span>
-</span></span><span class="line"><span class="cl">ssh-add -D
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 从默认位置添加默认名称的私钥</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#  ~/.ssh/id_rsa, .ssh/id_dsa, ~/.ssh/id_ecdsa, ~/.ssh/id_ed25519, and ~/.ssh/identity</span>
-</span></span><span class="line"><span class="cl">ssh-add
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 手动指定私钥位置和名称</span>
-</span></span><span class="line"><span class="cl">ssh-add keypair/keyToGPUServer
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>测试：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 成功认证</span>
-</span></span><span class="line"><span class="cl">ssh amax@192.168.50.50
-</span></span><span class="line"><span class="cl">amax@admin:~$
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="方法-2将私钥信息写入-sshconfig-文件" class="headerLink">
-    <a href="#%e6%96%b9%e6%b3%95-2%e5%b0%86%e7%a7%81%e9%92%a5%e4%bf%a1%e6%81%af%e5%86%99%e5%85%a5-sshconfig-%e6%96%87%e4%bb%b6" class="header-mark"></a>方法 2：将私钥信息写入 <code>~/.ssh/config</code> 文件</h3><p>Windows 下的对应文件是在 <code>C:\Users\$ENV:USERNAME\.ssh\config</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># https://www.ssh.com/ssh/config/#configuring-public-key-authentication</span>
-</span></span><span class="line"><span class="cl">Host GPU
-</span></span><span class="line"><span class="cl">    HostName 192.168.50.50
-</span></span><span class="line"><span class="cl">    User amax
-</span></span><span class="line"><span class="cl">    IdentityFile C:<span class="se">\U</span>sers<span class="se">\$</span>ENV:USERNAME<span class="se">\.</span>ssh<span class="se">\k</span>eypair<span class="se">\k</span>eyToGPUServer
-</span></span><span class="line"><span class="cl">    IdentitiesOnly yes
-</span></span><span class="line"><span class="cl">    Port <span class="m">22</span>
-</span></span><span class="line"><span class="cl">    ServerAliveInterval <span class="m">60</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>这里的 Host 名称一定要起一个好记的，因为在之后使用 ssh 进行公钥认证时匹配的就是这里的 Host 名称而不再是 <code>&lt;username&gt;@&lt;ip-address&gt;</code>，本文第二张图下方没有成功通过公钥认证就是这个原因。</p>
-<p>测试：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 如果前面还通过 ssh-agent 添加了相同的密钥，要先删除掉。因为找密钥的时候它的优先级更高</span>
-</span></span><span class="line"><span class="cl">ssh-add -d keyToGPUServer
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 只能通过 Host 名称才不要密码</span>
-</span></span><span class="line"><span class="cl">ssh GPU
-</span></span><span class="line"><span class="cl">amax@admin:~$
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 如果是通过用户名主机名去登录就还得输入密码</span>
-</span></span><span class="line"><span class="cl">ssh amax@192.168.50.50
-</span></span><span class="line"><span class="cl">amax@192.168.50.50<span class="err">&#39;</span>s password:
-</span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description></item></channel></rss>
+]]></description></item></channel></rss>
