@@ -1,4 +1,6 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CQCQ 收到未？</title><link>https://xuchunqiu.com/</link><description>CQ 的个人生活志</description><generator>Hugo -- gohugo.io</generator><managingEditor>self@xuchunqiu[.]com (xuchunqiu)</managingEditor><webMaster>self@xuchunqiu[.]com (xuchunqiu)</webMaster><lastBuildDate>Wed, 02 Oct 2024 08:22:34 +0000</lastBuildDate><atom:link href="https://xuchunqiu.com/index.xml" rel="self" type="application/rss+xml"/><item><title>运动手表不完全使用感受：Apple vs Garmin</title><link>https://xuchunqiu.com/switch-to-garmin-watch/</link><pubDate>Wed, 02 Oct 2024 08:22:34 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/switch-to-garmin-watch/</guid><description><![CDATA[<p>作为一个有轻度运动习惯（骑车、跑步、力量、HIIT，每周3～5次）的肥仔，我先后使用了三年半 <em>Apple Watch Series 4（GPS）</em>、一年半 <em>Garmin Enduro 2</em>。本文不会对比具体的硬件型号+软件版本（有这方面需要请直接去看 <a href="https://www.dcrainmaker.com" target="_blank" rel="noopener noreferrer">DC Rainmaker</a>），而是希望根据有限的体验对比两家的产品思路差异。</p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CQCQ 收到未？</title><link>https://xuchunqiu.com/</link><description>CQ 的个人生活志</description><generator>Hugo -- gohugo.io</generator><managingEditor>self@xuchunqiu[.]com (xuchunqiu)</managingEditor><webMaster>self@xuchunqiu[.]com (xuchunqiu)</webMaster><lastBuildDate>Wed, 02 Oct 2024 08:22:34 +0000</lastBuildDate><atom:link href="https://xuchunqiu.com/index.xml" rel="self" type="application/rss+xml"/><item><title>运动手表不完全使用感受：Apple vs Garmin</title><link>https://xuchunqiu.com/switch-to-garmin-watch/</link><pubDate>Wed, 02 Oct 2024 08:22:34 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/switch-to-garmin-watch/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://image.assets.xuchunqiu.com/img/2024/10/MM72PT.png" referrerpolicy="no-referrer">
+            </div><p>作为一个有轻度运动习惯（骑车、跑步、力量、HIIT，每周3～5次）的肥仔，我先后使用了三年半 <em>Apple Watch Series 4（GPS）</em>、一年半 <em>Garmin Enduro 2</em>。本文不会对比具体的硬件型号+软件版本（有这方面需要请直接去看 <a href="https://www.dcrainmaker.com" target="_blank" rel="noopener noreferrer">DC Rainmaker</a>），而是希望根据有限的使用经历对比两家的产品思路差异。</p>
 <h2 id="放弃-apple-watch-的契机" class="headerLink">
     <a href="#%e6%94%be%e5%bc%83-apple-watch-%e7%9a%84%e5%a5%91%e6%9c%ba" class="header-mark"></a>放弃 Apple Watch 的契机</h2><p>我的 <em>S4</em> 是 2019 年从香港买完激活过 ECG（v1）才背回内地，用了三年多电池寿命下降到 80%，平时不得不在公司留一块充电器才有足够的安全感。<em>S4</em> 从满电到自动关机大概能支撑 5～6 小时的骑行记录（关机前运动记录会自动结束，但要等重新充电开机后才能发送到手机），2023 年 9 月发布的 <a href="https://support.apple.com/zh-cn/guide/watch/apd4cbc876c7/10.0/watchos/10.0" target="_blank" rel="noopener noreferrer">iOS 17 带来了可以跟 Apple Watch 联动的骑行码表视图</a>，是否手表没电后手机可以接管 GPS 记录我不得而知，因为 2023 年 3 月我在天猫「Garmin佳明海外旗舰店」购入了 <em>Enduro 2</em>。 正如前面提到的 <em>S4</em> 电池寿命告急，有次早上起床来不及补电就去爬山，没等下山手表就电量耗尽了，回家后越想越气连夜下单换表。</p>
 <h2 id="为什么不是-apple-watch-ultra" class="headerLink">
@@ -57,16 +59,16 @@
     <a href="#garmin-%e6%b2%a1%e6%9c%89%e5%81%9a%e5%a5%bd%e7%9a%84%e7%82%b9" class="header-mark"></a>Garmin 没有做好的点</h2><ol>
 <li><strong>孱弱的处理器性能</strong>，这影响了很多细节，例如：
 <ol>
-<li>Garmin 的界面操作起来不跟手，不如 Apple Watch 丝滑。</li>
-<li>Garmin 在拖动、缩放地图时会有明显的重新绘制等待（根据网上的视频最顶级的旗舰机型也有此问题）。</li>
+<li>Garmin 的 UI 无论是触屏还是按键方式操作起来都不跟手，不如 Apple Watch 丝滑。</li>
+<li>Garmin 在拖动、缩放地图时会有明显的重新绘制等待。</li>
 <li>在做力量训练时我会尝试以微小幅度晃动手腕期望 Garmin 亮屏，但它就是检测不到。</li>
 <li>Garmin 导入 GPX 会有一个「计算路线」的过程，这至少涉及 TBT 的计算，还可能包含使用「China DEM v1.00」生成坡度信息。以一段 143 km 的新路线为例，载入路线花了 14 s，计算路线花了 32 s。</li>
 </ol>
 </li>
 <li><strong>糟糕的手机互联</strong>，例如：
 <ol>
-<li>Apple Watch 在手表上截图是会自动同步到手机相册的，而 Garmin 需要你用 USB 线连接电脑查看截图。</li>
-<li>Apple Watch 上被设置定时摘要的 app 通知会按与手机相同的逻辑推送，而 Garmin 则会立刻通知你。并且 Garmin 弹通知时 app 名称和通知内容是分两屏，经常是抬腕盯着 app 名称发两秒呆后才见到通知内容。</li>
+<li>Apple Watch 在手表上截图是会自动同步到手机相册的，两端都可以通过相册 app 查看；而 Garmin 则两端都无法查看，必须用 USB 线连接电脑后才能看到。</li>
+<li>Apple Watch 上被设置定时摘要的 app 通知会按与手机相同的逻辑推送，而 Garmin 则会立刻通知你。并且 Garmin 弹通知时 app 名称和通知内容是分两步展示，经常抬腕盯着 app 名称发两秒呆先见到通知内容。</li>
 <li>Garmin 秒针经常慢几秒。在 Garmin 的文档中声称「<a href="https://support.garmin.com/zh-CN/?faq=uXR3bWcLnq6465i9tYA5iA" target="_blank" rel="noopener noreferrer">当设备与 Garmin connect mobile 配对同步后，设备可通过 app 同步获取手机时间</a>」，但即使我通过手表上的「同步时间」功能手动触发看起来也还是不准。按前面引用的文档 Garmin 也会自动通过 GPS 卫星授时，这个准不准我没有仔细测。</li>
 </ol>
 </li>
@@ -85,13 +87,13 @@
 </li>
 </ol>
 <h2 id="室内运动指导" class="headerLink">
-    <a href="#%e5%ae%a4%e5%86%85%e8%bf%90%e5%8a%a8%e6%8c%87%e5%af%bc" class="header-mark"></a>室内运动指导</h2><p>对室内的力量、HIIT 等训练，Apple 和 Garmin 提供了差异化的指导方式。</p>
-<p>Apple 通过付费订阅的 Fitness+（尚不支持中国大陆的 Apple 账户）以预录视频方式提供固定几个时长（例如 10min、20min、30min）的训练组合，所有动作都有三个教练同时展示难、中、易的可选版本，同时会在视频上叠加你的实时心率及此心率的用户间排名。另外所有的视频的开头和结尾都会包含热身和放松动作，应该算顶尖的视频课了。</p>
+    <a href="#%e5%ae%a4%e5%86%85%e8%bf%90%e5%8a%a8%e6%8c%87%e5%af%bc" class="header-mark"></a>室内运动指导</h2><p>对室内的核心、力量、HIIT 等运动，Apple 和 Garmin 提供了差异化的指导方式。</p>
+<p>Apple 通过付费订阅的 Fitness+（尚不支持中国大陆的 Apple 账户）以预录视频方式提供固定几个时长（例如 10min、20min、30min）的训练组合，所有动作都有三个教练同屏展示难、中、易的可选版本，同时会在视频上叠加你的实时心率及此心率的用户间排名。另外所有的视频的开头和结尾都会包含热身和放松动作，应该算顶尖的视频课了。</p>
 <p>Garmin 的训练指导完全免费（或者说包含在售价里了），可以在手机或手表上选择课程（每个动作都是可以更换的），最终以手表上的动画呈现每个动作。</p>
 <h2 id="总结" class="headerLink">
-    <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h2><p>定标题的时候我有意避开了「智能手表」这个称呼，因为如果说 Apple Watch 是「手机第二块屏幕」，那么 Garmin 则是「恰好能接收手机通知的运动手表」。</p>
+    <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h2><p>定标题的时候我有意避开了「<strong>智能手表</strong>」这个称呼，因为如果说 Apple Watch 是「<strong>手机第二块屏幕</strong>」，那么 Garmin 则是「<strong>恰好能接收手机通知的运动手表</strong>」。</p>
 <p>Apple 的品牌调性决定了它不可能放弃「智能」的标签，那么在高密度电池没有突破性进展的情况下，Apple Watch 的续航问题无疑会长期存在。</p>
-<p>Garmin 这边正好相反，手表这种始终随身的设备才是它运动板块的「中枢系统」，自行车上可以连接自家的 Varia 雷达、Rally 功率计，潜水可以连接自家的 Descent T 系列气瓶传感器，航海可以连接自家的 GPSMAP 海图仪控制航向，连接手机只是为了同步数据，显示通知只是附带的功能。</p>
+<p>Garmin 这边正好相反，手表这种始终随身的设备才是它运动板块的「<strong>中枢系统</strong>」，自行车上可以连接自家的 Varia 雷达、Rally 功率计，潜水可以连接自家的 Descent T 系列气瓶传感器，航海可以连接自家的 GPSMAP 海图仪控制航向，连接手机只是为了同步数据，显示通知只是附带的功能。</p>
 ]]></description></item><item><title>新游漫记</title><link>https://xuchunqiu.com/singapore-travel-notes-2024/</link><pubDate>Thu, 26 Sep 2024 01:56:21 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/singapore-travel-notes-2024/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://image.assets.xuchunqiu.com/img/2024/10/5x6JrO.png" referrerpolicy="no-referrer">
             </div><p>地理课上的「亚洲四小龙」、《全球猎身》里印度 IT 劳工赴美的跳板、《新兵正传》中每个男性公民都需要服役的国度，在这个火热的 8 月，我终于在新加坡开启了人生首次出国旅行。</p>
