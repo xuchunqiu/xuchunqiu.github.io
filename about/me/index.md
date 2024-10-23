@@ -11,16 +11,16 @@
 
 ---
 
-大部分时间 I 人，擅长不讲话。工作的时候会假装 E。
+大部分时间 I 人，擅长不讲话。工作的时候会装 E。
 
 ---
 
-反对宏大叙事，拥抱附近与具体的人。正在努力成为没有爹味的男的。
+拒绝宏大叙事，真诚地拥抱附近与具体的人。
 
 ---
 
-适合公开的社交账号都在博客首页，您还可以通过 self(#)xuchunqiu.com 与我联系。
+公开的社交账号都在博客首页，亦可通过 self(#)xuchunqiu.com 与我联系。
 
 ---
 
-*本静态博客基于 [Hugo](https://gohugo.io) 的 [DoIt 主题](https://github.com/HEIGE-PCloud/DoIt) 使用 [hugo-gh-pages](https://github.com/chabad360/hugo-gh-pages) 构建，图片资源存储在 [Cloudflare R2](https://www.cloudflare.com/zh-cn/developer-platform/r2/)，域名邮箱使用 iCloud+。*
+*本静态博客内容使用 [linuxserver/code-server](https://docs.linuxserver.io/images/docker-code-server) 编辑并通过 [uPic](https://apps.apple.com/app/upic-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/id1549159979) 上传图片资源到 [Cloudflare R2](https://www.cloudflare.com/zh-cn/developer-platform/r2)。博客采用 [Hugo](https://gohugo.io) 的 [DoIt 主题](https://github.com/HEIGE-PCloud/DoIt) 通过 [hugo-gh-pages](https://github.com/chabad360/hugo-gh-pages) 构建。域名邮箱使用 iCloud+。*
