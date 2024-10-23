@@ -23,4 +23,4 @@
 
 ---
 
-*本静态博客内容使用 [linuxserver/code-server](https://docs.linuxserver.io/images/docker-code-server) 编辑并通过 [uPic](https://apps.apple.com/app/upic-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/id1549159979) 上传图片资源到 [Cloudflare R2](https://www.cloudflare.com/zh-cn/developer-platform/r2)。博客采用 [Hugo](https://gohugo.io) 的 [DoIt 主题](https://github.com/HEIGE-PCloud/DoIt) 通过 [hugo-gh-pages](https://github.com/chabad360/hugo-gh-pages) 构建。域名邮箱使用 iCloud+。*
+*本静态博客内容使用 [linuxserver/code-server](https://docs.linuxserver.io/images/docker-code-server) 编辑并通过 [uPic](https://apps.apple.com/app/upic-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/id1549159979) 上传图片资源到 [Cloudflare R2](https://www.cloudflare.com/zh-cn/developer-platform/r2)。博客采用 [Hugo](https://gohugo.io) 的 [DoIt 主题](https://github.com/HEIGE-PCloud/DoIt)、通过 [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) 自动构建。域名邮箱使用 iCloud+。*
