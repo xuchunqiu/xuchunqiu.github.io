@@ -1,0 +1,15 @@
+{
+    "version" : "https://jsonfeed.org/version/1.1",
+    "title" : "CQ's Blog",
+    "description": "CQ 的个人生活志",
+    "home_page_url" : "https://xuchunqiu.com/",
+    "feed_url" : "https://xuchunqiu.com/en/index.feed",
+    "icon" : "https://xuchunqiu.com/apple-touch-icon.png",
+    "favicon" : "https://xuchunqiu.com/favicon.ico",
+    "author" : {
+        "name" : "xuchunqiu",
+        "avatar": "https://xuchunqiu.com/avatar.jpg"
+    },
+    "items" : [
+    ]
+}

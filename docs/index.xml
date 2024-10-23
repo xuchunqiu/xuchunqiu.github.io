@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PSC-HC2S（TS40-X2）知识库 on CQ's Blog</title><link>https://xuchunqiu.com/docs/</link><description>Recent content in PSC-HC2S（TS40-X2）知识库 on CQ's Blog</description><generator>Hugo</generator><language>zh-CN</language><managingEditor>self(#)xuchunqiu.com (xuchunqiu)</managingEditor><webMaster>self(#)xuchunqiu.com (xuchunqiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://xuchunqiu.com/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>PSC HC2S（TS40 X2）软件说明</title><link>https://xuchunqiu.com/docs/psc-hc2s/psc-hc2s-aka-ts40-x2-software-infomation/</link><pubDate>Mon, 16 Nov 2020 09:35:19 +0800</pubDate><author>self(#)xuchunqiu.com (xuchunqiu)</author><guid>https://xuchunqiu.com/docs/psc-hc2s/psc-hc2s-aka-ts40-x2-software-infomation/</guid><description>&lt;h1 id="bios" class="headerLink">
+ &lt;a href="#bios" class="header-mark">&lt;/a>BIOS&lt;/h1>&lt;p>开机待屏幕点亮后按 &lt;code>DEL&lt;/code> 进入&lt;/p>
+&lt;h1 id="分区" class="headerLink">
+ &lt;a href="#%e5%88%86%e5%8c%ba" class="header-mark">&lt;/a>分区&lt;/h1>&lt;h1 id="软件安装路径" class="headerLink">
+ &lt;a href="#%e8%bd%af%e4%bb%b6%e5%ae%89%e8%a3%85%e8%b7%af%e5%be%84" class="header-mark">&lt;/a>软件安装路径&lt;/h1>
+&lt;div class="table-wrapper">
+ &lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: ">name&lt;/th>
+ &lt;th style="text-align: ">version&lt;/th>
+ &lt;th style="text-align: ">path&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: ">nvidia-driver&lt;/td>
+ &lt;td style="text-align: ">430.4&lt;/td>
+ &lt;td style="text-align: ">/usr/src/nvidia-430.40/nvidia&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">cuda&lt;/td>
+ &lt;td style="text-align: ">10.1&lt;/td>
+ &lt;td style="text-align: ">/usr/local/cuda&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">nvcc&lt;/td>
+ &lt;td style="text-align: ">10.0.130&lt;/td>
+ &lt;td style="text-align: ">/usr/local/cuda/bin/&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">cuDNN&lt;/td>
+ &lt;td style="text-align: ">7.6.5&lt;/td>
+ &lt;td style="text-align: ">/usr/local/cuda/include&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">nccl&lt;/td>
+ &lt;td style="text-align: ">2.5.6&lt;/td>
+ &lt;td style="text-align: ">/usr/local/lib&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">docker&lt;/td>
+ &lt;td style="text-align: ">18.09.3&lt;/td>
+ &lt;td style="text-align: ">/usr/bin/docker&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">nvidia-docker&lt;/td>
+ &lt;td style="text-align: ">2.0.3&lt;/td>
+ &lt;td style="text-align: ">/usr/bin/nvidia-docker&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">python2&lt;/td>
+ &lt;td style="text-align: ">2.7.12&lt;/td>
+ &lt;td style="text-align: ">/usr/bin/python&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">python3&lt;/td>
+ &lt;td style="text-align: ">3.5.2&lt;/td>
+ &lt;td style="text-align: ">/usr/bin/python3&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+ &lt;/table>
+&lt;/div>
+&lt;h1 id="ai-max-深度学习平台" class="headerLink">
+ &lt;a href="#ai-max-%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e5%b9%b3%e5%8f%b0" class="header-mark">&lt;/a>AI Max 深度学习平台&lt;/h1>&lt;blockquote>
+ &lt;p>AI Max是一款基于Kubernetes+Docker+GPU架构，定位于机器学习的上层应用，免去客户编写代码的麻烦，快速开始深度学习任务。通过容器化技术，封装了人工智能所需的系统环境和底层操作。&lt;/p></description></item><item><title>PSC-HC2S（TS40-X2）硬件规格</title><link>https://xuchunqiu.com/docs/psc-hc2s/psc-hc2s-aka-ts40-x2-hardware-specification/</link><pubDate>Mon, 16 Nov 2020 09:29:47 +0800</pubDate><author>self(#)xuchunqiu.com (xuchunqiu)</author><guid>https://xuchunqiu.com/docs/psc-hc2s/psc-hc2s-aka-ts40-x2-hardware-specification/</guid><description>&lt;h1 id="硬件信息" class="headerLink">
+ &lt;a href="#%e7%a1%ac%e4%bb%b6%e4%bf%a1%e6%81%af" class="header-mark">&lt;/a>硬件信息&lt;/h1>
+&lt;div class="table-wrapper">
+ &lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: ">类型&lt;/th>
+ &lt;th style="text-align: ">型号&lt;/th>
+ &lt;th style="text-align: ">数量&lt;/th>
+ &lt;th style="text-align: ">规格&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: ">CPU&lt;/td>
+ &lt;td style="text-align: ">Intel Xeon Gold 6254 @ 3.10GHz&lt;/td>
+ &lt;td style="text-align: ">2&lt;/td>
+ &lt;td style="text-align: ">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">Memory&lt;/td>
+ &lt;td style="text-align: ">Samsung RDIMM ECC DDR4 2933MHz 288Pin with 32GB capacity&lt;/td>
+ &lt;td style="text-align: ">4&lt;/td>
+ &lt;td style="text-align: ">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">Motherboard&lt;/td>
+ &lt;td style="text-align: ">Supermicro X11DPG-QT&lt;/td>
+ &lt;td style="text-align: ">1&lt;/td>
+ &lt;td style="text-align: ">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">GPU&lt;/td>
+ &lt;td style="text-align: ">Nvidia RTX 2080 Ti&lt;/td>
+ &lt;td style="text-align: ">4&lt;/td>
+ &lt;td style="text-align: ">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">SSD&lt;/td>
+ &lt;td style="text-align: ">Intel D3 S4610 Series 960GB 2.5&amp;quot; NAND TLC SATA III SSD&lt;/td>
+ &lt;td style="text-align: ">1&lt;/td>
+ &lt;td style="text-align: ">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">HDD&lt;/td>
+ &lt;td style="text-align: ">Western Digital Ultrastar DC HC320 8TB 3.5-inch Data Center Hard Drive&lt;/td>
+ &lt;td style="text-align: ">1&lt;/td>
+ &lt;td style="text-align: ">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">Power&lt;/td>
+ &lt;td style="text-align: ">&lt;/td>
+ &lt;td style="text-align: ">1&lt;/td>
+ &lt;td style="text-align: ">2000W&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: ">Network Adapter&lt;/td>
+ &lt;td style="text-align: ">Intel Ethernet Controller 10G X550T Dual Ports&lt;/td>
+ &lt;td style="text-align: ">1&lt;/td>
+ &lt;td style="text-align: ">10GbE/5GbE/2.5GbE/1GbE/100Mb&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+ &lt;/table>
+&lt;/div>
+&lt;h1 id="io" class="headerLink">
+ &lt;a href="#io" class="header-mark">&lt;/a>IO&lt;/h1>&lt;h2 id="back" class="headerLink">
+ &lt;a href="#back" class="header-mark">&lt;/a>1 Back&lt;/h2>&lt;p>使用 &lt;a href="https://en.wikipedia.org/wiki/D-subminiature#DE-9" target="_blank" rel="noopener noreferrer">DE-9&lt;/a> 接口的 &lt;a href="https://zh.wikipedia.org/wiki/RS-232" target="_blank" rel="noopener noreferrer">RS-232&lt;/a> &lt;a href="https://zh.wikipedia.org/wiki/%e4%b8%b2%e8%a1%8c%e7%ab%af%e5%8f%a3" target="_blank" rel="noopener noreferrer">串行端口&lt;/a>&lt;/p></description></item><item><title>如何使用 frp 安全访问实验室深度学习工作站</title><link>https://xuchunqiu.com/docs/psc-hc2s/remote-access-with-frp/</link><pubDate>Sun, 25 Jul 2021 16:18:08 +0800</pubDate><author>self(#)xuchunqiu.com (xuchunqiu)</author><guid>https://xuchunqiu.com/docs/psc-hc2s/remote-access-with-frp/</guid><description>&lt;h1 id="简介" class="headerLink">
+ &lt;a href="#%e7%ae%80%e4%bb%8b" class="header-mark">&lt;/a>简介&lt;/h1>&lt;p>之前使用的公共节点 Zerotier 在学校之外的打洞成功率很差，因此换用 &lt;a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp&lt;/a> 。两者工作原理类似——依赖具有公网 IP 的中心节点中转。frp 的中心节点只能自建但相应的稳定性更优。&lt;/p>
+&lt;p>frp 基于认证的 &lt;code>stcp(secret tcp)&lt;/code> 模式可以将内网服务安全地暴露到公网。frp 的可执行文件包括服务端（frps）与客户端（frpc），前者运行在具有公网 IP 的节点，后者运行在公网无法直接访问的、提供/使用服务的节点。&lt;code>.ini&lt;/code> 后缀的文件记录了 frp节点间（不单是 frpc 与 frps，还包括 frpc 之间）的连接信息。&lt;/p></description></item></channel></rss>
