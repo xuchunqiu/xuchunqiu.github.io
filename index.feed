@@ -1,6 +1,6 @@
 {
     "version" : "https://jsonfeed.org/version/1.1",
-    "title" : "CQ's Blog",
+    "title" : "",
     "description": "CQ 的个人生活志",
     "home_page_url" : "https://xuchunqiu.com/",
     "feed_url" : "https://xuchunqiu.com/index.feed",
