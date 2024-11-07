@@ -13,7 +13,7 @@ Garmin 手表有很多细分产品线（铁三、跑步、潜水、高尔夫、�
 
 ## 为什么不是高驰、Amazfit 这些国产表？
 
-因为有用 Strava 汇总运动记录、[running_page](https://github.com/yihong0618/running_page) 集中 [展示](https://biking.xuchunqiu.com) 的习惯，这一点上作为国际大牌 Garmin 无疑是方便的。另一个原因是买自行车码表的时候还在上学预算有限选了 Wahoo，现在有了积蓄正好来试试 Garmin 的手表。
+因为有用 Strava 汇总运动记录、[running_page](https://github.com/yihong0618/running_page) 集中 [展示](https://blog.xuchunqiu.com/workouts_page) 的习惯，这一点上作为国际大牌 Garmin 在数据互通上无疑是方便的。另一个原因是买自行车码表的时候还在上学预算有限选了 Wahoo，现在有了积蓄正好来试试 Garmin 的手表。
 
 ## 锁区现状
 
@@ -67,6 +67,13 @@ Body Battery 可以帮助您更好地了解休息和运动期间的影响，进�
 6. **运动记录界面自由地定义栏位和数据**。这个可以说 Garmin 就是按照码表的思路来布置的，从一～八栏（视表盘尺寸可能有差异）统统给你，每个栏位几十种数据可以选择。
 7. **提供网页版控制台**。苹果健康里的数据只支持在移动设备上查看，而 Garmin 的主程序 Garmin Connect 同时也有网页版 https://connect.garmin.com。从功能上来说网页版是手机版的超集，提供了比手机版更全面的数据视图、训练指导。
 8. **在记录运动的同时导航**。这在户外运动的时候是蛮常见的需求，根据提前规划的路线进行 [TBT]^(Turn By Turn) 导航并在偏离路线时重新算路。我甚至可以武断地讲所有以运动为卖点的手表都会实现这个功能（只是某些厂商可能不支持开放且通用的 [[GPX](https://www.topografix.com/gpx.asp)]^(Global Positioning XML) 轨迹格式；某些厂商的重新算路功能需要连接手机使用）。但 [截至 2024 年在 Apple Watch 上第一方的地图与运动仍是两个独立的 app](https://discussionschinese.apple.com/thread/254872040?sortBy=rank)，第三方的 [WorkOutDoors](https://apps.apple.com/us/app/workoutdoors/id1241909999) 售价 7.99 USD 支持 GPX 导入并在运动界面显示地图和回到/偏离路线提醒，遗憾的是它尚未实现 TBT 导航。
+{{< admonition type=tip title="WorkOutDoors 的新替代" open=true >}}
+
+2024 年 11 月见到「[YaoYao - 跳绳](https://apps.apple.com/app/yaoyao-jump-rope/id1179393901)」开发者为户外运动（徒步、骑行、越野跑）设计的「[Toopoo](https://apps.apple.com/app/toopoo-hiking-trail-guides/id6736378337)」正式发布，依然是订阅/买断两种选择。
+
+作为 YaoYao 的老用户我非常信任作者的审美水平、拥抱新 SDK 的速度和不断迭代的热情。未来 Toopoo 不见得能够在功能上比肩 WorkOutDoors（后者界面挤下的信息量、交互的复杂逻辑都更像 Garmin），但它一定是最果味的第三方户外运动记录 App。
+
+{{< /admonition >}}
 9. **离线地图**。这是一个可能会有争议的点因为离线意味着会过时，但至少在没有信号的地方会有安全感。[WatchOS 10 加入了离线地图功能](https://support.apple.com/zh-sg/guide/watch/apd0111bf788/10.0/watchos/10.0)，所以两者的差异只是地图服务提供商。
 
 ## Garmin 没有做好的点
@@ -81,7 +88,7 @@ Body Battery 可以帮助您更好地了解休息和运动期间的影响，进�
     3. Garmin 秒针经常慢几秒。在 Garmin 的文档中声称「[当设备与 Garmin connect mobile 配对同步后，设备可通过 app 同步获取手机时间](https://support.garmin.com/zh-CN/?faq=uXR3bWcLnq6465i9tYA5iA)」，但即使我通过手表上的「同步时间」功能手动触发看起来也还是不准。按前面引用的文档 Garmin 也会自动通过 GPS 卫星授时，这个准不准我没有仔细测。
 3. **落后的 OTA 和软件生态**，包括：
     1. Apple Watch 长周期的系统更新和新功能下放真的是独一份，Garmin 三个月都不见得能更新一次系统，更遑论新功能下放了。这背后一方面是因为产品线多开发者力不从心，但很难不怀疑还有为促进新型号销量的商业考量。
-    2. Garmin 的软件/表盘商店虽然也允许第三方开发者的存在，实际普遍都没什么亮点。不像 Apple Watch 因为高性能处理器和全面的 SDK 可以让一些第三方出品的运动或健康监测 app 比系统自带的更好用。
+    2. Garmin 的软件/表盘商店虽然也允许第三方开发者的存在，实际普遍都没什么亮点。不像 Apple Watch 因为高性能处理器和全面的 SDK 可以让一些第三方出品的运动或健康监测 app 比系统自带的更好用（例如前面提到的「YaoYao」支持通过 AirPods 记录跳绳次数）。
 4. **不应该存在的限制**（可能因机型而异），包括：
     1. 闹钟最多定 10 个时间，即使所有闹钟都是关闭状态也不允许你添加第 11 个。
     2. 从 ConnectIQ 安装的应用/表盘/数据字段合计最多 33 个。我目前还剩 59.60 MB 空间可以再安装 6 个，有趣的是如果把手表连接到电脑会看到储存空间还有足足 9 GB。
