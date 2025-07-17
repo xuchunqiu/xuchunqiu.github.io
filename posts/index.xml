@@ -1,16 +1,47 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - CQCQ收到未</title><link>https://xuchunqiu.com/posts/</link><description>所有文章 | CQCQ收到未</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>self(#)xuchunqiu.com (xuchunqiu)</managingEditor><webMaster>self(#)xuchunqiu.com (xuchunqiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Oct 2024 08:22:34 +0000</lastBuildDate><atom:link href="https://xuchunqiu.com/posts/" rel="self" type="application/rss+xml"/><item><title>运动手表不完全使用感受：Apple vs Garmin</title><link>https://xuchunqiu.com/switch-to-garmin-watch/</link><pubDate>Wed, 02 Oct 2024 08:22:34 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/switch-to-garmin-watch/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - CQCQ收到未</title><link>https://xuchunqiu.com/posts/</link><description>所有文章 | CQCQ收到未</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>self(#)xuchunqiu.com (xuchunqiu)</managingEditor><webMaster>self(#)xuchunqiu.com (xuchunqiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Jan 2025 14:14:19 +0800</lastBuildDate><atom:link href="https://xuchunqiu.com/posts/" rel="self" type="application/rss+xml"/><item><title>2024年：世界徐徐展开</title><link>https://xuchunqiu.com/this-cute-world/</link><pubDate>Wed, 01 Jan 2025 14:14:19 +0800</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/this-cute-world/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://image.assets.xuchunqiu.com/img/2025/01/PLTmA9.jpg" referrerpolicy="no-referrer">
+            </div><p>2024 是我毕业的第三个年头，我尝试下笔了无数次都不知道该如何记录这一年。选择过、不解过、愤怒过，这或许也算一种难得的成长？今年出现了颇多脑子里灵光闪现的时刻：「喔！原来 ta 当时是因为这个感觉才会做出那样的事！」。就如在学校中我们通过反复练习来掌握知识，当下则是需要不断经历来理解更加广大世界的时候了。</p>
+<p>今年是 AI 平民化的一年，很高兴现在学这个专业的学生终于不会再被家长问「你将来可以做什么工作」这种问题了，但也不由得担心 LLM 这条耀眼的技术路线背后的大数据、高算力依赖会成为科班学子在实践阶段的桎梏。至于 AI 应用这边，辅助编程工具 Coplit 确实对工作起到不小的帮助，只是在处理较为宏观和抽象的问题时它显得能力不足。这类工具会替代程序员吗？这里给出我的看法。首先 AI （Artificial Intelligents，即人工智能）实在是个烫嘴的词，它里面包含了太多概念，使用的场景通常是面向非技术背景受众；另一方面我非常怀疑当人们顺口讲出「AI」的时候往往轻视了这里的「人工/手工」。AI 的训练过程在一开始会戏称为「炼丹」——不知道这些输入数据是否有效、不知道网络结构是否合理、不知道训练出的模型是否符合预期。如果炼出了仙丹，恭喜你！请接着开始模型可解释性的探索吧！如果不成功，调整一番配方再试试看（这是我过于夸张的描述，现实中「炼丹师」们往往会站在前人的基础上这里改一改、那里动一动，尽量尝试解释方法与结果的关联性）。在前司了解过化学专业同事的科研之路的艰辛（例如非常好的实验无法复现，最后查出是第一次使用的药品过期了）后，不免感叹在计算机里炼丹要轻松多了，因为计算机环境是完全可控、任何实验都可以轻松复现的，确定的输入必然是确定的输出。不知你是否发现，这里暗藏了一道天然的鸿沟——永远无法把物理现实和人类权衡全部代入到虚拟世界之中。人工整理的输入数据可能遗漏掉实际决策时的关键信息或关键信息无法量化；AI 的最优答案如果叠加上使用者的资源、性格、价值观可能成为次优解或错误答案。在人机交互没有翻天覆地般变革之前，AI永远不可能掌舵。</p>
+<p>今年之前我一直以为生活和程序没什么两样——确定的因得到的总能确定的果，完全忽视了人的复杂多样，这里的人也包括我自己。比如今年我发现自己的感受能力空前增长，就好像游戏里的 NPC 突然被注入人性，开始感受到自己的身体和精神。以前的我感觉特别弱，不知道怎么搭衣服、不明白什么时候该休息、尝不出大锅饭和餐馆的区别、气氛上该哭时泪腺说不行。在由旁观者转换为参与者的过程中，我发现自己的心态也更加自如了。例如今年去香港听 MLA 终于没有再因为「这歌我甚至没听过」而不安了，甚至还抽空跟同场的网路芳邻 Liu（在圈子里太出名这里帮他化名）和 Row 约了早茶。席间聊了些香港的不知名景点后我跟 Liu 讲「我觉得你不是歌迷」，Row 有点吃惊地肯定「是我先喜欢他才跟着听的」。这个感受强化来得真棒！</p>
+<p>旅游方面除了上一篇博客里的新加坡，今年国内到过武汉、福州、莆田、昆明、大理，省内去过佛山、东莞、惠州、清远、江门、珠海、深圳。对我来说是历年中远行次数最多的一年，原因之一是缩减了骑行时间。骑行变少一方面是开发不出新路线了（或许一次搬家可以解决问题），另一方面是发现周末骑车不如周中在家原地跑。运动这种事情越轻松越容易坚持，比起穿戴装备、码表车灯充电、绘制 GPX 这么多准备环节，原地跑需要的只是Zwift 选路线、穿鞋、打开风扇、开启手表虚拟跑步。说回旅行，除了在景点之间腾挪我开始更多地观察别处的人如何生活——有什么有趣的公共空间？街市里卖什么当季食材？大家在图书馆借什么书？我在樱花季的武汉江滩放风筝，在入夜前踏上被灯光点亮的福道感受晚风，在莆田早市里看各种小海鲜一字排开，在昆明马路边赞叹公交号码写后视镜上的贴心设计，在苍山上听采菌子的领队大哥讲脚下的茶园如何没落。与其说旅游所提供的抽离和差异视角帮我认识别处，倒不如说它反哺了我对日常生活的认识。别处是一面镜子，自己才是坐标系。</p>
+<figure><a class="lightgallery" href="https://image.assets.xuchunqiu.com/img/2025/01/ZJnqLM.png" title="" data-thumbnail="https://image.assets.xuchunqiu.com/img/2025/01/ZJnqLM.png" data-sub-html="<h2>武汉</h2>"><img  loading="lazy" src=https://image.assets.xuchunqiu.com/img/2025/01/ZJnqLM.png     ></a><figcaption class="image-caption">武汉</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="https://image.assets.xuchunqiu.com/img/2025/01/PXXzXw.jpg" title="" data-thumbnail="https://image.assets.xuchunqiu.com/img/2025/01/PXXzXw.jpg" data-sub-html="<h2>福州</h2>"><img  loading="lazy" src=https://image.assets.xuchunqiu.com/img/2025/01/PXXzXw.jpg     ></a><figcaption class="image-caption">福州</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="https://image.assets.xuchunqiu.com/img/2025/01/awBwTK.png" title="" data-thumbnail="https://image.assets.xuchunqiu.com/img/2025/01/awBwTK.png" data-sub-html="<h2>莆田</h2>"><img  loading="lazy" src=https://image.assets.xuchunqiu.com/img/2025/01/awBwTK.png     ></a><figcaption class="image-caption">莆田</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="https://image.assets.xuchunqiu.com/img/2025/01/iBOGCG.png" title="" data-thumbnail="https://image.assets.xuchunqiu.com/img/2025/01/iBOGCG.png" data-sub-html="<h2>昆明</h2>"><img  loading="lazy" src=https://image.assets.xuchunqiu.com/img/2025/01/iBOGCG.png     ></a><figcaption class="image-caption">昆明</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="https://image.assets.xuchunqiu.com/img/2025/01/OrQzzS.png" title="" data-thumbnail="https://image.assets.xuchunqiu.com/img/2025/01/OrQzzS.png" data-sub-html="<h2>大理</h2>"><img  loading="lazy" src=https://image.assets.xuchunqiu.com/img/2025/01/OrQzzS.png     ></a><figcaption class="image-caption">大理</figcaption>
+    </figure>
+<p>这大概就是我对这一年的总结，活得更明白了一点，世界在面前徐徐展开。</p>
+]]></description></item><item><title>运动手表不完全使用感受：Apple vs Garmin</title><link>https://xuchunqiu.com/switch-to-garmin-watch/</link><pubDate>Wed, 02 Oct 2024 08:22:34 +0000</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/switch-to-garmin-watch/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://image.assets.xuchunqiu.com/img/2024/10/MM72PT.png" referrerpolicy="no-referrer">
-            </div><p>作为一个有轻度运动习惯（骑车、跑步、力量、HIIT，每周3～5次）的肥仔，我先后使用了三年半 <em>Apple Watch Series 4（GPS）</em>、一年半 <em>Garmin Enduro 2</em>。本文不会对比具体的硬件型号+软件版本（有这方面需要请直接去看 <a href="https://www.dcrainmaker.com" target="_blank" rel="noopener noreferrer">DC Rainmaker</a>），而是希望根据有限的使用经历对比两家的产品思路差异。</p>
+            </div><p>作为一个有轻度运动习惯（骑车、跑步、力量、HIIT，每周3～5次）的肥仔，我先后使用了三年半 <em>Apple Watch Series 4（GPS）</em>、一年半 <em>Garmin Enduro 2</em>。本文不会对比具体的硬件型号+软件版本（对比评测请看 <a href="https://www.dcrainmaker.com" target="_blank" rel="noopener noreferrer">DC Rainmaker</a>），而是希望根据有限的使用经历对比两家的产品思路差异。</p>
 <h2 id="放弃-apple-watch-的契机" class="headerLink">
     <a href="#%e6%94%be%e5%bc%83-apple-watch-%e7%9a%84%e5%a5%91%e6%9c%ba" class="header-mark"></a>放弃 Apple Watch 的契机</h2><p>我的 <em>S4</em> 是 2019 年从香港买完激活过 ECG（v1）才背回内地，用了三年多电池寿命下降到 80%，平时不得不在公司留一块充电器才有足够的安全感。<em>S4</em> 从满电到自动关机大概能支撑 5～6 小时的骑行记录（关机前运动记录会自动结束，但要等重新充电开机后才能发送到手机），2023 年 9 月发布的 <a href="https://support.apple.com/zh-cn/guide/watch/apd4cbc876c7/10.0/watchos/10.0" target="_blank" rel="noopener noreferrer">iOS 17 带来了可以跟 Apple Watch 联动的骑行码表视图</a>，是否手表没电后手机可以接管 GPS 记录我不得而知，因为 2023 年 3 月我在天猫「Garmin佳明海外旗舰店」购入了 <em>Enduro 2</em>。 正如前面提到的 <em>S4</em> 电池寿命告急，有次早上起床来不及补电就去爬山，没等下山手表就电量耗尽了，回家后越想越气连夜下单换表。</p>
 <h2 id="为什么不是-apple-watch-ultra" class="headerLink">
-    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e6%98%af-apple-watch-ultra" class="header-mark"></a>为什么不是 <em>Apple Watch Ultra</em>？</h2><p>Garmin 手表有很多细分产品线（铁三、跑步、潜水、高尔夫、航海……）去它 <a href="https://www.garmin.com.cn/products/wearables/?cat=watches" target="_blank" rel="noopener noreferrer">官网</a> 可以看到详尽的分类，我选择 <em>Enduro 2</em> 就是因为续航最长。<a href="https://www.apple.com.cn/watch/battery" target="_blank" rel="noopener noreferrer"><em>Apple Watch Ultra</em> 宣称有 12 小时的运动记录时长</a>，而作为当时 Garmin 续航最强的表 <a href="https://www.garmin.com.cn/products/wearables/enduro-2/#specsTab" target="_blank" rel="noopener noreferrer"><em>Enduro 2</em> 的运动记录在最耗电的多频多星模式下续航是 68 小时</a>。</p>
+    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e6%98%af-apple-watch-ultra" class="header-mark"></a>为什么不是 <em>Apple Watch Ultra</em>？</h2><p>Garmin 手表有很多细分产品线（铁三、跑步、潜水、高尔夫、航海……）<a href="https://www.garmin.com.cn/products/wearables/?cat=watches" target="_blank" rel="noopener noreferrer">官网</a> 有列出全部分类，我选择 <em>Enduro 2</em> 就是因为续航最长。<a href="https://www.apple.com.cn/watch/battery" target="_blank" rel="noopener noreferrer"><em>Apple Watch Ultra</em> 宣称有 12 小时的运动记录时长</a>，而作为当时 Garmin 续航最强的表 <a href="https://www.garmin.com.cn/products/wearables/enduro-2/#specsTab" target="_blank" rel="noopener noreferrer"><em>Enduro 2</em> 的运动记录在最耗电的多频多星模式下续航是 68 小时</a>。</p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/></svg></span>Garmin 常规产品线简介<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><ul>
+<li>飞耐时 Fenix：全能旗舰和主打产品。</li>
+<li>Forerunner：跑步。</li>
+<li>安夺 Enduro：长续航。</li>
+<li>本能 Instinct：入门价格体验 Garmin。</li>
+</ul>
+</div></div></div>
 <h2 id="为什么不是高驰amazfit-这些国产表" class="headerLink">
     <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e6%98%af%e9%ab%98%e9%a9%b0amazfit-%e8%bf%99%e4%ba%9b%e5%9b%bd%e4%ba%a7%e8%a1%a8" class="header-mark"></a>为什么不是高驰、Amazfit 这些国产表？</h2><p>因为有用 Strava 汇总运动记录、<a href="https://github.com/yihong0618/running_page" target="_blank" rel="noopener noreferrer">running_page</a> 集中 <a href="https://blog.xuchunqiu.com/workouts_page" target="_blank" rel="noopener noreferrer">展示</a> 的习惯，这一点上作为国际大牌 Garmin 在数据互通上无疑是方便的。另一个原因是买自行车码表的时候还在上学预算有限选了 Wahoo，现在有了积蓄正好来试试 Garmin 的手表。</p>
 <h2 id="锁区现状" class="headerLink">
     <a href="#%e9%94%81%e5%8c%ba%e7%8e%b0%e7%8a%b6" class="header-mark"></a>锁区现状</h2><p><strong>相信没人会喜欢花相同的钱买到被阉割的商品，但遗憾的是两家厂商的手表都存在锁区/阉割现象。</strong></p>
 <p>正如前面提到的 Apple Watch 的 ECG 功能在早年因为医疗审批问题是无法直接开通的，为了激活这个功能大家各显神通，例如有人 <a href="https://v2ex.com/t/710861" target="_blank" rel="noopener noreferrer">在口岸将手机连上香港运营商信号后，不用过境就能开通 ECG</a>。更多 Apple 锁区的技术细节可以参考《<a href="https://sspai.com/prime/story/ios-feature-region-lock" target="_blank" rel="noopener noreferrer">iOS 如何按地区限制功能：浅析 MobileGestalt 与 Eligibility</a>》。2024 年的今天国行 Apple Watch 已经可以无痛开通 ECG 了，但随 WatchOS 11 推出的 <a href="https://www.v2ex.com/t/1075937" target="_blank" rel="noopener noreferrer">睡眠呼吸暂停功能又陷入了和 ECG 一样的轮回</a>。至于运动数据同步，手机上安装 Strava 后关联苹果健康即可。</p>
-<p>Garmin 这边的情况稍有不同，<a href="https://dailysync.vyzt.dev/docs/%E6%88%91%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%9B%BD%E9%99%85%E5%8C%BA%E8%BF%98%E6%98%AF%E4%B8%AD%E5%9B%BD%E5%8C%BA" target="_blank" rel="noopener noreferrer">中国区账号只能关联（也就是上传运动数据到）国内的第三方运动 App；国际区账号则可以关联 Strava。我买的外版手表则从软件上阉割了国内的两家付款码程序和公交卡</a>。国际区账号可以直接注册没有任何验证，手表付款很鸡肋可能在单独带蜂窝版（仅 Apple，Garmin 没有这种型号）出门时才会用到。地图方面 Garmin <del>有点坏</del>有点太合规了，以某些方式对中国大陆的用户（包括我）隐藏了等高线地图（TopoActivate China ML），目前我手表上原厂跟中国大陆有关的地图是「CN China NT 2023.20-NI」、「CN RDA China NT 2023.20-NI ALL」、「China DEM v1.00」。</p>
+<p>Garmin 这边的情况稍有不同，<a href="https://dailysync.vyzt.dev/docs/%E6%88%91%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%9B%BD%E9%99%85%E5%8C%BA%E8%BF%98%E6%98%AF%E4%B8%AD%E5%9B%BD%E5%8C%BA" target="_blank" rel="noopener noreferrer">中国区账号只能关联（也就是上传运动数据到）国内的第三方运动 App；国际区账号则可以关联 Strava。我买的外版手表则从软件上阉割了国内的两家付款码程序和公交卡</a>。国际区账号可以直接注册没有任何验证，手表付款很鸡肋可能在单独带蜂窝版（Apple Watch S3 和之后的所有型号都有蜂窝网络可选，Garmin 只有极少型号有推出蜂窝款如 Forerunner 945 LTE）出门时才会用到。地图方面 Garmin <del>有点坏</del>有点太合规了，以某些方式对中国大陆的用户（包括我）隐藏了等高线地图（TopoActivate China ML），目前我手表上原厂跟中国大陆有关的地图是「CN China NT 2023.20-NI」、「CN RDA China NT 2023.20-NI ALL」、「China DEM v1.00」。</p>
 <h2 id="喜欢-garmin-的点" class="headerLink">
     <a href="#%e5%96%9c%e6%ac%a2-garmin-%e7%9a%84%e7%82%b9" class="header-mark"></a>喜欢 Garmin 的点</h2><ol>
 <li><strong>Garmin 的按键操作逻辑完备，它甚至允许用户完全关闭触摸功能（充分考虑了登山带手套、水上/水下运动容易误触的场景）</strong>。实际上只要不看地图我也是关闭了触摸在用，一方面是 Garmin 的触摸操作不够精准不如用按键快速，另一方面也有利于省电。Apple Watch 不支持仅通过按键操作。</li>
@@ -70,7 +101,7 @@
 <li><strong>孱弱的处理器性能</strong>，这影响了很多细节，例如：
 <ol>
 <li>Garmin 的 UI 无论是触屏还是按键方式操作起来都不跟手，不如 Apple Watch 丝滑。</li>
-<li>Garmin 在拖动、缩放地图时会有明显的重新绘制等待。</li>
+<li>Garmin 在拖动、缩放地图时会有明显的重新绘制等待。<strong>一些基础款因为性能和存储容量限制甚至缺失地图功能。</strong></li>
 <li>在做力量训练时我会尝试以微小幅度晃动手腕期望 Garmin 亮屏，但它就是检测不到。</li>
 <li>Garmin 导入 GPX 会有一个「计算路线」的过程，这至少涉及 TBT 的计算，还可能包含使用「China DEM v1.00」生成坡度信息。以一段 143 km 的新路线为例，载入路线花了 14 s，计算路线花了 32 s。</li>
 </ol>
@@ -84,14 +115,14 @@
 </li>
 <li><strong>落后的 OTA 和软件生态</strong>，包括：
 <ol>
-<li>Apple Watch 长周期的系统更新和新功能下放真的是独一份，Garmin 三个月都不见得能更新一次系统，更遑论新功能下放了。这背后一方面是因为产品线多开发者力不从心，但很难不怀疑还有为促进新型号销量的商业考量。</li>
+<li>Apple Watch 长周期的系统更新和新功能下放真的是独一份，Garmin 总体上按季度发布正式更新，新功能下放也抠抠索索（例如 <a href="https://garminrumors.com/has-garmin-abandoned-the-fenix-7-pro-after-just-1-5-years" target="_blank" rel="noopener noreferrer">问世仅一年半的 Fenix 7 无法获得最新的锁屏密码功能</a>）。这背后一方面是因为产品线多开发者力不从心，但很难不怀疑还有为促进新型号销量的商业考量。Garmin 会把每次的更新内容发布在论坛 forums.garmin.com 里（这是 <a href="https://forums.garmin.com/outdoor-recreation/outdoor-recreation/f/enduro-2" target="_blank" rel="noopener noreferrer">Enduro 2 的</a>），此外 garminrumors.com 维护了 <a href="https://garminrumors.com/garmin-software-updates/" target="_blank" rel="noopener noreferrer">一份滚动更新的更新日期坐标轴</a> 可以更直观地了解 Garmin 主要型号的更新频次。</li>
 <li>Garmin 的软件/表盘商店虽然也允许第三方开发者的存在，实际普遍都没什么亮点。不像 Apple Watch 因为高性能处理器和全面的 SDK 可以让一些第三方出品的运动或健康监测 app 比系统自带的更好用（例如前面提到的「YaoYao」支持通过 AirPods 记录跳绳次数）。</li>
 </ol>
 </li>
 <li><strong>不应该存在的限制</strong>（可能因机型而异），包括：
 <ol>
 <li>闹钟最多定 10 个时间，即使所有闹钟都是关闭状态也不允许你添加第 11 个。</li>
-<li>从 ConnectIQ 安装的应用/表盘/数据字段合计最多 33 个。我目前还剩 59.60 MB 空间可以再安装 6 个，有趣的是如果把手表连接到电脑会看到储存空间还有足足 9 GB。</li>
+<li>使用 ConnectIQ 安装的应用/表盘/数据字段合计最多 33 个。它显示我目前还剩 59.60 MB 空间（疑似指 RAM）可以再安装 6 个，有趣的是如果把手表连接到电脑会看到储存空间还有足足 9 GB。Apple Watch 那边只要存储空间够是完全不限制应用数量的。</li>
 <li>在运动途中无法重新加载 GPX。这个需求的场景是在路途中间改变行程，用手机重新规划了另一条路线想走，但手表上只允许在地图上重新选择终点后使用机内导航提供的路线。</li>
 </ol>
 </li>
@@ -1873,157 +1904,6 @@
 </li>
 <li id="fn:10">
 <p><a href="https://github.com/JetBrains/projector-installer#secure-connection" target="_blank" rel="noopener noreferrer">https://github.com/JetBrains/projector-installer#secure-connection</a>&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
-]]></description></item><item><title>什么是 SCI</title><link>https://xuchunqiu.com/what-is-sci/</link><pubDate>Wed, 11 Nov 2020 10:29:37 +0800</pubDate><author><name>xuchunqiu</name></author><guid>https://xuchunqiu.com/what-is-sci/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://image.assets.xuchunqiu.com/img/2023/09/Ytq0r5.png" referrerpolicy="no-referrer">
-            </div><h1 id="影响因子" class="headerLink">
-    <a href="#%e5%bd%b1%e5%93%8d%e5%9b%a0%e5%ad%90" class="header-mark"></a>影响因子</h1><blockquote>
-  <p>Impact Factor</p>
-
-</blockquote><p>是美国科学情报研究所（ISI）的 <a href="https://zh.wikipedia.org/wiki/%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a" target="_blank" rel="noopener noreferrer">期刊引证报告</a>（JCR）中的一项数据。指的是某一期刊的文章在特定年份或时期被引用的频率，是衡量 <a href="https://zh.wikipedia.org/wiki/%e5%ad%a6%e6%9c%af%e6%9c%9f%e5%88%8a" target="_blank" rel="noopener noreferrer">学术期刊</a> 影响力的一个重要指标。由美国科学情报研究所创始人尤金·加菲得在 1960 年代创立，其后为 <a href="https://zh.wikipedia.org/wiki/%e6%96%87%e7%8c%ae%e8%ae%a1%e9%87%8f%e5%ad%a6" target="_blank" rel="noopener noreferrer">文献计量学</a> 的发展带来了一系列重大革新。</p>
-<p>自 1975 年以来，每年定期发布于《<a href="https://clarivate.com/webofsciencegroup/zh-hans/solutions/journal-citation-reports/" target="_blank" rel="noopener noreferrer">期刊引证报告</a>》（JCR）。</p>
-<p>影响指数即某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X（前两年总被引次数）<strong>除以</strong>该期刊在前两年（S, T）内发表的论文总数 Y（前两年总发文量）。这是一个国际上通行的期刊评价指标。公式为：</p>
-<p>$$I F_{U}=\frac{X_{(S, T)}}{Y_{(S, T)}}$$</p>
-<h1 id="sci-科学引文索引" class="headerLink">
-    <a href="#sci-%e7%a7%91%e5%ad%a6%e5%bc%95%e6%96%87%e7%b4%a2%e5%bc%95" class="header-mark"></a>SCI 科学引文索引</h1><blockquote>
-  <p>Science Citation Index</p>
-
-</blockquote><p>是由美国 <a href="https://zh.wikipedia.org/w/index.php?title=%e7%a7%91%e5%ad%a6%e8%b3%87%e8%a8%8a%e7%a0%94%e7%a9%b6%e6%89%80&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreferrer">科学资讯研究所</a>（Institute for Scientific Information，简称ISI）于 1960 年上线投入使用的一部期刊文献检索工具（<a href="https://mjl.clarivate.com/home" target="_blank" rel="noopener noreferrer">点我使用</a>），其出版形式包括印刷版期刊和光盘版及联机数据库。科学引文索引由 <a href="https://clarivate.com.tw/" target="_blank" rel="noopener noreferrer">科睿唯安</a> 公司（Clarivate Analytics）运营。</p>
-<p>收录范围：自然科学的基础研究领域</p>
-<h2 id="web-of-science" class="headerLink">
-    <a href="#web-of-science" class="header-mark"></a>Web of Science™</h2><blockquote>
-  <p>科睿唯安当前涉及的领域包括：科学与学术研究、生命科学与制药、专利与研发创新、产业法规与标准、网域名称管理、商标检索与保护。Web of Science™ 是其在 科学与学术研究 领域提供的「最受信任的、独立于出版商的全球引文数据库（the world’s most trusted publisher-independent global citation database）」；而 Journal Citation Reports 是其在 科学与学术研究 领域 依托于 Web of Science 的在研究分析与评估方面的产品。它早先的名称是 Web of Knowledge</p>
-
-</blockquote><p>Web of Science™ 是一个基于 Web 而构建的动态的数字研究环境，通过强大的检索技术和基于内容的连接能力，将高质量的信息资源、独特的信息分析工具和专业的信息管理软件无缝地整合在一起，兼具知识的检索、提取、分析、评价、管理与发表等多项功能<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。在内容上，</p>
-<ul>
-<li>以 Web of Science™ 核心合集（著名的三大引文索引 Science Citation Index Expanded®, Social Science Citation Index®, Arts &amp; Humanities Citation Index®）为核心</li>
-</ul>
-<p>，凭藉独特的引文检索机制和强大的交叉检索功能，有效地整合了：</p>
-<ul>
-<li>学术期刊（Web of Science™ 核心合集）</li>
-<li>技术专利（Derwent Innovations Index）</li>
-<li>化学反应（Chemistry）</li>
-<li>研究基金（eSearch）</li>
-<li>Internet资源（Current Web Contents）</li>
-<li>学术分析与评价工具（Essential Science Indicators）</li>
-<li>学术社区（<a href="http://HighlyCited.com" target="_blank" rel="noopener noreferrer">HighlyCited.com</a>）</li>
-</ul>
-<p>及其它重要的学术信息资源，提供了自然科学、工程技术、生物医学、社会科学、艺术与人文等多个领域中高质量、可信赖的学术信息。Web of Science™ 平台上所有数据库中的信息都是经过精心挑选的，它只收录那些对研究者有用的出版物、网站内容和其它学术资源。这些学术信息是由许多不同的媒介以不同的格式提供的。这些媒介形式包括期刊（印刷版或电子版）、书籍和会议录、网站内容，以及 ISI 外部的数据库。</p>
-<h3 id="web-of-science-core-collection-核心合辑2" class="headerLink">
-    <a href="#web-of-science-core-collection-%e6%a0%b8%e5%bf%83%e5%90%88%e8%be%912" class="header-mark"></a>Web of Science Core Collection™ 核心合辑<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></h3><blockquote>
-  <p>遴选标准：<a href="https://solutions.clarivate.com.cn/products/web-of-science%e6%a0%b8%e5%bf%83%e5%90%88%e9%9b%86%e9%81%b4%e9%80%89%e6%a0%87%e5%87%86/" target="_blank" rel="noopener noreferrer">zh-cn</a>、<a href="https://clarivate.com.tw/products/web-of-science/journal-selection-process/" target="_blank" rel="noopener noreferrer">zh-tw</a></p>
-<p>重点摘录：普通期刊 →（编辑品质评估成功）→ ESCI →（编辑影响力评估成功）→ SCIE/SSCI/AHCI，其中箭头也可反向——即SCIE也可掉回ESCI甚至普通期刊</p>
-
-</blockquote><p>拥有来自全球 18,000 多种高影响力的学术期刊、180,000 多种会议论文、以及 80,000 多种学术书籍的多学科研究资料。通过百年以上的丰富文献资源以及超过十亿的引文网络，您可以在任何领域放心地检索并发现完整的引文网络。</p>
-<ul>
-<li>
-<p><strong>Science Citation Index Expanded™ (SCIE)</strong></p>
-<p>涵盖 178 个学科的 9300 多种主流期刊。— 1900 年至今。</p>
-</li>
-<li>
-<p><strong>Social Sciences Citation Index™ (SSCI)</strong></p>
-<p>涵盖 58 个社会科学学科的 3,400 多种期刊，以及从 3,500 种世界顶尖期刊中筛选的内容。— 1900 年至今。</p>
-</li>
-<li>
-<p><strong>Arts &amp; Humanities Citation Index™ (A&amp;HCI)</strong></p>
-<p>超过 1,800 种艺术与人文领域的期刊，以及从 250 多种自然科学和社会科学期刊中筛选的内容。— 1975 年至今。</p>
-</li>
-<li>
-<p>Emerging Sources Citation Index™ (ESCI)</p>
-<p>包含了 5,000 多种期刊的 ESCI，旨在捕捉高影响力文献之外的自然科学、社会科学和人文学科领域的趋势与发展。科睿唯安编辑团队所遴选并评审的期刊通常会在全球得到相关领域的意见领袖、基金资助和评估机构的重视。</p>
-</li>
-<li>
-<p>Book Citation Index™ (BKCI)</p>
-<p>索引了超过 80,000 种编辑精选的图书，且每年增加 10,000 种新书。— 2005 年至今。</p>
-</li>
-<li>
-<p>Conference Proceedings Citation Index (CPCI)</p>
-<p>该多学科索引能让人们以最快的方式从 180,000 多种会议论文集中获得最前沿、有影响力的研究。— 1990 年至今。</p>
-</li>
-</ul>
-<h3 id="区域性资料库3" class="headerLink">
-    <a href="#%e5%8c%ba%e5%9f%9f%e6%80%a7%e8%b5%84%e6%96%99%e5%ba%933" class="header-mark"></a>区域性资料库<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></h3><ul>
-<li>
-<p>Chinese Science Citation Database™（中国科学引文资料库）</p>
-<p>科睿唯安与中国科学院合作，将中国科学引文资料库（Chinese Science Citation Database™）嵌入到 Web of Science™ 平台中，让全世界更多的科学研究人员瞭解中国的科学研究发展及动态。作为 Web of Science™ 平台中首个非英文产品，该资料库收录了约 1,100 种中国出版的科学与工程核心期刊，共有近 400 万条论文记录，1,700 万条引文记录。</p>
-</li>
-<li>
-<p>Russian Science Citation Index™</p>
-</li>
-<li>
-<p>KCI Korean Journal Database™</p>
-</li>
-<li>
-<p>SciELO Citation Index™</p>
-</li>
-</ul>
-<h2 id="journal-citation-reports-期刊引证报告4" class="headerLink">
-    <a href="#journal-citation-reports-%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a4" class="header-mark"></a>Journal Citation Reports™ 期刊引证报告<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></h2><p>全球每年有上千万的学术研究著作发表，其中的文献引用更是巨量。引文所串起的连结都具有意义，因为这是研究学者悉心阐述其研究发现的轨迹，而每一本他们所引用与选择的期刊也代表著他们重视该期刊为自己的研究发现所带来的价值。Journal Citation Reports™ (JCR) 汇总了 Web of Science™ 核心合辑期刊的引文数据，呈现了庞大的学术网络彼此之间的关联与研究脉络。</p>
-<p>最新版的 JCR 显著加强了对 Journal Impact Factor™ (JIF) 和其他指标的透明度，增加了论文层面的分析和解读，为用户全面瞭解期刊表现，提供了新的分析角度和更加丰富而详尽的资讯。这些新的分析角度更好地利用了引文资料库中的资料和指标，能协助研究人员、出版商、期刊编辑、图书馆员和基金资助者进一步地瞭解期刊对各种用户的核心价值。</p>
-<p>每本被 JCR 收录的期刊均符合 Web of Science 核心合辑的期刊遴选标准，JCR仅显示被 Science Citation Index Expanded™ (SCIE) 和 Social Sciences Citation Index™ (SSCI) 索引的期刊，以便您可以快速找到自然科学和社会科学领域最具影响力的期刊清单。</p>
-<h3 id="指标5" class="headerLink">
-    <a href="#%e6%8c%87%e6%a0%875" class="header-mark"></a>指标<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></h3><p>期刊引证报告透过量化引用文献的统计资讯，于每年度发表下列评比指标并予以排名：</p>
-<ol>
-<li>年度影响因子（Impact Factor）：透过该期刊“前两年”所发表文章总数，与“前两年”的文章在“该年度”被引用的总次数计算而得出。当影响因子的数字越高，代表此期刊的文章被引用次数越多，即此期刊在学术界的影响力越大。一般而言期刊的影响因子越高，则代表此期刊的学术品质越佳。值得注意的是，影响因子虽然是期刊本身评价的指标，但不能作为该期刊中单篇论文影响力的依据、或是论文作者的评价。</li>
-<li>5年影响因子（5-Year Impact Factor）：透过该期刊于“前五年”所发表文章总数，与“前五年”的文章在“该年度”被引用的总次数计算而得出。此指标类似于年度影响因子，但计算时间较长，可以代表该期刊在长时间下的影响能力。</li>
-<li>立即指数（Immediacy Index）：为该期刊当年度所出版文章的平均被引用次数。此指标可代表该期刊在当年度影响力的大小。</li>
-<li>被引半衰期（Cited Half-Life）：该期刊的总被引用次数衰退一半所需要的年数（此数据只有在总被引次数大于100时提供）。此指标可代表该期刊文章影响力衰退的速度，其数值越大则代表影响力持续较久，数值越小则代表影响力较小。通常社会科学领域期刊的被引用半衰期相较来的长。</li>
-<li>总被引用次数（Total Cites）：为该期刊自从被收录进期刊引证报告后的总被引用次数。</li>
-<li>文章总数（Current Articles）：为该期刊自从被收录进期刊引证报告后的文章总数。</li>
-</ol>
-<h1 id="engineering-index-工程索引" class="headerLink">
-    <a href="#engineering-index-%e5%b7%a5%e7%a8%8b%e7%b4%a2%e5%bc%95" class="header-mark"></a>Engineering Index 工程索引</h1><p>是世界著名的检索工具，由美国工程信息公司编辑出版发行，该公司始建于 1884 年，是世界上最大的工程信息提供者之一，早期出版印刷版、缩微版等信息产品，1969 年开始提供 EI Compendex 数据库服务。EI Compendex：对应的印刷版检索刊为《工程索引》，是最常用的文摘数据库之一，侧重于工程技术领域的文献的报道。1992 年开始收录中国期刊，1998 年清华大学建立了 EI 中国镜像站。</p>
-<p>EI数据来源于 3 千种工程类期刊以及 9 万多种会议录，每周更新<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>。目前主要有三个版本：</p>
-<ul>
-<li>Ei Compendex 光盘数据库</li>
-<li>Ei Compendex Web数据库</li>
-<li>Engineering Village 2 工程信息村</li>
-</ul>
-<p>其中 Ei Village 2 包括：</p>
-<ul>
-<li>Compendex</li>
-<li>Engineering Index Backfile 工程索引回放文件</li>
-<li>Inspec</li>
-<li>Inspec Archive</li>
-<li>NTIS 国家医学研究所</li>
-<li>Referex Engineering</li>
-<li>ENGnetBASE</li>
-<li>Patents from USPTO and esp@cenet</li>
-<li>GlobalSpec</li>
-<li>Scirus</li>
-<li>EEVL</li>
-<li>LexisNexis News</li>
-</ul>
-<h1 id="参考文献" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-mark"></a>参考文献</h1><p><a href="http://tul.blog.ntu.edu.tw/archives/4797" target="_blank" rel="noopener noreferrer">Impact Factor、引用次數與學術評鑑相關問題懶人包</a></p>
-<p><a href="http://tul.blog.ntu.edu.tw/archives/8330" target="_blank" rel="noopener noreferrer">WoS 與 WOK、JCR、ESI 之間的關係？</a>：</p>
-<p><img class="tw-inline" loading="lazy" src=https://image.assets.xuchunqiu.com/img/2023/09/XgKwgg.png   alt="一张描述 WoS、JCR、ESI关系的树状图。图片内容：WoS（含SCIE、SSCI、A&amp;HCI等）为树根，左分叉为JCR（运用SCIE、SSCI资料，提供Impact Factor等期刊评鉴指标），右分叉为ESI（同样运用SCIE、SSCI资料，筛选高被引的文章、机构、期刊、学者）"  ></p>
-<p><a href="http://tul.blog.ntu.edu.tw/archives/8333" target="_blank" rel="noopener noreferrer">SCI 與 SCIE 的區別</a>：1. SCI为光盘形式，现已停止发行发布；后者为网页服务 2. 两者评选标准相同</p>
-<p><a href="http://tul.blog.ntu.edu.tw/archives/2598" target="_blank" rel="noopener noreferrer">如何得知期刊是否收錄於 Web of Science 資料庫？</a>：<a href="https://mjl.clarivate.com/home" target="_blank" rel="noopener noreferrer">WOS’s Master Journal List</a></p>
-<p><a href="http://tul.blog.ntu.edu.tw/archives/4627" target="_blank" rel="noopener noreferrer">如何得知某期刊是否被EI收錄？</a>：<a href="https://www.engineeringvillage.com/search/quick.url" target="_blank" rel="noopener noreferrer">Ei Village(Source title)</a> or 下载（定期更新的）<a href="https://www.elsevier.com/solutions/engineering-village/content/compendex" target="_blank" rel="noopener noreferrer">Ei Compendex 收录清单</a></p>
-<p><a href="http://tul.blog.ntu.edu.tw/archives/1831" target="_blank" rel="noopener noreferrer">如何查詢期刊之Impact Factor</a></p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p><a href="https://solutions.clarivate.com.cn/products/web-of-science%E6%A0%B8%E5%BF%83%E5%90%88%E9%9B%86%E9%81%B4%E9%80%89%E6%A0%87%E5%87%86/" target="_blank" rel="noopener noreferrer">科睿唯安网站上关于 Web of Science™ 核心合集的遴选标准</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p><a href="https://clarivate.com.tw/products/web-of-science/databases" target="_blank" rel="noopener noreferrer">科睿唯安网站上关于 Web of Science™ 核心合辑的介绍</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p><a href="https://clarivate.com.tw/products/web-of-science/databases#standard-text-3:~:text=%e5%8d%80%e5%9f%9f%e6%80%a7%e8%b3%87%e6%96%99%e5%ba%ab" target="_blank" rel="noopener noreferrer">科睿唯安网站上关于 Web of Science™ 核心合辑中区域性资料库的介绍</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:4">
-<p><a href="https://clarivate.com.tw/products/journal-citation-reports" target="_blank" rel="noopener noreferrer">科睿唯安网站上关于期刊引证报告的介绍</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:5">
-<p><a href="https://zh.wikipedia.org/wiki/%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a#%e6%8c%87%e6%a8%99:~:text=%e6%8c%87%e6%a0%87[%e7%bc%96%e8%be%91],%e6%9c%9f%e5%88%8a%e5%bc%95%e8%af%81%e6%8a%a5%e5%91%8a%e9%80%8f%e8%bf%87%e9%87%8f%e5%8c%96%e5%bc%95%e7%94%a8%e6%96%87%e7%8c%ae%e7%9a%84%e7%bb%9f%e8%ae%a1%e8%b5%84%e8%ae%af%ef%bc%8c%e4%ba%8e%e6%af%8f%e5%b9%b4%e5%ba%a6%e5%8f%91%e8%a1%a8%e4%b8%8b%e5%88%97%e8%af%84%e6%af%94%e6%8c%87%e6%a0%87%e5%b9%b6%e4%ba%88%e4%bb%a5%e6%8e%92%e5%90%8d%ef%bc%9a" target="_blank" rel="noopener noreferrer">维基百科条目「期刊引证报告」中关于指标的解释</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:6">
-<p><a href="http://www.ei-cn.com/About/5.html" target="_blank" rel="noopener noreferrer">第三方网站「EI学术」上对EI的简介</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>

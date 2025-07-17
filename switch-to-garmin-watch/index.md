@@ -1,7 +1,7 @@
 # 运动手表不完全使用感受：Apple vs Garmin
 
 
-作为一个有轻度运动习惯（骑车、跑步、力量、HIIT，每周3～5次）的肥仔，我先后使用了三年半 *Apple Watch Series 4（GPS）*、一年半 *Garmin Enduro 2*。本文不会对比具体的硬件型号+软件版本（有这方面需要请直接去看 [DC Rainmaker](https://www.dcrainmaker.com)），而是希望根据有限的使用经历对比两家的产品思路差异。
+作为一个有轻度运动习惯（骑车、跑步、力量、HIIT，每周3～5次）的肥仔，我先后使用了三年半 *Apple Watch Series 4（GPS）*、一年半 *Garmin Enduro 2*。本文不会对比具体的硬件型号+软件版本（对比评测请看 [DC Rainmaker](https://www.dcrainmaker.com)），而是希望根据有限的使用经历对比两家的产品思路差异。
 
 ## 放弃 Apple Watch 的契机
 
@@ -9,7 +9,16 @@
 
 ## 为什么不是 *Apple Watch Ultra*？
 
-Garmin 手表有很多细分产品线（铁三、跑步、潜水、高尔夫、航海……）去它 [官网](https://www.garmin.com.cn/products/wearables/?cat=watches) 可以看到详尽的分类，我选择 *Enduro 2* 就是因为续航最长。[*Apple Watch Ultra* 宣称有 12 小时的运动记录时长](https://www.apple.com.cn/watch/battery)，而作为当时 Garmin 续航最强的表 [*Enduro 2* 的运动记录在最耗电的多频多星模式下续航是 68 小时](https://www.garmin.com.cn/products/wearables/enduro-2/#specsTab)。
+Garmin 手表有很多细分产品线（铁三、跑步、潜水、高尔夫、航海……）[官网](https://www.garmin.com.cn/products/wearables/?cat=watches) 有列出全部分类，我选择 *Enduro 2* 就是因为续航最长。[*Apple Watch Ultra* 宣称有 12 小时的运动记录时长](https://www.apple.com.cn/watch/battery)，而作为当时 Garmin 续航最强的表 [*Enduro 2* 的运动记录在最耗电的多频多星模式下续航是 68 小时](https://www.garmin.com.cn/products/wearables/enduro-2/#specsTab)。
+
+{{< admonition type=tip title="Garmin 常规产品线简介" open=true >}}
+
+- 飞耐时 Fenix：全能旗舰和主打产品。
+- Forerunner：跑步。
+- 安夺 Enduro：长续航。
+- 本能 Instinct：入门价格体验 Garmin。
+
+{{< /admonition >}}
 
 ## 为什么不是高驰、Amazfit 这些国产表？
 
@@ -21,7 +30,7 @@ Garmin 手表有很多细分产品线（铁三、跑步、潜水、高尔夫、�
 
 正如前面提到的 Apple Watch 的 ECG 功能在早年因为医疗审批问题是无法直接开通的，为了激活这个功能大家各显神通，例如有人 [在口岸将手机连上香港运营商信号后，不用过境就能开通 ECG](https://v2ex.com/t/710861)。更多 Apple 锁区的技术细节可以参考《[iOS 如何按地区限制功能：浅析 MobileGestalt 与 Eligibility](https://sspai.com/prime/story/ios-feature-region-lock)》。2024 年的今天国行 Apple Watch 已经可以无痛开通 ECG 了，但随 WatchOS 11 推出的 [睡眠呼吸暂停功能又陷入了和 ECG 一样的轮回](https://www.v2ex.com/t/1075937)。至于运动数据同步，手机上安装 Strava 后关联苹果健康即可。
 
-Garmin 这边的情况稍有不同，[中国区账号只能关联（也就是上传运动数据到）国内的第三方运动 App；国际区账号则可以关联 Strava。我买的外版手表则从软件上阉割了国内的两家付款码程序和公交卡](https://dailysync.vyzt.dev/docs/%E6%88%91%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%9B%BD%E9%99%85%E5%8C%BA%E8%BF%98%E6%98%AF%E4%B8%AD%E5%9B%BD%E5%8C%BA)。国际区账号可以直接注册没有任何验证，手表付款很鸡肋可能在单独带蜂窝版（仅 Apple，Garmin 没有这种型号）出门时才会用到。地图方面 Garmin ~~有点坏~~有点太合规了，以某些方式对中国大陆的用户（包括我）隐藏了等高线地图（TopoActivate China ML），目前我手表上原厂跟中国大陆有关的地图是「CN China NT 2023.20-NI」、「CN RDA China NT 2023.20-NI ALL」、「China DEM v1.00」。
+Garmin 这边的情况稍有不同，[中国区账号只能关联（也就是上传运动数据到）国内的第三方运动 App；国际区账号则可以关联 Strava。我买的外版手表则从软件上阉割了国内的两家付款码程序和公交卡](https://dailysync.vyzt.dev/docs/%E6%88%91%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%9B%BD%E9%99%85%E5%8C%BA%E8%BF%98%E6%98%AF%E4%B8%AD%E5%9B%BD%E5%8C%BA)。国际区账号可以直接注册没有任何验证，手表付款很鸡肋可能在单独带蜂窝版（Apple Watch S3 和之后的所有型号都有蜂窝网络可选，Garmin 只有极少型号有推出蜂窝款如 Forerunner 945 LTE）出门时才会用到。地图方面 Garmin ~~有点坏~~有点太合规了，以某些方式对中国大陆的用户（包括我）隐藏了等高线地图（TopoActivate China ML），目前我手表上原厂跟中国大陆有关的地图是「CN China NT 2023.20-NI」、「CN RDA China NT 2023.20-NI ALL」、「China DEM v1.00」。
 
 ## 喜欢 Garmin 的点
 
@@ -79,7 +88,7 @@ Body Battery 可以帮助您更好地了解休息和运动期间的影响，进�
 ## Garmin 没有做好的点
 1. **孱弱的处理器性能**，这影响了很多细节，例如：
     1. Garmin 的 UI 无论是触屏还是按键方式操作起来都不跟手，不如 Apple Watch 丝滑。
-    2. Garmin 在拖动、缩放地图时会有明显的重新绘制等待。
+    2. Garmin 在拖动、缩放地图时会有明显的重新绘制等待。**一些基础款因为性能和存储容量限制甚至缺失地图功能。**
     3. 在做力量训练时我会尝试以微小幅度晃动手腕期望 Garmin 亮屏，但它就是检测不到。
     4. Garmin 导入 GPX 会有一个「计算路线」的过程，这至少涉及 TBT 的计算，还可能包含使用「China DEM v1.00」生成坡度信息。以一段 143 km 的新路线为例，载入路线花了 14 s，计算路线花了 32 s。
 2. **糟糕的手机互联**，例如：
@@ -87,11 +96,11 @@ Body Battery 可以帮助您更好地了解休息和运动期间的影响，进�
     2. Apple Watch 上被设置定时摘要的 app 通知会按与手机相同的逻辑推送，而 Garmin 则会立刻通知你。并且 Garmin 弹通知时 app 名称和通知内容是分两步展示，经常抬腕盯着 app 名称发两秒呆先见到通知内容。
     3. Garmin 秒针经常慢几秒。在 Garmin 的文档中声称「[当设备与 Garmin connect mobile 配对同步后，设备可通过 app 同步获取手机时间](https://support.garmin.com/zh-CN/?faq=uXR3bWcLnq6465i9tYA5iA)」，但即使我通过手表上的「同步时间」功能手动触发看起来也还是不准。按前面引用的文档 Garmin 也会自动通过 GPS 卫星授时，这个准不准我没有仔细测。
 3. **落后的 OTA 和软件生态**，包括：
-    1. Apple Watch 长周期的系统更新和新功能下放真的是独一份，Garmin 三个月都不见得能更新一次系统，更遑论新功能下放了。这背后一方面是因为产品线多开发者力不从心，但很难不怀疑还有为促进新型号销量的商业考量。
+    1. Apple Watch 长周期的系统更新和新功能下放真的是独一份，Garmin 总体上按季度发布正式更新，新功能下放也抠抠索索（例如 [问世仅一年半的 Fenix 7 无法获得最新的锁屏密码功能](https://garminrumors.com/has-garmin-abandoned-the-fenix-7-pro-after-just-1-5-years)）。这背后一方面是因为产品线多开发者力不从心，但很难不怀疑还有为促进新型号销量的商业考量。Garmin 会把每次的更新内容发布在论坛 forums.garmin.com 里（这是 [Enduro 2 的](https://forums.garmin.com/outdoor-recreation/outdoor-recreation/f/enduro-2)），此外 garminrumors.com 维护了 [一份滚动更新的更新日期坐标轴](https://garminrumors.com/garmin-software-updates/) 可以更直观地了解 Garmin 主要型号的更新频次。
     2. Garmin 的软件/表盘商店虽然也允许第三方开发者的存在，实际普遍都没什么亮点。不像 Apple Watch 因为高性能处理器和全面的 SDK 可以让一些第三方出品的运动或健康监测 app 比系统自带的更好用（例如前面提到的「YaoYao」支持通过 AirPods 记录跳绳次数）。
 4. **不应该存在的限制**（可能因机型而异），包括：
     1. 闹钟最多定 10 个时间，即使所有闹钟都是关闭状态也不允许你添加第 11 个。
-    2. 从 ConnectIQ 安装的应用/表盘/数据字段合计最多 33 个。我目前还剩 59.60 MB 空间可以再安装 6 个，有趣的是如果把手表连接到电脑会看到储存空间还有足足 9 GB。
+    2. 使用 ConnectIQ 安装的应用/表盘/数据字段合计最多 33 个。它显示我目前还剩 59.60 MB 空间（疑似指 RAM）可以再安装 6 个，有趣的是如果把手表连接到电脑会看到储存空间还有足足 9 GB。Apple Watch 那边只要存储空间够是完全不限制应用数量的。
     3. 在运动途中无法重新加载 GPX。这个需求的场景是在路途中间改变行程，用手机重新规划了另一条路线想走，但手表上只允许在地图上重新选择终点后使用机内导航提供的路线。
 
 ## 室内运动指导
