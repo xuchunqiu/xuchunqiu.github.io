@@ -13,10 +13,10 @@
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2025/01/PXXzXw.jpg" caption="福州" >}}
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2025/01/awBwTK.png" caption="莆田" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2025/01/OrQzzS.png" caption="莆田" >}}
 
 {{< image src="https://image.assets.xuchunqiu.com/img/2025/01/iBOGCG.png" caption="昆明" >}}
 
-{{< image src="https://image.assets.xuchunqiu.com/img/2025/01/OrQzzS.png" caption="大理" >}}
+{{< image src="https://image.assets.xuchunqiu.com/img/2025/01/awBwTK.png" caption="大理" >}}
 
 这大概就是我对这一年的总结，活得更明白了一点，世界在面前徐徐展开。
